@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GamingViewController: UIViewController {
 
-    @IBOutlet var gameViewContainer: UIView!
-    var gamingViewController = GamingViewController()
+
 
     @IBOutlet var startView: UIView!
 
@@ -22,7 +21,6 @@ class ViewController: UIViewController {
 
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
-        self.gameViewContainer.hidden = false
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,6 +13,9 @@ class GamingViewController: UIViewController {
     @IBOutlet var startView: UIView!
     @IBOutlet var gameView: UIView!
 
+    var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
+    var colorArray: [String] = ["green","blue","black","red"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

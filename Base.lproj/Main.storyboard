@@ -64,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="pIA-Q7-p3L" kind="embed" id="EI8-vP-pjS"/>
+                                    <segue destination="pIA-Q7-p3L" kind="embed" identifier="game" id="EI8-vP-pjS"/>
                                 </connections>
                             </containerView>
                         </subviews>

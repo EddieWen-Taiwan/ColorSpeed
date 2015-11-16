@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var gameViewContainer: UIView!
+    private let gamingViewController: GamingViewController!
 
     @IBOutlet var startView: UIView!
 

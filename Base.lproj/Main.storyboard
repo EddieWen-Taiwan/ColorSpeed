@@ -247,6 +247,10 @@
                             <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="rBs-7M-xqf" secondAttribute="centerX" id="yqH-FR-1S2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorTextLabel" destination="97k-VX-qmF" id="18f-DI-hQe"/>
+                        <outlet property="timerLabel" destination="629-3M-paI" id="vAV-ZH-gwY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oY-TN-nLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

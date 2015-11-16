@@ -10,10 +10,14 @@ import UIKit
 
 class GamingViewController: UIViewController {
 
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var colorTextLabel: UILabel!
+
+    internal var parameter = 123
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
     }
 
     override func didReceiveMemoryWarning() {

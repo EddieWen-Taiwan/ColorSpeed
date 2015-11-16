@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="350"/>
         </scene>
-        <!--View Controller-->
+        <!--Gaming View Controller-->
         <scene sceneID="Spm-gh-I4i">
             <objects>
-                <viewController id="pIA-Q7-p3L" sceneMemberID="viewController">
+                <viewController id="pIA-Q7-p3L" customClass="GamingViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zCf-Kz-3R8"/>
                         <viewControllerLayoutGuide type="bottom" id="0bv-gF-Dm0"/>

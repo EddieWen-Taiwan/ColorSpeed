@@ -21,26 +21,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ColorSpeed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-AU-DaJ">
-                                <rect key="frame" x="0.0" y="80" width="600" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97Q-HM-OuN" userLabel="StartView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ColorSpeed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-AU-DaJ">
+                                        <rect key="frame" x="0.0" y="185" width="600" height="70"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNp-pv-e82">
+                                        <rect key="frame" x="260" y="325" width="80" height="50"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="35V-k9-kpc"/>
+                                            <constraint firstAttribute="width" constant="80" id="Xdl-Vg-QZU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Start"/>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
+                                    <constraint firstItem="XUa-AU-DaJ" firstAttribute="leading" secondItem="97Q-HM-OuN" secondAttribute="leading" id="BAl-Ec-6fJ"/>
+                                    <constraint firstItem="iNp-pv-e82" firstAttribute="top" secondItem="XUa-AU-DaJ" secondAttribute="bottom" constant="70" id="WZc-2x-mrx"/>
+                                    <constraint firstAttribute="trailing" secondItem="XUa-AU-DaJ" secondAttribute="trailing" id="vzX-gX-mDc"/>
+                                    <constraint firstItem="iNp-pv-e82" firstAttribute="centerX" secondItem="97Q-HM-OuN" secondAttribute="centerX" id="wPc-Og-V1l"/>
+                                    <constraint firstItem="XUa-AU-DaJ" firstAttribute="centerY" secondItem="97Q-HM-OuN" secondAttribute="centerY" constant="-80" id="zDI-J1-dYS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XUa-AU-DaJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="4Kr-wF-yC6"/>
+                            <constraint firstAttribute="trailing" secondItem="97Q-HM-OuN" secondAttribute="trailing" id="76V-Mz-QgW"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
-                            <constraint firstAttribute="trailing" secondItem="XUa-AU-DaJ" secondAttribute="trailing" id="YaS-JG-dXs"/>
-                            <constraint firstItem="XUa-AU-DaJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YdP-XF-CXD"/>
+                            <constraint firstItem="97Q-HM-OuN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SLj-kW-jE1"/>
+                            <constraint firstItem="97Q-HM-OuN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xel-OP-HYH"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acS-81-b9c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHU-1W-0tz" secondAttribute="bottom" id="e3h-34-XPW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="97Q-HM-OuN" secondAttribute="bottom" id="oYS-Ld-T2a"/>
                             <constraint firstAttribute="trailing" secondItem="uHU-1W-0tz" secondAttribute="trailing" id="p6R-8W-ph2"/>
                         </constraints>
                     </view>

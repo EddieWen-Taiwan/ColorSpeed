@@ -56,16 +56,24 @@
                                     <constraint firstItem="XUa-AU-DaJ" firstAttribute="centerY" secondItem="97Q-HM-OuN" secondAttribute="centerY" constant="-80" id="zDI-J1-dYS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-F4-pKR" userLabel="GameView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xB7-F4-pKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="13f-Pg-wlJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xB7-F4-pKR" secondAttribute="bottom" id="5oL-Hh-nqa"/>
+                            <constraint firstItem="xB7-F4-pKR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="74q-dy-ZRb"/>
                             <constraint firstAttribute="trailing" secondItem="97Q-HM-OuN" secondAttribute="trailing" id="76V-Mz-QgW"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
                             <constraint firstItem="97Q-HM-OuN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SLj-kW-jE1"/>
                             <constraint firstItem="97Q-HM-OuN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xel-OP-HYH"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acS-81-b9c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHU-1W-0tz" secondAttribute="bottom" id="e3h-34-XPW"/>
+                            <constraint firstAttribute="trailing" secondItem="xB7-F4-pKR" secondAttribute="trailing" id="nHP-vH-WnE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="97Q-HM-OuN" secondAttribute="bottom" id="oYS-Ld-T2a"/>
                             <constraint firstAttribute="trailing" secondItem="uHU-1W-0tz" secondAttribute="trailing" id="p6R-8W-ph2"/>
                         </constraints>

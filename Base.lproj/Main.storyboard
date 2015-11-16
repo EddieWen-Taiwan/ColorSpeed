@@ -229,6 +229,10 @@
                         <outlet property="RightTopButton" destination="vGB-0z-FY5" id="v8F-HQ-yZT"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
+                        <outlet property="textOnLeftBottomBtn" destination="fzB-S0-NmA" id="R0w-fZ-WD7"/>
+                        <outlet property="textOnLeftTopBtn" destination="1co-dR-KF4" id="wjd-Hf-xyI"/>
+                        <outlet property="textOnRightBottomBtn" destination="11U-mz-6oS" id="UPT-Rt-1Pp"/>
+                        <outlet property="textOnRightTopBtn" destination="BzH-w6-q3a" id="F4P-5x-tKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

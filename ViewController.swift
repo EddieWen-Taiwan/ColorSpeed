@@ -10,9 +10,8 @@ import UIKit
 
 class GamingViewController: UIViewController {
 
-
-
     @IBOutlet var startView: UIView!
+    @IBOutlet var gameView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +20,7 @@ class GamingViewController: UIViewController {
 
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
+        self.gameView.hidden = false
     }
 
     override func didReceiveMemoryWarning() {

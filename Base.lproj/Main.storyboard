@@ -71,6 +71,10 @@
         <scene sceneID="Spm-gh-I4i">
             <objects>
                 <viewController id="pIA-Q7-p3L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zCf-Kz-3R8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0bv-gF-Dm0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rBs-7M-xqf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,6 +229,10 @@
         <scene sceneID="2mL-GK-99B">
             <objects>
                 <viewController id="YN1-Ar-zz9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2yK-Ba-qWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="0BP-8d-MuU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pcj-ni-xLm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

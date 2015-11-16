@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var startViewContainer: UIView!
     @IBOutlet var gameViewContainer: UIView!
 
     override func viewDidLoad() {

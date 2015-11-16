@@ -16,8 +16,45 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorwater" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-Wu-0t9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ColorSpeed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e01-yY-LuF">
+                                <rect key="frame" x="0.0" y="250" width="600" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="k4l-Qg-RDW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is the fastest?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-FO-Ram">
+                                <rect key="frame" x="0.0" y="340" width="600" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GIg-Wu-0t9" secondAttribute="trailing" id="5v1-uV-PuX"/>
+                            <constraint firstItem="3Xc-FO-Ram" firstAttribute="top" secondItem="e01-yY-LuF" secondAttribute="bottom" constant="30" id="7XH-Bg-mBR"/>
+                            <constraint firstItem="3Xc-FO-Ram" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8eF-O7-xnc"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GIg-Wu-0t9" secondAttribute="bottom" id="97E-FU-GO2"/>
+                            <constraint firstItem="GIg-Wu-0t9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="CaP-aX-h5C"/>
+                            <constraint firstAttribute="trailing" secondItem="e01-yY-LuF" secondAttribute="trailing" id="Eda-V0-r0y"/>
+                            <constraint firstAttribute="trailing" secondItem="3Xc-FO-Ram" secondAttribute="trailing" id="Jpc-0R-LDk"/>
+                            <constraint firstItem="e01-yY-LuF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NKz-Hg-0tp"/>
+                            <constraint firstItem="GIg-Wu-0t9" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xDh-uP-WcS"/>
+                            <constraint firstItem="e01-yY-LuF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-20" id="z2w-1F-JYq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,4 +62,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="colorwater" width="453" height="640"/>
+    </resources>
 </document>

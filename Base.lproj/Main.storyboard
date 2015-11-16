@@ -46,6 +46,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDx-v0-bQc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -57,7 +60,7 @@
                                     <constraint firstItem="iNp-pv-e82" firstAttribute="centerX" secondItem="UNW-cW-U10" secondAttribute="centerX" id="j1a-oe-T0K"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-lH-xT7" userLabel="GameViewContainer">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-lH-xT7" userLabel="GameViewContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <connections>
@@ -84,6 +87,7 @@
                     </view>
                     <connections>
                         <outlet property="gameViewContainer" destination="rPA-lH-xT7" id="Fn0-16-nsa"/>
+                        <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

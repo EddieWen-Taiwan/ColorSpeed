@@ -26,6 +26,15 @@ class GamingViewController: UIViewController {
         self.gameView.hidden = false
     }
 
+    func prepareNewGame() {
+        // Resort array
+        colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
+            let a = Int( arc4random_uniform(50) )
+            let b = Int( arc4random_uniform(50) )
+            return a > b
+        })
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -72,10 +72,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-oM-d7u" userLabel="left">
-                                        <rect key="frame" x="0.0" y="300" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="370" width="300" height="230"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Px-Tj-y49">
-                                                <rect key="frame" x="100" y="20" width="100" height="70"/>
+                                                <rect key="frame" x="100" y="30" width="100" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1co-dR-KF4">
                                                         <rect key="frame" x="25" y="25" width="51" height="21"/>
@@ -95,7 +95,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-Yp-gbj">
-                                                <rect key="frame" x="100" y="110" width="100" height="70"/>
+                                                <rect key="frame" x="100" y="130" width="100" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzB-S0-NmA">
                                                         <rect key="frame" x="25" y="24" width="51" height="21"/>
@@ -117,17 +117,18 @@
                                         </subviews>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstItem="s1k-Yp-gbj" firstAttribute="top" secondItem="7Px-Tj-y49" secondAttribute="bottom" constant="20" id="8sd-0N-s8e"/>
-                                            <constraint firstItem="7Px-Tj-y49" firstAttribute="top" secondItem="YmM-oM-d7u" secondAttribute="top" constant="20" id="qHB-9A-cNm"/>
+                                            <constraint firstItem="s1k-Yp-gbj" firstAttribute="top" secondItem="7Px-Tj-y49" secondAttribute="bottom" constant="30" id="8sd-0N-s8e"/>
+                                            <constraint firstAttribute="bottom" secondItem="s1k-Yp-gbj" secondAttribute="bottom" constant="30" id="Pdp-yg-oEZ"/>
+                                            <constraint firstItem="7Px-Tj-y49" firstAttribute="top" secondItem="YmM-oM-d7u" secondAttribute="top" constant="30" id="qHB-9A-cNm"/>
                                             <constraint firstItem="s1k-Yp-gbj" firstAttribute="centerX" secondItem="YmM-oM-d7u" secondAttribute="centerX" id="qru-Oz-dTM"/>
                                             <constraint firstItem="7Px-Tj-y49" firstAttribute="centerX" secondItem="YmM-oM-d7u" secondAttribute="centerX" id="rwe-hW-Qq2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-VC-pC7" userLabel="right">
-                                        <rect key="frame" x="300" y="300" width="300" height="300"/>
+                                        <rect key="frame" x="300" y="370" width="300" height="230"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGB-0z-FY5">
-                                                <rect key="frame" x="100" y="20" width="100" height="70"/>
+                                                <rect key="frame" x="100" y="30" width="100" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzH-w6-q3a">
                                                         <rect key="frame" x="25" y="25" width="51" height="21"/>
@@ -147,7 +148,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gED-Um-9cB">
-                                                <rect key="frame" x="100" y="110" width="100" height="70"/>
+                                                <rect key="frame" x="100" y="130" width="100" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11U-mz-6oS">
                                                         <rect key="frame" x="25" y="24" width="51" height="21"/>
@@ -170,9 +171,10 @@
                                         <animations/>
                                         <constraints>
                                             <constraint firstItem="gED-Um-9cB" firstAttribute="centerX" secondItem="pEx-VC-pC7" secondAttribute="centerX" id="6r1-dm-KWf"/>
-                                            <constraint firstItem="gED-Um-9cB" firstAttribute="top" secondItem="vGB-0z-FY5" secondAttribute="bottom" constant="20" id="K8x-0R-qjX"/>
+                                            <constraint firstItem="gED-Um-9cB" firstAttribute="top" secondItem="vGB-0z-FY5" secondAttribute="bottom" constant="30" id="K8x-0R-qjX"/>
                                             <constraint firstItem="vGB-0z-FY5" firstAttribute="centerX" secondItem="pEx-VC-pC7" secondAttribute="centerX" id="QNM-J0-Y0z"/>
-                                            <constraint firstItem="vGB-0z-FY5" firstAttribute="top" secondItem="pEx-VC-pC7" secondAttribute="top" constant="20" id="cRY-ed-Hem"/>
+                                            <constraint firstAttribute="bottom" secondItem="gED-Um-9cB" secondAttribute="bottom" constant="30" id="R0N-Ku-pTd"/>
+                                            <constraint firstItem="vGB-0z-FY5" firstAttribute="top" secondItem="pEx-VC-pC7" secondAttribute="top" constant="30" id="cRY-ed-Hem"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
@@ -220,6 +222,12 @@
                             <constraint firstItem="pEx-VC-pC7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="rEh-F3-4fL"/>
                             <constraint firstItem="pEx-VC-pC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="rRq-3m-wSC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5xU-Ce-CpJ"/>
+                                <exclude reference="rEh-F3-4fL"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

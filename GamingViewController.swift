@@ -1,5 +1,5 @@
 //
-//  GamingViewController.swift
+//  ViewController.swift
 //  ColorSpeed
 //
 //  Created by Eddie on 11/16/15.
@@ -10,14 +10,20 @@ import UIKit
 
 class GamingViewController: UIViewController {
 
-    @IBOutlet var timerLabel: UILabel!
-    @IBOutlet var colorTextLabel: UILabel!
+    @IBOutlet var startView: UIView!
+    @IBOutlet var gameView: UIView!
 
-    internal var parameter = 123
+    var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
+    var colorArray: [String] = ["green","blue","black","red"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    @IBAction func gameStart(sender: AnyObject) {
+        self.startView.hidden = true
+        self.gameView.hidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,14 +31,11 @@ class GamingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension Array {
+    func randomItem() -> Element {
+        let index = Int( arc4random_uniform( UInt32(self.count) ) )
+        return self[index]
     }
-    */
-
 }

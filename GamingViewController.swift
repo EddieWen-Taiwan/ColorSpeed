@@ -13,6 +13,11 @@ class GamingViewController: UIViewController {
     @IBOutlet var startView: UIView!
     @IBOutlet var gameView: UIView!
 
+    @IBOutlet var LeftTopButton: UIView!
+    @IBOutlet var LeftBottomButton: UIView!
+    @IBOutlet var RightTopButton: UIView!
+    @IBOutlet var RightBottomButton: UIView!
+
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
 

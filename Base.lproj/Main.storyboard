@@ -223,6 +223,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LeftBottomButton" destination="s1k-Yp-gbj" id="iik-Bx-aj8"/>
+                        <outlet property="LeftTopButton" destination="7Px-Tj-y49" id="YUm-wH-5l0"/>
+                        <outlet property="RightBottomButton" destination="gED-Um-9cB" id="heB-lJ-Zhq"/>
+                        <outlet property="RightTopButton" destination="vGB-0z-FY5" id="v8F-HQ-yZT"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                     </connections>

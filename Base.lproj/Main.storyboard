@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -58,7 +59,38 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-F4-pKR" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97k-VX-qmF">
+                                        <rect key="frame" x="225" y="160" width="150" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="BNp-5L-3hH"/>
+                                            <constraint firstAttribute="height" constant="100" id="svf-RK-BU7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-oM-d7u">
+                                        <rect key="frame" x="0.0" y="300" width="300" height="300"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-VC-pC7">
+                                        <rect key="frame" x="300" y="300" width="300" height="300"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="YmM-oM-d7u" firstAttribute="leading" secondItem="xB7-F4-pKR" secondAttribute="leading" id="B4P-V6-CXg"/>
+                                    <constraint firstAttribute="trailing" secondItem="pEx-VC-pC7" secondAttribute="trailing" id="LYT-rO-Mq8"/>
+                                    <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="QqA-Xp-j9P"/>
+                                    <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="xB7-F4-pKR" secondAttribute="centerX" id="Tb0-qV-gNl"/>
+                                    <constraint firstAttribute="bottom" secondItem="pEx-VC-pC7" secondAttribute="bottom" id="VmP-Sf-EC1"/>
+                                    <constraint firstItem="97k-VX-qmF" firstAttribute="centerY" secondItem="xB7-F4-pKR" secondAttribute="centerY" constant="-90" id="hib-TS-6o5"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
@@ -66,8 +98,10 @@
                         <constraints>
                             <constraint firstItem="xB7-F4-pKR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="13f-Pg-wlJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xB7-F4-pKR" secondAttribute="bottom" id="5oL-Hh-nqa"/>
+                            <constraint firstItem="YmM-oM-d7u" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="5xU-Ce-CpJ"/>
                             <constraint firstItem="xB7-F4-pKR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="74q-dy-ZRb"/>
                             <constraint firstAttribute="trailing" secondItem="97Q-HM-OuN" secondAttribute="trailing" id="76V-Mz-QgW"/>
+                            <constraint firstItem="YmM-oM-d7u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="LdF-p6-pkB"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
                             <constraint firstItem="97Q-HM-OuN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SLj-kW-jE1"/>
                             <constraint firstItem="97Q-HM-OuN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xel-OP-HYH"/>
@@ -76,6 +110,8 @@
                             <constraint firstAttribute="trailing" secondItem="xB7-F4-pKR" secondAttribute="trailing" id="nHP-vH-WnE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="97Q-HM-OuN" secondAttribute="bottom" id="oYS-Ld-T2a"/>
                             <constraint firstAttribute="trailing" secondItem="uHU-1W-0tz" secondAttribute="trailing" id="p6R-8W-ph2"/>
+                            <constraint firstItem="pEx-VC-pC7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="rEh-F3-4fL"/>
+                            <constraint firstItem="pEx-VC-pC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="rRq-3m-wSC"/>
                         </constraints>
                     </view>
                 </viewController>

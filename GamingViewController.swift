@@ -14,9 +14,13 @@ class GamingViewController: UIViewController {
     @IBOutlet var gameView: UIView!
 
     @IBOutlet var LeftTopButton: UIView!
+    @IBOutlet var textOnLeftTopBtn: UILabel!
     @IBOutlet var LeftBottomButton: UIView!
+    @IBOutlet var textOnLeftBottomBtn: UILabel!
     @IBOutlet var RightTopButton: UIView!
+    @IBOutlet var textOnRightTopBtn: UILabel!
     @IBOutlet var RightBottomButton: UIView!
+    @IBOutlet var textOnRightBottomBtn: UILabel!
 
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -24,6 +28,7 @@ class GamingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.prepareNewGame()
     }
 
     @IBAction func gameStart(sender: AnyObject) {
@@ -38,6 +43,11 @@ class GamingViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
+
+        self.textOnLeftTopBtn.text = self.colorArray[0]
+        self.textOnLeftBottomBtn.text = self.colorArray[1]
+        self.textOnRightTopBtn.text = self.colorArray[2]
+        self.textOnRightBottomBtn.text = self.colorArray[3]
     }
 
     override func didReceiveMemoryWarning() {

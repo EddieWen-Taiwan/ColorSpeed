@@ -212,7 +212,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
-                                        <rect key="frame" x="40" y="130" width="41" height="29"/>
+                                        <rect key="frame" x="40" y="135" width="41" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,26 +224,18 @@
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="7sN-bJ-IDJ"/>
                                     <constraint firstAttribute="trailing" secondItem="97k-VX-qmF" secondAttribute="trailing" id="8PG-pU-J83"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerY" secondItem="NNB-E0-1Yt" secondAttribute="centerY" constant="-50" id="9e1-D1-Drk"/>
+                                    <constraint firstItem="rk0-CT-0gn" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="top" id="EEX-DD-KZS"/>
                                     <constraint firstAttribute="bottom" secondItem="pEx-VC-pC7" secondAttribute="bottom" id="KA2-9e-QE4"/>
-                                    <constraint firstItem="Msi-yx-1wL" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" constant="30" id="NqE-3C-h4z"/>
                                     <constraint firstItem="YmM-oM-d7u" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="Nyr-nv-Pel"/>
                                     <constraint firstItem="629-3M-paI" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="RO2-9y-IWN"/>
-                                    <constraint firstItem="rk0-CT-0gn" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="130" id="VAW-0u-ven"/>
                                     <constraint firstItem="rk0-CT-0gn" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" constant="40" id="bBK-LN-74I"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="bottom" constant="30" id="c9h-G9-FOB"/>
                                     <constraint firstAttribute="trailing" secondItem="pEx-VC-pC7" secondAttribute="trailing" id="chK-5Y-d2w"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="dbW-ee-Cld"/>
-                                    <constraint firstAttribute="trailing" secondItem="Msi-yx-1wL" secondAttribute="trailing" constant="30" id="lM2-VQ-d7f"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="mTZ-ix-g6t"/>
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="30" id="sdx-VH-riY"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="NqE-3C-h4z"/>
-                                        <exclude reference="lM2-VQ-d7f"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <animations/>

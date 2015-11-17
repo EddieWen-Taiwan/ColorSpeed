@@ -107,13 +107,16 @@ class GamingViewController: UIViewController {
                 })
             })
 
-            self.plus2second.layer.position.y += 70
+            // Plus 2 seconds animation
             self.plus2second.alpha = 1
             UIView.animateWithDuration( 0.7, animations: {
                 self.plus2second.layer.position.y -= 70
                 self.plus2second.alpha = 0
+            }, completion: { finish in
+                self.plus2second.layer.position.y += 70
             })
 
+            // Punish: plus two seconds
             self.currentSecond += 2.0
             self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
         }

@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="350"/>
         </scene>
-        <!--View Controller-->
+        <!--Rank View Controller-->
         <scene sceneID="bmS-22-DDQ">
             <objects>
-                <viewController id="KhW-SH-slc" sceneMemberID="viewController">
+                <viewController id="KhW-SH-slc" customClass="RankViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="opG-xZ-4z1"/>
                         <viewControllerLayoutGuide type="bottom" id="Ppf-vW-svH"/>

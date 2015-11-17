@@ -21,6 +21,8 @@ class GamingViewController: UIViewController {
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
+    var currentSecond: Float = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +32,9 @@ class GamingViewController: UIViewController {
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
         self.gameView.hidden = false
+
+        // Start timer
+        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer", userInfo: nil, repeats: true )
     }
 
     func prepareNewGame() {

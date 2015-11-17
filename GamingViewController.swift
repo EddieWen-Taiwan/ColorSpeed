@@ -94,13 +94,16 @@ class GamingViewController: UIViewController {
             }
         } else {
             // Answer is wrong
-            self.warningView.hidden = false
-            self.warningView.duration = 0.5
-            self.warningView.force = 1
-            self.warningView.animation = "shake"
-            self.warningView.animateToNext({
-                self.warningView.animation = "fadeOut"
-                self.warningView.animateTo()
+            UIView.animateWithDuration( 0.2, animations: {
+                self.warningView.alpha = 1
+            }, completion: { finish in
+                self.warningView.animation = "shake"
+                self.warningView.duration = 0.5
+                self.warningView.force = 1
+                self.warningView.animateToNext({
+                    self.warningView.animation = "fadeOut"
+                    self.warningView.animateTo()
+                })
             })
             self.currentSecond += 2.0
             self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String

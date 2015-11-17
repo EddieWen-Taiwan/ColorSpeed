@@ -70,7 +70,7 @@
                                             <constraint firstAttribute="width" constant="100" id="GLf-qu-wch"/>
                                             <constraint firstAttribute="height" constant="50" id="e3M-br-M6T"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97k-VX-qmF">
@@ -246,7 +246,7 @@
                                             <constraint firstAttribute="height" constant="50" id="FRR-ym-K5Z"/>
                                             <constraint firstAttribute="width" constant="100" id="gIB-ae-0Ui"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

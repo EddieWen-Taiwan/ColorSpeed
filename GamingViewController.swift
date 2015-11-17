@@ -98,11 +98,10 @@ class GamingViewController: UIViewController {
                 self.warningView.alpha = 1
             }, completion: { finish in
                 self.warningView.animation = "shake"
-                self.warningView.duration = 0.5
-                self.warningView.force = 1
-                self.warningView.animateToNext({
-                    self.warningView.animation = "fadeOut"
-                    self.warningView.animateTo()
+                self.warningView.animate()
+                UIView.animateWithDuration( 0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                    self.warningView.alpha = 0
+                }, completion: { finish in
                 })
             })
             self.currentSecond += 2.0

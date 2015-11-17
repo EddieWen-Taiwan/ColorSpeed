@@ -211,7 +211,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
                                         <rect key="frame" x="40" y="130" width="41" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -272,6 +272,7 @@
                         <outlet property="RightTopButton" destination="5eH-ON-orz" id="jbg-yb-a9x"/>
                         <outlet property="clock" destination="629-3M-paI" id="d2o-MG-i5z"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
+                        <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                         <outlet property="warningView" destination="Msi-yx-1wL" id="17X-fY-ZFb"/>

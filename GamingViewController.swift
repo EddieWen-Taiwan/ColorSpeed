@@ -21,6 +21,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var clock: UILabel!
     @IBOutlet var questionTitle: UILabel!
     @IBOutlet var warningView: SpringView!
+    @IBOutlet var plus2second: UILabel!
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -104,6 +105,13 @@ class GamingViewController: UIViewController {
                     self.warningView.alpha = 0
                 }, completion: { finish in
                 })
+            })
+
+            self.plus2second.layer.position.y += 70
+            self.plus2second.alpha = 1
+            UIView.animateWithDuration( 0.7, animations: {
+                self.plus2second.layer.position.y -= 70
+                self.plus2second.alpha = 0
             })
 
             self.currentSecond += 2.0

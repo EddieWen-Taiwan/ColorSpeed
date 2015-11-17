@@ -60,7 +60,7 @@
                                     <constraint firstItem="iNp-pv-e82" firstAttribute="centerX" secondItem="UNW-cW-U10" secondAttribute="centerX" id="j1a-oe-T0K"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
@@ -181,11 +181,23 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msi-yx-1wL">
-                                        <rect key="frame" x="30" y="30" width="540" height="50"/>
+                                        <rect key="frame" x="200" y="30" width="200" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong color !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53l-R2-k2u">
+                                                <rect key="frame" x="51" y="15" width="98" height="20"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.12808388157894732" blue="0.35266755756578949" alpha="0.7450380067567568" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="DgP-AZ-sVp"/>
+                                            <constraint firstItem="53l-R2-k2u" firstAttribute="centerY" secondItem="Msi-yx-1wL" secondAttribute="centerY" id="FPd-E9-OCw"/>
+                                            <constraint firstItem="53l-R2-k2u" firstAttribute="centerX" secondItem="Msi-yx-1wL" secondAttribute="centerX" id="Nd3-JX-AkK"/>
+                                            <constraint firstAttribute="width" constant="200" id="dzW-jy-bkO"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -196,6 +208,7 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="Msi-yx-1wL" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="7sN-bJ-IDJ"/>
                                     <constraint firstAttribute="trailing" secondItem="97k-VX-qmF" secondAttribute="trailing" id="8PG-pU-J83"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerY" secondItem="NNB-E0-1Yt" secondAttribute="centerY" constant="-50" id="9e1-D1-Drk"/>
                                     <constraint firstAttribute="bottom" secondItem="pEx-VC-pC7" secondAttribute="bottom" id="KA2-9e-QE4"/>
@@ -210,6 +223,12 @@
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="30" id="sdx-VH-riY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NqE-3C-h4z"/>
+                                        <exclude reference="lM2-VQ-d7f"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <animations/>

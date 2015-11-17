@@ -55,7 +55,7 @@ class GamingViewController: UIViewController {
         let redGesture = UITapGestureRecognizer(target: self, action: "isRed")
         let blackGesture = UITapGestureRecognizer(target: self, action: "isBlack")
         let blueGesture = UITapGestureRecognizer(target: self, action: "isBlue")
-        func returnButton( index: Int ) -> UITapGestureRecognizer {
+        func returnGesture( index: Int ) -> UITapGestureRecognizer {
             switch( colorArray[index] ) {
                 case "green":
                     return greenGesture
@@ -68,22 +68,30 @@ class GamingViewController: UIViewController {
             }
         }
 
+        self.LeftTopButton.addGestureRecognizer( returnGesture(0) )
+        self.LeftBottomButton.addGestureRecognizer( returnGesture(1) )
+        self.RightTopButton.addGestureRecognizer( returnGesture(2) )
+        self.RightBottomButton.addGestureRecognizer( returnGesture(3) )
     }
 
     func isGreen() {
         //
+        print("is green")
     }
 
     func isRed() {
         //
+        print("is red")
     }
 
     func isBlack() {
         //
+        print("is black")
     }
 
     func isBlue() {
         //
+        print("is blue")
     }
 
     override func didReceiveMemoryWarning() {

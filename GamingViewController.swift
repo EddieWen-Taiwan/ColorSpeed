@@ -12,8 +12,12 @@ import Spring
 class GamingViewController: UIViewController {
 
     @IBOutlet var startView: UIView!
+    @IBOutlet var effectView: UIView!
     @IBOutlet var gameView: UIView!
     @IBOutlet var endingView: UIView!
+
+    // in effect view
+    @IBOutlet var three: UILabel!
 
     // in game view
     @IBOutlet var LeftTopButton: UIButton!
@@ -81,6 +85,12 @@ class GamingViewController: UIViewController {
         self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
 
     }
+    
+    
+    
+    
+    // *************
+    // Effect View
 
 
 

@@ -60,9 +60,21 @@
                                     <constraint firstItem="iNp-pv-e82" firstAttribute="centerX" secondItem="UNW-cW-U10" secondAttribute="centerX" id="j1a-oe-T0K"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-vc-x3p" userLabel="EffectView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-vc-x3p" userLabel="EffectView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-g4-ptA">
+                                        <rect key="frame" x="283" y="268" width="35" height="65"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstItem="kt0-g4-ptA" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="7RL-sC-PHb"/>
+                                    <constraint firstItem="kt0-g4-ptA" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="TVQ-mZ-SwP"/>
+                                </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -313,12 +325,14 @@
                         <outlet property="RightBottomButton" destination="Mzr-0c-mX0" id="MeE-iF-JmQ"/>
                         <outlet property="RightTopButton" destination="5eH-ON-orz" id="jbg-yb-a9x"/>
                         <outlet property="clock" destination="629-3M-paI" id="d2o-MG-i5z"/>
+                        <outlet property="effectView" destination="fUR-vc-x3p" id="hOh-iv-6ns"/>
                         <outlet property="endingTimeLabel" destination="efH-zY-Vab" id="ZJu-Fm-iM1"/>
                         <outlet property="endingView" destination="mOI-qb-v48" id="L1H-hf-hQ7"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
+                        <outlet property="three" destination="kt0-g4-ptA" id="qr9-gf-3iP"/>
                         <outlet property="topConstraintOfTimeLabel" destination="vdq-2r-7cf" id="fv8-7G-qa4"/>
                         <outlet property="warningView" destination="Msi-yx-1wL" id="17X-fY-ZFb"/>
                     </connections>

@@ -10,6 +10,10 @@ import UIKit
 
 class RankTableViewCell: UITableViewCell {
 
+    @IBOutlet var userSticker: UIView!
+    @IBOutlet var username: UILabel!
+    @IBOutlet var time: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

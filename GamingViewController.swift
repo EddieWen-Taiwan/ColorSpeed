@@ -57,25 +57,7 @@ class GamingViewController: UIViewController {
 
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
-        self.effectView.hidden = false
-
-        // Countdown animation 3... 2... 1...
-        self.three.animation = "zoomOut"
-        self.three.animateToNext({
-            self.two.hidden = false
-            self.two.animation = "zoomOut"
-            self.two.animateToNext({
-                self.one.hidden = false
-                self.one.animation = "zoomOut"
-                self.one.animateToNext({
-                    // Game Start
-                    self.effectView.hidden = true
-                    self.gameView.hidden = false
-                    // Start timer
-                    NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
-                })
-            })
-        })
+        self.beReadyToGame()
     }
 
     func prepareNewGame() {
@@ -108,8 +90,35 @@ class GamingViewController: UIViewController {
     // *************
     // Effect View
 
+    // Countdown animation 3... 2... 1...
     func beReadyToGame() {
-        
+        self.effectView.hidden = false
+
+        self.three.animation = "zoomOut"
+        self.three.animateToNext({
+            self.two.hidden = false
+            self.two.animation = "zoomOut"
+            self.two.animateToNext({
+                self.one.hidden = false
+                self.one.animation = "zoomOut"
+                self.one.animateToNext({
+                    // Game Start
+                    self.effectView.hidden = true
+                    self.gameView.hidden = false
+                    // Start timer
+                    NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                    self.initCountdownNumbers()
+                })
+            })
+        })
+    }
+
+    func initCountdownNumbers() {
+        self.three.transform = CGAffineTransformIdentity
+        self.two.hidden = true
+        self.two.transform = CGAffineTransformIdentity
+        self.one.hidden = true
+        self.one.transform = CGAffineTransformIdentity
     }
 
 
@@ -220,7 +229,7 @@ class GamingViewController: UIViewController {
         // Clear current variables and restart
         self.prepareNewGame()
         self.endingView.hidden = true
-        self.gameView.hidden = false
+        self.beReadyToGame()
     }
 
     override func didReceiveMemoryWarning() {

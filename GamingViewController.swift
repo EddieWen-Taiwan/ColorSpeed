@@ -126,8 +126,7 @@ class GamingViewController: UIViewController {
             case "black":
                 self.questionTitle.textColor = UIColor.blackColor()
                 self.currentColor = "black"
-            default:
-            // green
+            default: g// green
                 self.questionTitle.textColor = UIColor.greenColor()
                 self.currentColor = "green"
         }

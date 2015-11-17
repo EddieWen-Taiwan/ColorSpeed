@@ -254,6 +254,9 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Play again"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6b-BH-IRK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8b-It-GYM">
                                         <rect key="frame" x="426" y="508" width="49" height="32"/>

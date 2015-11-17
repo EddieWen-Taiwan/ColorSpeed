@@ -50,22 +50,18 @@ class GamingViewController: UIViewController {
     }
 
     @IBAction func clickLeftTopButton(sender: AnyObject) {
-        print("LeftTop")
         self.answerColor(0)
     }
 
     @IBAction func clickLeftBottomButton(sender: AnyObject) {
-        print("LeftBottom")
         self.answerColor(1)
     }
 
     @IBAction func clickRightTopButton(sender: AnyObject) {
-        print("RightTop")
         self.answerColor(2)
     }
 
     @IBAction func clickRightBottomButton(sender: AnyObject) {
-        print("RightBottom")
         self.answerColor(3)
     }
 

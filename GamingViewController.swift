@@ -94,6 +94,7 @@ class GamingViewController: UIViewController {
             }
         } else {
             // Answer is wrong
+            // WarningView animation
             UIView.animateWithDuration( 0.2, animations: {
                 self.warningView.alpha = 1
             }, completion: { finish in
@@ -104,6 +105,7 @@ class GamingViewController: UIViewController {
                 }, completion: { finish in
                 })
             })
+
             self.currentSecond += 2.0
             self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
         }

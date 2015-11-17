@@ -80,7 +80,7 @@ class GamingViewController: UIViewController {
 
     func answerColor( buttonIndex: Int ) {
         let buttonColor = self.colorArray[buttonIndex]
-print(buttonColor)
+
         if buttonColor == self.currentColor {
             // Answer is correct
             if self.answeredQuestion == 19 {
@@ -88,7 +88,6 @@ print(buttonColor)
             } else {
                 // Next one
                 self.answeredQuestion++
-
                 self.updateQuestion()
             }
         } else {

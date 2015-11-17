@@ -59,6 +59,7 @@ class GamingViewController: UIViewController {
         self.startView.hidden = true
         self.effectView.hidden = false
 
+        // Countdown animation 3... 2... 1...
         self.three.animation = "zoomOut"
         self.three.animateToNext({
             self.two.hidden = false
@@ -66,14 +67,18 @@ class GamingViewController: UIViewController {
             self.two.animateToNext({
                 self.one.hidden = false
                 self.one.animation = "zoomOut"
-                self.one.animateTo()
+                self.one.animateToNext({
+                    // Game Start
+                    self.effectView.hidden = true
+                    self.gameView.hidden = false
+                    // Start timer
+                    NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                })
             })
         })
-//        // Start timer
-//        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
-//
-//        // First question
-//        self.updateQuestion()
+
+        // First question
+        self.updateQuestion()
     }
 
     func prepareNewGame() {

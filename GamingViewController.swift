@@ -28,7 +28,7 @@ class GamingViewController: UIViewController {
 
     var currentSecond: Float = 0.0
     var currentColor: String!
-    let totalQuestion: Int = 20
+    let totalQuestion: Int = 20 // <-----
     var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
@@ -98,7 +98,7 @@ class GamingViewController: UIViewController {
 
         if buttonColor == self.currentColor {
             // Answer is correct
-            if self.answeredQuestion == 19 {
+            if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
             } else {
                 // Next one

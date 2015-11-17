@@ -17,7 +17,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var endingView: UIView!
 
     // in effect view
-    @IBOutlet var three: UILabel!
+    @IBOutlet var three: SpringLabel!
 
     // in game view
     @IBOutlet var LeftTopButton: UIButton!
@@ -55,13 +55,14 @@ class GamingViewController: UIViewController {
 
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
-        self.gameView.hidden = false
+        self.effectView.hidden = false
 
-        // Start timer
-        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
-
-        // First question
-        self.updateQuestion()
+//        self.three
+//        // Start timer
+//        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+//
+//        // First question
+//        self.updateQuestion()
     }
 
     func prepareNewGame() {

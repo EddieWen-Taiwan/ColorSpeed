@@ -63,7 +63,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-vc-x3p" userLabel="EffectView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-g4-ptA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-g4-ptA" customClass="SpringLabel" customModule="Spring">
                                         <rect key="frame" x="283" y="268" width="35" height="65"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
@@ -332,7 +332,7 @@
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
-                        <outlet property="three" destination="kt0-g4-ptA" id="qr9-gf-3iP"/>
+                        <outlet property="three" destination="kt0-g4-ptA" id="PfM-QX-oCg"/>
                         <outlet property="topConstraintOfTimeLabel" destination="vdq-2r-7cf" id="fv8-7G-qa4"/>
                         <outlet property="warningView" destination="Msi-yx-1wL" id="17X-fY-ZFb"/>
                     </connections>

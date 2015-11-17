@@ -18,6 +18,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var RightTopButton: UIButton!
     @IBOutlet var RightBottomButton: UIButton!
     @IBOutlet var clock: UILabel!
+    @IBOutlet var questionTitle: UILabel!
 
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -89,7 +90,7 @@ print(buttonColor)
     }
 
     func updateQuestion() {
-        g
+        
     }
 
     override func didReceiveMemoryWarning() {

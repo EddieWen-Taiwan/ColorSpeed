@@ -105,6 +105,11 @@
                                                     <constraint firstAttribute="width" constant="100" id="Snc-6h-kYX"/>
                                                     <constraint firstItem="1co-dR-KF4" firstAttribute="centerX" secondItem="7Px-Tj-y49" secondAttribute="centerX" id="jcI-rq-SJU"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-Yp-gbj">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -125,6 +130,11 @@
                                                     <constraint firstItem="fzB-S0-NmA" firstAttribute="centerX" secondItem="s1k-Yp-gbj" secondAttribute="centerX" id="p8I-nr-C5c"/>
                                                     <constraint firstItem="fzB-S0-NmA" firstAttribute="centerY" secondItem="s1k-Yp-gbj" secondAttribute="centerY" id="rJH-gB-zig"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <animations/>
@@ -158,6 +168,11 @@
                                                     <constraint firstItem="BzH-w6-q3a" firstAttribute="centerY" secondItem="vGB-0z-FY5" secondAttribute="centerY" id="ajt-bU-VXC"/>
                                                     <constraint firstItem="BzH-w6-q3a" firstAttribute="centerX" secondItem="vGB-0z-FY5" secondAttribute="centerX" id="bpP-L2-x5X"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gED-Um-9cB">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -178,6 +193,11 @@
                                                     <constraint firstAttribute="height" constant="70" id="evf-aA-o6C"/>
                                                     <constraint firstItem="11U-mz-6oS" firstAttribute="centerY" secondItem="gED-Um-9cB" secondAttribute="centerY" id="wLJ-IV-Mf8"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <animations/>

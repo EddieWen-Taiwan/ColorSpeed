@@ -20,7 +20,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var clock: UILabel!
     @IBOutlet var questionTitle: UILabel!
 
-    var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
+    var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
     var currentSecond: Float = 0.0
@@ -85,6 +85,7 @@ print(buttonColor)
 //            default:
 //            // red
 //        }
+        self.updateQuestion()
     }
 
     func addTimer( timer: NSTimer ) {
@@ -93,7 +94,18 @@ print(buttonColor)
     }
 
     func updateQuestion() {
-        self.questionTitle.text = self.colorArray.randomItem()
+        self.questionTitle.text = self.colorTextArray.randomItem()
+        switch( self.colorArray.randomItem() ) {
+            case "red":
+                self.questionTitle.textColor = UIColor.redColor()
+            case "blue":
+                self.questionTitle.textColor = UIColor.blueColor()
+            case "black":
+                self.questionTitle.textColor = UIColor.blackColor()
+            default:
+            // green
+                self.questionTitle.textColor = UIColor.greenColor()
+        }
     }
 
     override func didReceiveMemoryWarning() {

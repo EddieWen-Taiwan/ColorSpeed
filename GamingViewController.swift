@@ -25,6 +25,8 @@ class GamingViewController: UIViewController {
 
     var currentSecond: Float = 0.0
     var currentColor: String!
+    let totalQuestion: Int = 20
+    var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +82,19 @@ class GamingViewController: UIViewController {
         let buttonColor = self.colorArray[buttonIndex]
 print(buttonColor)
         if buttonColor == self.currentColor {
-            // Correct
+            // Answer is correct
+            if self.answeredQuestion == 19 {
+                // End game
+            } else {
+                // Next one
+                self.answeredQuestion++
 
-            self.updateQuestion()
+                self.updateQuestion()
+            }
         } else {
-            // Wrong
+            // Answer is wrong
+            self.currentSecond += 2.0
+            self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
         }
     }
 

@@ -74,10 +74,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97k-VX-qmF">
-                                        <rect key="frame" x="225" y="215" width="150" height="70"/>
+                                        <rect key="frame" x="0.0" y="215" width="600" height="70"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="BNp-5L-3hH"/>
                                             <constraint firstAttribute="height" constant="70" id="svf-RK-BU7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="58"/>
@@ -184,6 +183,7 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="97k-VX-qmF" secondAttribute="trailing" id="8PG-pU-J83"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerY" secondItem="NNB-E0-1Yt" secondAttribute="centerY" constant="-50" id="9e1-D1-Drk"/>
                                     <constraint firstAttribute="bottom" secondItem="pEx-VC-pC7" secondAttribute="bottom" id="KA2-9e-QE4"/>
                                     <constraint firstItem="YmM-oM-d7u" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="Nyr-nv-Pel"/>
@@ -191,6 +191,7 @@
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="bottom" constant="30" id="c9h-G9-FOB"/>
                                     <constraint firstAttribute="trailing" secondItem="pEx-VC-pC7" secondAttribute="trailing" id="chK-5Y-d2w"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="dbW-ee-Cld"/>
+                                    <constraint firstItem="97k-VX-qmF" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="mTZ-ix-g6t"/>
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                 </constraints>
                             </view>

@@ -88,6 +88,10 @@ print(buttonColor)
         self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
     }
 
+    func updateQuestion() {
+        g
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

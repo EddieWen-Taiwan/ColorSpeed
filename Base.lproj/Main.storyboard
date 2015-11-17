@@ -100,6 +100,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickLeftTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIx-wh-Jgx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcK-O0-LSy">
                                                 <rect key="frame" x="100" y="30" width="100" height="70"/>
@@ -115,6 +118,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickLeftBottomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYw-fQ-Sgc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -143,6 +149,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickRightTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8b-Wz-ziR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eH-ON-orz">
                                                 <rect key="frame" x="100" y="30" width="100" height="70"/>
@@ -158,6 +167,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickRightBottomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZN-kN-GLE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>

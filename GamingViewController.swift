@@ -13,7 +13,6 @@ class GamingViewController: UIViewController {
     @IBOutlet var startView: UIView!
     @IBOutlet var gameView: UIView!
 
-
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
@@ -64,6 +63,22 @@ class GamingViewController: UIViewController {
 //        self.LeftBottomButton.addGestureRecognizer( returnGesture(1) )
 //        self.RightTopButton.addGestureRecognizer( returnGesture(2) )
 //        self.RightBottomButton.addGestureRecognizer( returnGesture(3) )
+    }
+
+    @IBAction func clickLeftTopButton(sender: AnyObject) {
+        print("LeftTop")
+    }
+
+    @IBAction func clickLeftBottomButton(sender: AnyObject) {
+        print("LeftBottom")
+    }
+
+    @IBAction func clickRightTopButton(sender: AnyObject) {
+        print("RightTop")
+    }
+
+    @IBAction func clickRightBottomButton(sender: AnyObject) {
+        print("RightBottom")
     }
 
     func isGreen() {

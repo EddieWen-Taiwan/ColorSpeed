@@ -46,28 +46,7 @@ class GamingViewController: UIViewController {
         self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
         self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
         self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
-
-//        let greenGesture = UITapGestureRecognizer(target: self, action: "isGreen")
-//        let redGesture = UITapGestureRecognizer(target: self, action: "isRed")
-//        let blackGesture = UITapGestureRecognizer(target: self, action: "isBlack")
-//        let blueGesture = UITapGestureRecognizer(target: self, action: "isBlue")
-//        func returnGesture( index: Int ) -> UITapGestureRecognizer {
-//            switch( colorArray[index] ) {
-//                case "green":
-//                    return greenGesture
-//                case "red":
-//                    return redGesture
-//                case "black":
-//                    return blackGesture
-//                default:
-//                    return blueGesture
-//            }
-//        }
-//
-//        self.LeftTopButton.addGestureRecognizer( returnGesture(0) )
-//        self.LeftBottomButton.addGestureRecognizer( returnGesture(1) )
-//        self.RightTopButton.addGestureRecognizer( returnGesture(2) )
-//        self.RightBottomButton.addGestureRecognizer( returnGesture(3) )
+g
     }
 
     @IBAction func clickLeftTopButton(sender: AnyObject) {

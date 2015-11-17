@@ -410,6 +410,12 @@
                                                 <constraint firstAttribute="height" constant="60" id="ChG-X0-1XW"/>
                                                 <constraint firstAttribute="width" constant="60" id="HwA-se-tna"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
                                     <animations/>

@@ -62,6 +62,11 @@ class GamingViewController: UIViewController {
 
     func prepareNewGame() {
 
+        // Initialize variables
+        self.currentSecond = 0.0
+        self.answeredQuestion = 0
+        self.clock.text = "0"
+
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
             let a = Int( arc4random_uniform(50) )
@@ -182,6 +187,10 @@ class GamingViewController: UIViewController {
     // Ending View
 
     @IBAction func playAgain(sender: AnyObject) {
+        // Clear current variables and restart
+        self.prepareNewGame()
+        self.endingView.hidden = true
+        self.gameView.hidden = false
     }
 
     override func didReceiveMemoryWarning() {

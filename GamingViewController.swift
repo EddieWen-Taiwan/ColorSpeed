@@ -19,6 +19,7 @@ class GamingViewController: UIViewController {
     // in effect view
     @IBOutlet var three: SpringLabel!
     @IBOutlet var two: SpringLabel!
+    @IBOutlet var one: SpringLabel!
 
     // in game view
     @IBOutlet var LeftTopButton: UIButton!

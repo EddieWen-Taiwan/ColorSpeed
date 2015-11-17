@@ -63,6 +63,20 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-vc-x3p" userLabel="EffectView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebt-Ep-hUP" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="287" y="268" width="26" height="65"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-Nd-9wy" customClass="SpringLabel" customModule="Spring">
                                         <rect key="frame" x="284" y="268" width="33" height="65"/>
                                         <animations/>
@@ -96,8 +110,10 @@
                                 <constraints>
                                     <constraint firstItem="kt0-g4-ptA" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="7RL-sC-PHb"/>
                                     <constraint firstItem="g2u-Nd-9wy" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="CXH-3z-1be"/>
+                                    <constraint firstItem="ebt-Ep-hUP" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="M0V-A3-xU4"/>
                                     <constraint firstItem="kt0-g4-ptA" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="TVQ-mZ-SwP"/>
                                     <constraint firstItem="g2u-Nd-9wy" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="d8x-3f-RBY"/>
+                                    <constraint firstItem="ebt-Ep-hUP" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="hHN-NL-gQb"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
@@ -353,6 +369,7 @@
                         <outlet property="endingTimeLabel" destination="efH-zY-Vab" id="ZJu-Fm-iM1"/>
                         <outlet property="endingView" destination="mOI-qb-v48" id="L1H-hf-hQ7"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
+                        <outlet property="one" destination="ebt-Ep-hUP" id="1Qf-VN-zMu"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>

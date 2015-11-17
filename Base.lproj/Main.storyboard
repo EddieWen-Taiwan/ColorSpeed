@@ -63,10 +63,24 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUR-vc-x3p" userLabel="EffectView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-g4-ptA" customClass="SpringLabel" customModule="Spring">
-                                        <rect key="frame" x="283" y="268" width="35" height="65"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-Nd-9wy" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="284" y="268" width="33" height="65"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt0-g4-ptA" customClass="SpringLabel" customModule="Spring">
+                                        <rect key="frame" x="283" y="268" width="34" height="65"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="duration">
@@ -81,7 +95,9 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="kt0-g4-ptA" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="7RL-sC-PHb"/>
+                                    <constraint firstItem="g2u-Nd-9wy" firstAttribute="centerX" secondItem="fUR-vc-x3p" secondAttribute="centerX" id="CXH-3z-1be"/>
                                     <constraint firstItem="kt0-g4-ptA" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="TVQ-mZ-SwP"/>
+                                    <constraint firstItem="g2u-Nd-9wy" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="d8x-3f-RBY"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
@@ -342,6 +358,7 @@
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                         <outlet property="three" destination="kt0-g4-ptA" id="PfM-QX-oCg"/>
                         <outlet property="topConstraintOfTimeLabel" destination="vdq-2r-7cf" id="fv8-7G-qa4"/>
+                        <outlet property="two" destination="g2u-Nd-9wy" id="VH0-WJ-Z7H"/>
                         <outlet property="warningView" destination="Msi-yx-1wL" id="17X-fY-ZFb"/>
                     </connections>
                 </viewController>

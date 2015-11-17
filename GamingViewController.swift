@@ -106,6 +106,7 @@ class GamingViewController: UIViewController {
             // Answer is correct
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
+                self.endingTimeLabel.text = self.clock.text
                 // Show ending view
                 self.gameView.hidden = true
                 self.endingView.hidden = false

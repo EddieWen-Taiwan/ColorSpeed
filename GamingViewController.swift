@@ -101,12 +101,6 @@ class GamingViewController: UIViewController {
         // First question
         self.updateQuestion()
     }
-    
-    
-    
-    
-    // *************
-    // Effect View
 
 
 

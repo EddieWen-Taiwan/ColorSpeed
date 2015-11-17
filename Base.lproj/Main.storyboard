@@ -319,6 +319,9 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Top 10"/>
+                                        <connections>
+                                            <segue destination="KhW-SH-slc" kind="show" id="p04-8b-xQK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -382,6 +385,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="350"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bmS-22-DDQ">
+            <objects>
+                <viewController id="KhW-SH-slc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opG-xZ-4z1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ppf-vW-svH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zb-fr-Xai">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXc-rR-dLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="1171"/>
         </scene>
     </scenes>
     <resources>

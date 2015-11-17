@@ -24,6 +24,7 @@ class GamingViewController: UIViewController {
     var colorArray: [String] = ["green","blue","black","red"]
 
     var currentSecond: Float = 0.0
+    var currentColor: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,14 +79,13 @@ class GamingViewController: UIViewController {
     func answerColor( buttonIndex: Int ) {
         let buttonColor = self.colorArray[buttonIndex]
 print(buttonColor)
-//        switch(buttonColor) {
-//            case "green":
-//            case "blue":
-//            case "black":
-//            default:
-//            // red
-//        }
-        self.updateQuestion()
+        if buttonColor == self.currentColor {
+            // Correct
+
+            self.updateQuestion()
+        } else {
+            // Wrong
+        }
     }
 
     func addTimer( timer: NSTimer ) {
@@ -98,13 +98,17 @@ print(buttonColor)
         switch( self.colorArray.randomItem() ) {
             case "red":
                 self.questionTitle.textColor = UIColor.redColor()
+                self.currentColor = "red"
             case "blue":
                 self.questionTitle.textColor = UIColor.blueColor()
+                self.currentColor = "blue"
             case "black":
                 self.questionTitle.textColor = UIColor.blackColor()
+                self.currentColor = "black"
             default:
             // green
                 self.questionTitle.textColor = UIColor.greenColor()
+                self.currentColor = "green"
         }
     }
 

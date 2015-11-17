@@ -249,8 +249,24 @@
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-lD-NV6">
+                                        <rect key="frame" x="113" y="508" width="74" height="32"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Play again"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8b-It-GYM">
+                                        <rect key="frame" x="426" y="508" width="49" height="32"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Top 10"/>
+                                    </button>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RRN-lD-NV6" secondAttribute="bottom" constant="60" id="AjE-Te-YCC"/>
+                                    <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
@@ -259,11 +275,13 @@
                             <constraint firstItem="YmM-oM-d7u" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="7po-HU-2Mr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UNW-cW-U10" secondAttribute="bottom" id="9Ug-oG-SSR"/>
                             <constraint firstItem="UNW-cW-U10" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FQI-Ra-8Qm"/>
+                            <constraint firstItem="RRN-lD-NV6" firstAttribute="centerX" secondItem="YmM-oM-d7u" secondAttribute="centerX" id="J7W-H4-UB2"/>
                             <constraint firstAttribute="trailing" secondItem="mOI-qb-v48" secondAttribute="trailing" id="K1z-c0-J23"/>
                             <constraint firstAttribute="trailing" secondItem="NNB-E0-1Yt" secondAttribute="trailing" id="NJz-Ql-VRS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mOI-qb-v48" secondAttribute="bottom" id="NgV-zt-jh6"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acS-81-b9c"/>
+                            <constraint firstItem="u8b-It-GYM" firstAttribute="centerX" secondItem="pEx-VC-pC7" secondAttribute="centerX" id="bxn-ge-M0x"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHU-1W-0tz" secondAttribute="bottom" id="e3h-34-XPW"/>
                             <constraint firstItem="pEx-VC-pC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ecE-ao-AJh"/>
                             <constraint firstItem="efH-zY-Vab" firstAttribute="leading" secondItem="629-3M-paI" secondAttribute="leading" id="huT-0M-yJa"/>

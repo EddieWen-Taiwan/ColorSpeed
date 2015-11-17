@@ -406,7 +406,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Top 10" id="hex-5Y-WGT">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wx7-zr-j49"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wx7-zr-j49">
+                                            <connections>
+                                                <action selector="dismissViewController:" destination="KhW-SH-slc" id="E7d-Gb-zzS"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

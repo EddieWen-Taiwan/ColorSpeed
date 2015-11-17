@@ -413,7 +413,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Top 10" id="Yd6-2h-ur9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2l6-4H-sNk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2l6-4H-sNk">
+                            <connections>
+                                <action selector="dismissViewController:" destination="vOg-xL-VqE" id="CSj-8G-a9g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nb0-7Z-vp9" userLabel="First Responder" sceneMemberID="firstResponder"/>

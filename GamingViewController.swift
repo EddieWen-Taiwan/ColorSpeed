@@ -13,13 +13,18 @@ class GamingViewController: UIViewController {
     @IBOutlet var startView: UIView!
     @IBOutlet var gameView: UIView!
 
+    @IBOutlet var LeftTopButton: UIButton!
+    @IBOutlet var LeftBottomButton: UIButton!
+    @IBOutlet var RightTopButton: UIButton!
+    @IBOutlet var RightBottomButton: UIButton!
+
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        self.prepareNewGame()
+        self.prepareNewGame()
     }
 
     @IBAction func gameStart(sender: AnyObject) {
@@ -36,12 +41,12 @@ class GamingViewController: UIViewController {
             return a > b
         })
 
-//        // Set text on the buttons
-//        self.textOnLeftTopBtn.text = self.colorArray[0]
-//        self.textOnLeftBottomBtn.text = self.colorArray[1]
-//        self.textOnRightTopBtn.text = self.colorArray[2]
-//        self.textOnRightBottomBtn.text = self.colorArray[3]
-//
+        // Set text on the buttons
+        self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
+        self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
+        self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
+        self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
+
 //        let greenGesture = UITapGestureRecognizer(target: self, action: "isGreen")
 //        let redGesture = UITapGestureRecognizer(target: self, action: "isRed")
 //        let blackGesture = UITapGestureRecognizer(target: self, action: "isBlack")
@@ -67,38 +72,34 @@ class GamingViewController: UIViewController {
 
     @IBAction func clickLeftTopButton(sender: AnyObject) {
         print("LeftTop")
+        self.answerColor(0)
     }
 
     @IBAction func clickLeftBottomButton(sender: AnyObject) {
         print("LeftBottom")
+        self.answerColor(1)
     }
 
     @IBAction func clickRightTopButton(sender: AnyObject) {
         print("RightTop")
+        self.answerColor(2)
     }
 
     @IBAction func clickRightBottomButton(sender: AnyObject) {
         print("RightBottom")
+        self.answerColor(3)
     }
 
-    func isGreen() {
-        //
-        print("is green")
-    }
-
-    func isRed() {
-        //
-        print("is red")
-    }
-
-    func isBlack() {
-        //
-        print("is black")
-    }
-
-    func isBlue() {
-        //
-        print("is blue")
+    func answerColor( buttonIndex: Int ) {
+        let buttonColor = self.colorArray[buttonIndex]
+print(buttonColor)
+//        switch(buttonColor) {
+//            case "green":
+//            case "blue":
+//            case "black":
+//            default:
+//            // red
+//        }
     }
 
     override func didReceiveMemoryWarning() {

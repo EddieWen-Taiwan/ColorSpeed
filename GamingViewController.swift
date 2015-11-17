@@ -18,6 +18,7 @@ class GamingViewController: UIViewController {
 
     // in effect view
     @IBOutlet var three: SpringLabel!
+    @IBOutlet var two: SpringLabel!
 
     // in game view
     @IBOutlet var LeftTopButton: UIButton!
@@ -57,7 +58,15 @@ class GamingViewController: UIViewController {
         self.startView.hidden = true
         self.effectView.hidden = false
 
-//        self.three
+        self.three.animation = "zoomOut"
+        self.three.animateToNext({
+            print("done")
+            self.two.hidden = false
+            self.two.animation = "zoomOut"
+            self.two.animateToNext({
+                print("done, too.")
+            })
+        })
 //        // Start timer
 //        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
 //

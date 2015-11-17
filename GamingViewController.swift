@@ -13,7 +13,9 @@ class GamingViewController: UIViewController {
 
     @IBOutlet var startView: UIView!
     @IBOutlet var gameView: UIView!
+    @IBOutlet var endingView: UIView!
 
+    // in game view
     @IBOutlet var LeftTopButton: UIButton!
     @IBOutlet var LeftBottomButton: UIButton!
     @IBOutlet var RightTopButton: UIButton!
@@ -23,12 +25,16 @@ class GamingViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
+    // in ending view
+    @IBOutlet var endingTimeLabel: UILabel!
+    @IBOutlet var topConstraintOfTimeLabel: NSLayoutConstraint!
+
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
     var currentSecond: Float = 0.0
     var currentColor: String!
-    let totalQuestion: Int = 20 // <-----
+    let totalQuestion: Int = 10 // <-----
     var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
@@ -100,6 +106,17 @@ class GamingViewController: UIViewController {
             // Answer is correct
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
+                // Show ending view
+                self.gameView.hidden = true
+                self.endingView.hidden = false
+
+                // TimeLabel animation
+                self.topConstraintOfTimeLabel.constant = 50
+                UIView.animateWithDuration( 1, animations: {
+                    self.endingTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
+                    self.view.layoutIfNeeded()
+                })
+
             } else {
                 // Next one
                 self.answeredQuestion++

@@ -60,11 +60,9 @@ class GamingViewController: UIViewController {
 
         self.three.animation = "zoomOut"
         self.three.animateToNext({
-            print("done")
             self.two.hidden = false
             self.two.animation = "zoomOut"
             self.two.animateToNext({
-                print("done, too.")
             })
         })
 //        // Start timer

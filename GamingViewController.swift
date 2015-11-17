@@ -86,7 +86,6 @@ print(buttonColor)
     func addTimer( timer: NSTimer ) {
         self.currentSecond += 0.1
         self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
-        print( NSString( format: "%.1f", self.currentSecond ) as String )
     }
 
     override func didReceiveMemoryWarning() {

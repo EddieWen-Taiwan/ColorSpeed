@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class GamingViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var RightBottomButton: UIButton!
     @IBOutlet var clock: UILabel!
     @IBOutlet var questionTitle: UILabel!
+    @IBOutlet var warningView: SpringView!
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -92,6 +94,14 @@ class GamingViewController: UIViewController {
             }
         } else {
             // Answer is wrong
+            self.warningView.hidden = false
+            self.warningView.duration = 0.5
+            self.warningView.force = 1
+            self.warningView.animation = "shake"
+            self.warningView.animateToNext({
+                self.warningView.animation = "fadeOut"
+                self.warningView.animateTo()
+            })
             self.currentSecond += 2.0
             self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
         }

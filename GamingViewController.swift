@@ -37,6 +37,7 @@ class GamingViewController: UIViewController {
     }
 
     func prepareNewGame() {
+
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
             let a = Int( arc4random_uniform(50) )
@@ -44,10 +45,45 @@ class GamingViewController: UIViewController {
             return a > b
         })
 
+        // Set text on the buttons
         self.textOnLeftTopBtn.text = self.colorArray[0]
         self.textOnLeftBottomBtn.text = self.colorArray[1]
         self.textOnRightTopBtn.text = self.colorArray[2]
         self.textOnRightBottomBtn.text = self.colorArray[3]
+
+        let greenGesture = UITapGestureRecognizer(target: self, action: "isGreen")
+        let redGesture = UITapGestureRecognizer(target: self, action: "isRed")
+        let blackGesture = UITapGestureRecognizer(target: self, action: "isBlack")
+        let blueGesture = UITapGestureRecognizer(target: self, action: "isBlue")
+        func returnButton( index: Int ) -> UITapGestureRecognizer {
+            switch( colorArray[index] ) {
+                case "green":
+                    return greenGesture
+                case "red":
+                    return redGesture
+                case "black":
+                    return blackGesture
+                default:
+                    return blueGesture
+            }
+        }
+
+    }
+
+    func isGreen() {
+        //
+    }
+
+    func isRed() {
+        //
+    }
+
+    func isBlack() {
+        //
+    }
+
+    func isBlue() {
+        //
     }
 
     override func didReceiveMemoryWarning() {

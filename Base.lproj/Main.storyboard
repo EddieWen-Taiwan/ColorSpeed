@@ -319,9 +319,6 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Top 10"/>
-                                        <connections>
-                                            <segue destination="KhW-SH-slc" kind="show" id="p04-8b-xQK"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -385,49 +382,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="350"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="bmS-22-DDQ">
-            <objects>
-                <viewController id="KhW-SH-slc" customClass="RankViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="opG-xZ-4z1"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ppf-vW-svH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7zb-fr-Xai">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPA-Ag-keZ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="tUA-82-Srf"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Top 10" id="hex-5Y-WGT">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Wx7-zr-j49">
-                                            <connections>
-                                                <action selector="dismissViewController:" destination="KhW-SH-slc" id="E7d-Gb-zzS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GPA-Ag-keZ" secondAttribute="trailing" id="Xw2-wK-jt7"/>
-                            <constraint firstItem="GPA-Ag-keZ" firstAttribute="top" secondItem="7zb-fr-Xai" secondAttribute="top" id="YkE-h8-iqW"/>
-                            <constraint firstItem="GPA-Ag-keZ" firstAttribute="leading" secondItem="7zb-fr-Xai" secondAttribute="leading" id="dgl-v2-kfm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="sLE-1w-wlj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JXc-rR-dLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="410" y="1171"/>
         </scene>
     </scenes>
     <resources>

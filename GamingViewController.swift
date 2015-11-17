@@ -17,6 +17,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var LeftBottomButton: UIButton!
     @IBOutlet var RightTopButton: UIButton!
     @IBOutlet var RightBottomButton: UIButton!
+    @IBOutlet var clock: UILabel!
 
     var colorTextArray: [String] = ["Red","Blue","Yellow","Black","Green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -34,7 +35,7 @@ class GamingViewController: UIViewController {
         self.gameView.hidden = false
 
         // Start timer
-        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer", userInfo: nil, repeats: true )
+        NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
     }
 
     func prepareNewGame() {
@@ -80,6 +81,12 @@ print(buttonColor)
 //            default:
 //            // red
 //        }
+    }
+
+    func addTimer( timer: NSTimer ) {
+        self.currentSecond += 0.1
+        self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
+        print( NSString( format: "%.1f", self.currentSecond ) as String )
     }
 
     override func didReceiveMemoryWarning() {

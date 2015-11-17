@@ -219,6 +219,7 @@
                         <outlet property="LeftTopButton" destination="lcK-O0-LSy" id="fRM-BN-hEQ"/>
                         <outlet property="RightBottomButton" destination="Mzr-0c-mX0" id="MeE-iF-JmQ"/>
                         <outlet property="RightTopButton" destination="5eH-ON-orz" id="jbg-yb-a9x"/>
+                        <outlet property="clock" destination="629-3M-paI" id="d2o-MG-i5z"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                     </connections>

@@ -37,6 +37,12 @@ class GamingViewController: UIViewController {
         self.prepareNewGame()
     }
 
+
+
+
+    // *************
+    // Start View
+
     @IBAction func gameStart(sender: AnyObject) {
         self.startView.hidden = true
         self.gameView.hidden = false
@@ -64,6 +70,12 @@ class GamingViewController: UIViewController {
         self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
 
     }
+
+
+
+
+    // *************
+    // Game View
 
     @IBAction func clickLeftTopButton(sender: AnyObject) {
         self.answerColor(0)

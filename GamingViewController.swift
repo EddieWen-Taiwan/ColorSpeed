@@ -97,7 +97,7 @@ class GamingViewController: UIViewController {
         self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
         self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
         self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
-g
+
         // First question
         self.updateQuestion()
     }

@@ -37,6 +37,9 @@ class GamingViewController: UIViewController {
 
         // Start timer
         NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+
+        // First question
+        self.updateQuestion()
     }
 
     func prepareNewGame() {
@@ -90,7 +93,7 @@ print(buttonColor)
     }
 
     func updateQuestion() {
-        
+        self.questionTitle.text = self.colorArray.randomItem()
     }
 
     override func didReceiveMemoryWarning() {

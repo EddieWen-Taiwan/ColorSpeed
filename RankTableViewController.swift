@@ -14,6 +14,7 @@ class RankTableViewController: UITableViewController {
     var rankJSON: JSON!
     var dataLoaded: Bool = false
     let reachability = Reachability()
+    let userP = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +51,7 @@ class RankTableViewController: UITableViewController {
                 self.tableView.reloadData()
 
                 // Save to UserPreference
-                let userP = NSUserDefaults.standardUserDefaults()
-                userP.setValue( NSString(data: response!, encoding: NSUTF8StringEncoding), forKey: "json")
+                self.userP.setValue( NSString(data: response!, encoding: NSUTF8StringEncoding), forKey: "json")
                 self.saveCurrentTime()
             }
 
@@ -70,8 +70,7 @@ class RankTableViewController: UITableViewController {
         let currentTime = dateFormatter.stringFromDate( NSDate() )
 
         // Save to UserPreference
-        let userP = NSUserDefaults.standardUserDefaults()
-        userP.setValue( currentTime, forKey: "time" )
+        self.userP.setValue( currentTime, forKey: "time" )
 
     }
 

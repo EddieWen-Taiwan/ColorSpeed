@@ -44,11 +44,6 @@ class RankTableViewController: UITableViewController {
         getJsonTask.resume()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -133,5 +128,10 @@ class RankTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }

@@ -107,13 +107,13 @@ class GamingViewController: UIViewController {
                     self.gameView.hidden = false
                     // Start timer
                     NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
-                    self.initCountdownNumbers()
+                    self.initEffectTransform()
                 })
             })
         })
     }
 
-    func initCountdownNumbers() {
+    func initEffectTransform() {
         self.three.transform = CGAffineTransformIdentity
         self.two.hidden = true
         self.two.transform = CGAffineTransformIdentity

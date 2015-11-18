@@ -49,6 +49,7 @@ class RankTableViewController: UITableViewController {
         checkNewData.resume()
     }
 
+    // Update local rank JSON in UserPreference
     func updateLocalRank() {
 
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/read.php" )!)
@@ -72,6 +73,7 @@ class RankTableViewController: UITableViewController {
 
     }
 
+    // Save current time to UserPreference when download rank JSON from server
     func saveCurrentTime() {
 
         let dateFormatter = NSDateFormatter()

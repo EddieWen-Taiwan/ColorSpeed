@@ -30,16 +30,23 @@ class RankTableViewController: UITableViewController {
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/anythingNew.php" )!)
         httpRequest.HTTPMethod = "POST"
 
-        let postString = ""
+        let postString = "time=\(self.userP.stringForKey("time"))"
         httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+        let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
             if error == nil {
+                let status = JSON( data: response! )
+                if status["new"] {
+                    // Download new ranl data from server
+                    self.updateLocalRank()
+                } else {
+                    
+                }
             }
 
         }
-        getJsonTask.resume()
+        checkNewData.resume()
     }
 
     func updateLocalRank() {

@@ -454,7 +454,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="time" destination="5CJ-3R-Fcz" id="ev6-AS-ujr"/>
-                                    <outlet property="userSticker" destination="89Q-OW-cDy" id="X1N-Nv-C0b"/>
+                                    <outlet property="userSticker" destination="BuU-cW-7pg" id="5nb-vw-nB0"/>
                                     <outlet property="username" destination="TWI-aK-E2J" id="Oat-vz-bLy"/>
                                 </connections>
                             </tableViewCell>

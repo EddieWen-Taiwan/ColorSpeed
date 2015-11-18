@@ -32,7 +32,12 @@ class RankTableViewController: UITableViewController {
             if error == nil {
                 self.dataLoaded = true
                 self.rankJSON = JSON( data: response! )
+
                 self.tableView.reloadData()
+
+                // Save to UserPreference
+                let userP = NSUserDefaults.standardUserDefaults()
+                userP.setValue( NSString(data: response!, encoding: NSUTF8StringEncoding), forKey: "json")
             }
 
         }

@@ -26,15 +26,15 @@ class RankTableViewController: UITableViewController {
         self.tableView.rowHeight = 70
         
         // Check should I download new rank data
-//        let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/..." )!)
-//        httpRequest.HTTPMethod = "GET"
-//        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
-//
-//            if error == nil {
-//            }
-//
-//        }
-//        getJsonTask.resume()
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/anythingNew.php" )!)
+        httpRequest.HTTPMethod = "POST"
+        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+
+            if error == nil {
+            }
+
+        }
+        getJsonTask.resume()
     }
 
     func updateLocalRank() {

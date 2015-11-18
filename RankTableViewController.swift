@@ -24,6 +24,9 @@ class RankTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.rowHeight = 70
+    }
+
+    func updateLocalRank() {
 
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/read.php" )!)
         httpRequest.HTTPMethod = "GET"
@@ -41,7 +44,9 @@ class RankTableViewController: UITableViewController {
             }
 
         }
+
         getJsonTask.resume()
+
     }
 
     // MARK: - Table view data source

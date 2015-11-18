@@ -119,6 +119,10 @@ class GamingViewController: UIViewController {
         self.two.transform = CGAffineTransformIdentity
         self.one.hidden = true
         self.one.transform = CGAffineTransformIdentity
+
+        self.endingTimeLabel.transform = CGAffineTransformIdentity
+        self.topConstraintOfTimeLabel.constant = 0
+        self.view.layoutIfNeeded()
     }
 
 

@@ -184,8 +184,7 @@ class GamingViewController: UIViewController {
                 self.warningView.animate()
                 UIView.animateWithDuration( 0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                     self.warningView.alpha = 0
-                }, completion: { finish in
-                })
+                }, completion: { finish in })
             })
 
             // Plus 2 seconds animation

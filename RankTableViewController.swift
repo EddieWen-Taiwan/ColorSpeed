@@ -19,6 +19,18 @@ class RankTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.rowHeight = 70
+
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/read.php" )!)
+        httpRequest.HTTPMethod = "GET"
+        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+
+            if error == nil {
+                let resp = NSString(data: response!, encoding: NSUTF8StringEncoding)
+                print(resp)
+            }
+
+        }
+        getJsonTask.resume()
     }
 
     override func didReceiveMemoryWarning() {

@@ -29,6 +29,10 @@ class RankTableViewController: UITableViewController {
         // Check should I download new rank data
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/anythingNew.php" )!)
         httpRequest.HTTPMethod = "POST"
+
+        let postString = ""
+        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+
         let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
             if error == nil {

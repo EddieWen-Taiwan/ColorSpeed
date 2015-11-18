@@ -19,6 +19,10 @@ class RankTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let rankData = self.userP.stringForKey("json") {
+            self.isDataExisted = true
+            self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

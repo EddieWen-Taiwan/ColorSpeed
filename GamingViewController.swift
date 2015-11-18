@@ -38,9 +38,10 @@ class GamingViewController: UIViewController {
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
+    var timer = NSTimer()
     var currentSecond: Float = 0.0
     var currentColor: String!
-    let totalQuestion: Int = 10 // <-----
+    let totalQuestion: Int = 5 // <-----
     var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
@@ -106,7 +107,7 @@ class GamingViewController: UIViewController {
                     self.effectView.hidden = true
                     self.gameView.hidden = false
                     // Start timer
-                    NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
                     self.initEffectTransform()
                 })
             })
@@ -154,6 +155,7 @@ class GamingViewController: UIViewController {
             // Answer is correct
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
+                self.timer.invalidate()
                 self.endingTimeLabel.text = self.clock.text
                 // Show ending view
                 self.gameView.hidden = true

@@ -64,10 +64,12 @@ class RankTableViewController: UITableViewController {
 
             cell.username.text = self.rankJSON[indexPath.row]["user"].string
             cell.time.text = self.rankJSON[indexPath.row]["time"].string
-            let url = NSURL(string: "http://graph.facebook.com/\(self.rankJSON[indexPath.row]["fb_id"].string)/picture?type=small")!
-            self.reachability.getImageFromUrl( url, completion: { (data, response, error) in
-
-            })
+            if let fbid = self.rankJSON[indexPath.row]["fb_id"].string {
+                let url = NSURL(string: "http://graph.facebook.com/\(fbid)/picture?type=small")!
+                self.reachability.getImageFromUrl( url, completion: { (data, response, error) in
+                    cell.userSticker.image = UIImage(data: data!)
+                })
+            }
 
         }
 

@@ -67,7 +67,11 @@ class RankTableViewController: UITableViewController {
             if let fbid = self.rankJSON[indexPath.row]["fb_id"].string {
                 let url = NSURL(string: "http://graph.facebook.com/\(fbid)/picture?type=small")!
                 self.reachability.getImageFromUrl( url, completion: { (data, response, error) in
-                    cell.userSticker.image = UIImage(data: data!)
+                    if data != nil {
+                        dispatch_async( dispatch_get_main_queue(), {
+                            cell.userSticker.image = UIImage(data: data!)
+                        })
+                    }
                 })
             }
 

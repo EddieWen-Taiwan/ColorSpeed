@@ -13,6 +13,7 @@ class RankTableViewController: UITableViewController {
 
     var rankJSON: JSON!
     var dataLoaded: Bool = false
+    let reachability = Reachability()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +61,14 @@ class RankTableViewController: UITableViewController {
 
         // Configure the cell...
         if self.dataLoaded {
+
             cell.username.text = self.rankJSON[indexPath.row]["user"].string
             cell.time.text = self.rankJSON[indexPath.row]["time"].string
+            let url = NSURL(string: "http://graph.facebook.com/\(self.rankJSON[indexPath.row]["fb_id"].string)/picture?type=small")!
+            self.reachability.getImageFromUrl( url, completion: { (data, response, error) in
+
+            })
+
         }
 
         return cell

@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class RankTableViewController: UITableViewController {
+
+    var rankJSON: JSON!
+    var dataLoaded: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +29,9 @@ class RankTableViewController: UITableViewController {
         let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
             if error == nil {
-                let resp = NSString(data: response!, encoding: NSUTF8StringEncoding)
-                print(resp)
+                self.dataLoaded = true
+                self.rankJSON = JSON( data: response! )
+                self.tableView.reloadData()
             }
 
         }
@@ -51,9 +56,13 @@ class RankTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! RankTableViewCell
 
         // Configure the cell...
+        if self.dataLoaded {
+            cell.username.text = self.rankJSON[indexPath.row]["user"].string
+            cell.time.text = self.rankJSON[indexPath.row]["time"].string
+        }
 
         return cell
     }

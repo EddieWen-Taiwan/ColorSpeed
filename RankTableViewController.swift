@@ -12,7 +12,7 @@ import SwiftyJSON
 class RankTableViewController: UITableViewController {
 
     var rankJSON: JSON!
-    var dataLoaded: Bool = false
+    var isDataExisted: Bool = false
     let reachability = Reachability()
     let userP = NSUserDefaults.standardUserDefaults()
 
@@ -40,8 +40,6 @@ class RankTableViewController: UITableViewController {
                 if status["new"] {
                     // Download new ranl data from server
                     self.updateLocalRank()
-                } else {
-                    
                 }
             }
 
@@ -57,7 +55,7 @@ class RankTableViewController: UITableViewController {
         let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
             if error == nil {
-                self.dataLoaded = true
+                self.isDataExisted = true
                 self.rankJSON = JSON( data: response! )
 
                 self.tableView.reloadData()
@@ -103,7 +101,7 @@ class RankTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! RankTableViewCell
 
         // Configure the cell...
-        if self.dataLoaded {
+        if self.isDataExisted {
 
             cell.username.text = self.rankJSON[indexPath.row]["user"].string
             cell.time.text = self.rankJSON[indexPath.row]["time"].string

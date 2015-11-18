@@ -52,11 +52,26 @@ class RankTableViewController: UITableViewController {
                 // Save to UserPreference
                 let userP = NSUserDefaults.standardUserDefaults()
                 userP.setValue( NSString(data: response!, encoding: NSUTF8StringEncoding), forKey: "json")
+                self.saveCurrentTime()
             }
 
         }
 
         getJsonTask.resume()
+
+    }
+
+    func saveCurrentTime() {
+
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+
+        let currentTime = dateFormatter.stringFromDate( NSDate() )
+
+        // Save to UserPreference
+        let userP = NSUserDefaults.standardUserDefaults()
+        userP.setValue( currentTime, forKey: "time" )
 
     }
 

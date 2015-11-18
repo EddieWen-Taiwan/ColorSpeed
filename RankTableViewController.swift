@@ -51,7 +51,7 @@ class RankTableViewController: UITableViewController {
             }
             checkNewData.resume()
         } else {
-            // There is no rank data in local≥
+            // There is no rank data in local
             self.updateLocalRank()
         }
     }

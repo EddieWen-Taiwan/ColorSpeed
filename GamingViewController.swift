@@ -270,9 +270,9 @@ class GamingViewController: UIViewController {
                 let status = JSON( data: response! )
                 if status["better"] {
                     // Download new ranl data from server
-                    self.newTimeRecordLabel.text = self.clock.text
                     self.newRank = status["rank"].int!
                     dispatch_async( dispatch_get_main_queue(), {
+                        self.newTimeRecordLabel.text = self.clock.text
                         self.breakView.hidden = false
                     })
                 }

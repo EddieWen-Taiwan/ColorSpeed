@@ -257,13 +257,17 @@ class GamingViewController: UIViewController {
                 let status = JSON( data: response! )
                 if status["better"] {
                     // Download new ranl data from server
-                    //
+                    self.recordBreaking( status["rank"] )
                 }
             }
 
         }
         checkNewData.resume()
 
+    }
+
+    func recordBreaking( newRank: Int ) {
+        
     }
 
     override func didReceiveMemoryWarning() {

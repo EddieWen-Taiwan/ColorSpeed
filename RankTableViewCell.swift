@@ -14,6 +14,7 @@ class RankTableViewCell: UITableViewCell {
     @IBOutlet var userSticker: UIImageView!
     @IBOutlet var username: UILabel!
     @IBOutlet var time: UILabel!
+    @IBOutlet var markView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -563,13 +563,24 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJk-wV-44o">
+                                            <rect key="frame" x="0.0" y="0.0" width="10" height="69"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="10" id="iCX-fU-fAf"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstItem="iJk-wV-44o" firstAttribute="top" secondItem="89Q-OW-cDy" secondAttribute="top" id="18u-6g-82O"/>
                                         <constraint firstItem="5CJ-3R-Fcz" firstAttribute="leading" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="20" id="3Mf-9O-MsP"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="80" id="4D0-tI-Jtd"/>
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GFb-5K-Pbe"/>
                                         <constraint firstItem="5CJ-3R-Fcz" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GNk-fv-O59"/>
+                                        <constraint firstAttribute="bottom" secondItem="iJk-wV-44o" secondAttribute="bottom" id="JNB-Wb-x3j"/>
+                                        <constraint firstItem="iJk-wV-44o" firstAttribute="leading" secondItem="89Q-OW-cDy" secondAttribute="leading" id="M9Z-ov-qKD"/>
                                         <constraint firstAttribute="trailing" secondItem="rEs-sj-Z1v" secondAttribute="trailing" constant="16" id="RoN-a3-GmE"/>
                                         <constraint firstItem="rEs-sj-Z1v" firstAttribute="leading" secondItem="5CJ-3R-Fcz" secondAttribute="trailing" constant="1" id="cKw-Rr-pj3"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="gDg-AA-r8t"/>
@@ -586,6 +597,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="cellView" destination="89Q-OW-cDy" id="nyw-hG-OMG"/>
+                                    <outlet property="markView" destination="iJk-wV-44o" id="dYp-Q6-NZN"/>
                                     <outlet property="time" destination="5CJ-3R-Fcz" id="ev6-AS-ujr"/>
                                     <outlet property="userSticker" destination="BuU-cW-7pg" id="5nb-vw-nB0"/>
                                     <outlet property="username" destination="TWI-aK-E2J" id="Oat-vz-bLy"/>

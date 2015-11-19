@@ -8,6 +8,7 @@
 
 import UIKit
 import Spring
+import SwiftyJSON
 
 class GamingViewController: UIViewController {
 
@@ -257,7 +258,7 @@ class GamingViewController: UIViewController {
                 let status = JSON( data: response! )
                 if status["better"] {
                     // Download new ranl data from server
-                    self.recordBreaking( status["rank"] )
+                    self.recordBreaking( status["rank"].int! )
                 }
             }
 

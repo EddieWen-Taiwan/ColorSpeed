@@ -11,7 +11,7 @@ import Spring
 import SwiftyJSON
 import FBSDKLoginKit
 
-class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
+class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
 
     @IBOutlet var startView: UIView!
     @IBOutlet var effectView: UIView!
@@ -67,6 +67,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.nameTextField.text = username
         }
 
+        self.nameTextField.delegate = self
         // Add Facebook login button
         self.view.layoutIfNeeded()
 
@@ -313,6 +314,11 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     // *************
     // Break View
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     @IBAction func pressSendButton(sender: AnyObject) {
 

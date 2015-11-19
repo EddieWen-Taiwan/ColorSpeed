@@ -390,6 +390,9 @@
                                             <constraint firstAttribute="width" constant="200" id="Ptg-ES-GtS"/>
                                         </constraints>
                                         <state key="normal" title="I'm the same user"/>
+                                        <connections>
+                                            <action selector="loginAsSameUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uO6-Ea-hg2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -485,6 +488,7 @@
                         <outlet property="one" destination="ebt-Ep-hUP" id="1Qf-VN-zMu"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
+                        <outlet property="sameUserButton" destination="6f5-Is-R54" id="4Zz-7o-YkD"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                         <outlet property="three" destination="kt0-g4-ptA" id="PfM-QX-oCg"/>
                         <outlet property="topConstraintOfTimeLabel" destination="vdq-2r-7cf" id="fv8-7G-qa4"/>

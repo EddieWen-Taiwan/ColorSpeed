@@ -42,6 +42,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var newTimeRecordLabel: UILabel!
     @IBOutlet var FBLoginView: UIView!
+    @IBOutlet var sameUserButton: UIButton!
 
     let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
@@ -345,6 +346,8 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     }
 
+    @IBAction func loginAsSameUser(sender: AnyObject) {
+    }
 
 
 

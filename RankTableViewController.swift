@@ -34,29 +34,38 @@ class RankTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.rowHeight = 70
         
-        // Check should I download new rank data
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkNew )!)
-        httpRequest.HTTPMethod = "POST"
+        if reachability.isConnectedToNetwork() {
+            // Check should I download new rank data
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkNew )!)
+            httpRequest.HTTPMethod = "POST"
 
-        if let time = self.userP.stringForKey("time") {
-            let postString = "time=\(time)"
-            httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            if let time = self.userP.stringForKey("time") {
+                let postString = "time=\(time)"
+                httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
-                if error == nil {
-                    let status = JSON( data: response! )
-                    if status["new"] {
-                        // Download new ranl data from server
+                    if error == nil {
+                        let status = JSON( data: response! )
+                        if status["new"] {
+                            // Download new ranl data from server
                         self.updateLocalRank()
+                        }
                     }
-                }
 
+                }
+                checkNewData.resume()
+            } else {
+                // There is no rank data in local
+                self.updateLocalRank()
             }
-            checkNewData.resume()
         } else {
-            // There is no rank data in local
-            self.updateLocalRank()
+            self.isDataExisted = false
+
+            let alertController = UIAlertController(title: "No Netwrok", message: "Please check you newtwork connection and try again.", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(okAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
 
     }

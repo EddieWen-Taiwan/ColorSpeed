@@ -35,6 +35,8 @@ class GamingViewController: UIViewController {
     @IBOutlet var endingTimeLabel: UILabel!
     @IBOutlet var topConstraintOfTimeLabel: NSLayoutConstraint!
 
+    let serverTalker = ServerTalker()
+
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
@@ -242,7 +244,26 @@ class GamingViewController: UIViewController {
     }
 
     func checkRank() {
-        
+
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.checkTimeInLastRow )!)
+        httpRequest.HTTPMethod = "POST"
+
+        let postString = "time=\(self.currentSecond)"
+        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+
+        let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+
+            if error == nil {
+                let status = JSON( data: response! )
+                if status["better"] {
+                    // Download new ranl data from server
+                    //
+                }
+            }
+
+        }
+        checkNewData.resume()
+
     }
 
     override func didReceiveMemoryWarning() {

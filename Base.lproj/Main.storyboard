@@ -330,7 +330,7 @@
                                     <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="30" width="560" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">

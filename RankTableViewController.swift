@@ -14,6 +14,7 @@ class RankTableViewController: UITableViewController {
     var rankJSON: JSON!
     var isDataExisted: Bool = false
     let reachability = Reachability()
+    let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class RankTableViewController: UITableViewController {
         self.tableView.rowHeight = 70
         
         // Check should I download new rank data
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/anythingNew.php" )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.checkNew )!)
         httpRequest.HTTPMethod = "POST"
 
         if let time = self.userP.stringForKey("time") {
@@ -59,7 +60,7 @@ class RankTableViewController: UITableViewController {
     // Update local rank JSON in UserPreference
     func updateLocalRank() {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: "http://eddiewen.me/colorspeed/backend/read.php" )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.readAllData )!)
         httpRequest.HTTPMethod = "GET"
         let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 

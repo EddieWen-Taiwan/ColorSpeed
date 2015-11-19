@@ -357,6 +357,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
             // Process error
         } else if result.isCancelled {
             // Handle cancellations
+            print("cancel")
         } else {
             // Navigate to other view
 
@@ -364,9 +365,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
             graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
 
                 if error == nil {
-                    if let FBID = result.objectForKey("id") {
-
-                    }
+                    let FBID = result.objectForKey("id") as! String
+                    let name = result.objectForKey("name") as! String
+                    self.sendUpdateRequest( name, fbid: FBID )
                 }
 
             }) // --- graphRequest

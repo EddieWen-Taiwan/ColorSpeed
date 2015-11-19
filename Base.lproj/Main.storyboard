@@ -449,7 +449,7 @@
                         <outlet property="LeftTopButton" destination="lcK-O0-LSy" id="fRM-BN-hEQ"/>
                         <outlet property="RightBottomButton" destination="Mzr-0c-mX0" id="MeE-iF-JmQ"/>
                         <outlet property="RightTopButton" destination="5eH-ON-orz" id="jbg-yb-a9x"/>
-                        <outlet property="breakView" destination="VOd-d2-4w3" id="d3x-b7-Mdd"/>
+                        <outlet property="breakView" destination="VOd-d2-4w3" id="fmk-fq-mAg"/>
                         <outlet property="clock" destination="629-3M-paI" id="d2o-MG-i5z"/>
                         <outlet property="effectView" destination="fUR-vc-x3p" id="hOh-iv-6ns"/>
                         <outlet property="endingTimeLabel" destination="efH-zY-Vab" id="ZJu-Fm-iM1"/>

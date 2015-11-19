@@ -16,7 +16,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var effectView: UIView!
     @IBOutlet var gameView: UIView!
     @IBOutlet var endingView: UIView!
-    @IBOutlet var breakView: UIView!
+    @IBOutlet var breakView: SpringView!
 
     // in effect view
     @IBOutlet var three: SpringLabel!
@@ -310,6 +310,7 @@ class GamingViewController: UIViewController {
         
         // Hide this BreakView
         self.breakView.hidden = true
+
 
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -368,6 +368,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     @IBAction func loginAsSameUser(sender: AnyObject) {
+        let fbid = self.userP.stringForKey("fb_id")!
+        let name = self.userP.stringForKey("fb_name")!
+
+        self.sendUpdateRequest(name, fbid: fbid)
     }
 
 

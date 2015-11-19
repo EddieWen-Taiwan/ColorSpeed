@@ -308,10 +308,16 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
             name = ">__<"
         }
 
+        self.sendUpdateRequest( name )
+
+    }
+
+    func sendUpdateRequest( username: String, fbid: String = "" ) {
+
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
         httpRequest.HTTPMethod = "POST"
 
-        let postString = "name=\(name)&time=\(self.currentSecond)&rank=\(self.newRank)"
+        let postString = "name=\(username)&time=\(self.currentSecond)&rank=\(self.newRank)"
         httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
         let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
@@ -322,7 +328,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
 
         }
         updateData.resume()
-        
+
         // Hide this BreakView
         self.breakView.hidden = true
 

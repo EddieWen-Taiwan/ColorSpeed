@@ -9,6 +9,7 @@
 import UIKit
 import Spring
 import SwiftyJSON
+import FBSDKLoginKit
 
 class GamingViewController: UIViewController {
 

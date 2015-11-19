@@ -53,7 +53,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     var timer = NSTimer()
     var currentSecond: Float = 0.0
     var currentColor: String!
-    let totalQuestion: Int = 5 // <-----
+    let totalQuestion: Int = 20 // <-----
     var answeredQuestion: Int = 0
     var newRank: Int = 0
 

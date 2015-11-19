@@ -371,7 +371,7 @@
                                         </constraints>
                                         <state key="normal" title="SEND"/>
                                         <connections>
-                                            <action selector="sendUpdateRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk2-Q0-wRr"/>
+                                            <action selector="pressSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIB-Pc-CWX"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqc-3D-cc4">
@@ -458,6 +458,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="FBLoginView" destination="zqc-3D-cc4" id="g1r-2y-pSd"/>
                         <outlet property="LeftBottomButton" destination="t68-Vr-IJ7" id="HoU-KZ-Whs"/>
                         <outlet property="LeftTopButton" destination="lcK-O0-LSy" id="fRM-BN-hEQ"/>
                         <outlet property="RightBottomButton" destination="Mzr-0c-mX0" id="MeE-iF-JmQ"/>

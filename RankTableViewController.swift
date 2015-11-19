@@ -18,6 +18,7 @@ class RankTableViewController: UITableViewController {
     let userP = NSUserDefaults.standardUserDefaults()
 
     var newDataRow: Int = 0
+    var forceUpdate: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ class RankTableViewController: UITableViewController {
 
                     if error == nil {
                         let status = JSON( data: response! )
-                        if status["new"] {
+                        if status["new"] || self.forceUpdate {
                             // Download new ranl data from server
                             self.updateLocalRank()
                         }

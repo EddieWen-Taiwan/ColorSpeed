@@ -286,6 +286,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
                         self.newRank = status["rank"].int!
                         dispatch_async( dispatch_get_main_queue(), {
                             self.newTimeRecordLabel.text = self.clock.text
+                            // Show break view
                             self.breakView.hidden = false
                             self.breakView.animation = "pop"
                             self.breakView.animate()
@@ -298,6 +299,12 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
 
     }
+
+
+
+
+    // *************
+    // Break View
 
     @IBAction func pressSendButton(sender: AnyObject) {
 

@@ -258,30 +258,32 @@ class GamingViewController: UIViewController {
 
     func checkRank() {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
-        httpRequest.HTTPMethod = "POST"
+        if Reachability().isConnectedToNetwork() {
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
+            httpRequest.HTTPMethod = "POST"
 
-        let postString = "time=\(self.currentSecond)"
-        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            let postString = "time=\(self.currentSecond)"
+            httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-        let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
-            if error == nil {
-                let status = JSON( data: response! )
-                if status["better"] {
-                    // Download new ranl data from server
-                    self.newRank = status["rank"].int!
-                    dispatch_async( dispatch_get_main_queue(), {
-                        self.newTimeRecordLabel.text = self.clock.text
-                        self.breakView.hidden = false
-                        self.breakView.animation = "pop"
-                        self.breakView.animate()
-                    })
+                if error == nil {
+                    let status = JSON( data: response! )
+                    if status["better"] {
+                        // Download new ranl data from server
+                        self.newRank = status["rank"].int!
+                        dispatch_async( dispatch_get_main_queue(), {
+                            self.newTimeRecordLabel.text = self.clock.text
+                            self.breakView.hidden = false
+                            self.breakView.animation = "pop"
+                            self.breakView.animate()
+                        })
+                    }
                 }
-            }
 
+            }
+            checkNewData.resume()
         }
-        checkNewData.resume()
 
     }
 

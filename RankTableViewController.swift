@@ -127,6 +127,10 @@ class RankTableViewController: UITableViewController {
                         })
                     }
                 })
+            } else {
+                if cell.userSticker.image != UIImage(named: "defaultUser") {
+                    cell.userSticker.image = UIImage(named: "defaultUser")
+                }
             }
 
             // Set background-color

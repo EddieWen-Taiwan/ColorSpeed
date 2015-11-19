@@ -314,6 +314,7 @@ class GamingViewController: UIViewController {
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
+        rankViewController.newDataRow = self.newRank
         let navigationController = UINavigationController(rootViewController: rankViewController)
         self.presentViewController(navigationController, animated: true, completion: nil)
 

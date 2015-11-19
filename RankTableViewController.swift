@@ -17,6 +17,8 @@ class RankTableViewController: UITableViewController {
     let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
 
+    var newDataRow: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,6 +57,7 @@ class RankTableViewController: UITableViewController {
             // There is no rank data in local
             self.updateLocalRank()
         }
+
     }
 
     // Update local rank JSON in UserPreference

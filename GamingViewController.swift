@@ -267,6 +267,7 @@ class GamingViewController: UIViewController {
 
             if error == nil {
                 let status = JSON( data: response! )
+                print(status)
                 if status["better"] {
                     // Download new ranl data from server
                     self.newRank = status["rank"].int!
@@ -295,6 +296,7 @@ class GamingViewController: UIViewController {
         let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 
             if error == nil {
+                print( JSON(data: response!) )
             }
 
         }

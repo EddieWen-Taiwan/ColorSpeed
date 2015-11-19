@@ -274,6 +274,8 @@ class GamingViewController: UIViewController {
                     dispatch_async( dispatch_get_main_queue(), {
                         self.newTimeRecordLabel.text = self.clock.text
                         self.breakView.hidden = false
+                        self.breakView.animation = "pop"
+                        self.breakView.animate()
                     })
                 }
             }
@@ -310,7 +312,6 @@ class GamingViewController: UIViewController {
         
         // Hide this BreakView
         self.breakView.hidden = true
-
 
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -287,6 +287,11 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
                         dispatch_async( dispatch_get_main_queue(), {
                             self.newTimeRecordLabel.text = self.clock.text
                             // Show break view
+                            if FBSDKAccessToken.currentAccessToken() == nil {
+                                self.sameUserButton.hidden = true
+                            } else {
+                                self.sameUserButton.hidden = false
+                            }
                             self.breakView.hidden = false
                             self.breakView.animation = "pop"
                             self.breakView.animate()

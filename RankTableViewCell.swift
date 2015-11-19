@@ -10,6 +10,7 @@ import UIKit
 
 class RankTableViewCell: UITableViewCell {
 
+    @IBOutlet var cellView: UIView!
     @IBOutlet var userSticker: UIImageView!
     @IBOutlet var username: UILabel!
     @IBOutlet var time: UILabel!

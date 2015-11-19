@@ -532,6 +532,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="cellView" destination="89Q-OW-cDy" id="nyw-hG-OMG"/>
                                     <outlet property="time" destination="5CJ-3R-Fcz" id="ev6-AS-ujr"/>
                                     <outlet property="userSticker" destination="BuU-cW-7pg" id="5nb-vw-nB0"/>
                                     <outlet property="username" destination="TWI-aK-E2J" id="Oat-vz-bLy"/>

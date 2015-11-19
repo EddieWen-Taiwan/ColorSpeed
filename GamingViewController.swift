@@ -267,11 +267,12 @@ class GamingViewController: UIViewController {
 
             if error == nil {
                 let status = JSON( data: response! )
-                print(status)
                 if status["better"] {
                     // Download new ranl data from server
                     self.newRank = status["rank"].int!
-                    self.breakView.hidden = false
+                    dispatch_async( dispatch_get_main_queue(), {
+                        self.breakView.hidden = false
+                    })
                 }
             }
 

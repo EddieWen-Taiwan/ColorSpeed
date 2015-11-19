@@ -67,7 +67,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
 
         // Add Facebook login button
-//        self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded()
 
         let loginView = FBSDKLoginButton()
         self.FBLoginView.addSubview( loginView )

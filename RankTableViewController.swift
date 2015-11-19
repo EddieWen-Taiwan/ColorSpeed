@@ -26,6 +26,7 @@ class RankTableViewController: UITableViewController {
             self.isDataExisted = true
             self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )
         }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -119,7 +120,7 @@ class RankTableViewController: UITableViewController {
             cell.username.text = self.rankJSON[indexPath.row]["user"].string
             cell.time.text = self.rankJSON[indexPath.row]["time"].string
             if let fbid = self.rankJSON[indexPath.row]["fb_id"].string {
-                let url = NSURL(string: "http://graph.facebook.com/\(fbid)/picture?type=small")!
+                let url = NSURL(string: "http://graph.facebook.com/\(fbid)/picture?type=normal")!
                 self.reachability.getImageFromUrl( url, completion: { (data, response, error) in
                     if data != nil {
                         dispatch_async( dispatch_get_main_queue(), {

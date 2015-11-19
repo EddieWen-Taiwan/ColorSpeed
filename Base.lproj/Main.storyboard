@@ -357,6 +357,9 @@
                                             <constraint firstAttribute="height" constant="40" id="lwV-tz-h8N"/>
                                         </constraints>
                                         <state key="normal" title="SEND"/>
+                                        <connections>
+                                            <action selector="sendUpdateRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bk2-Q0-wRr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>

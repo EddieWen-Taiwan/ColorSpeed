@@ -291,6 +291,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
                                 self.sameUserButton.hidden = true
                             } else {
                                 self.sameUserButton.hidden = false
+                                if let username = self.userP.stringForKey("fb_name") {
+                                    self.sameUserButton.setTitle("Yes, I'm \(username)", forState: .Normal)
+                                }
                             }
                             self.breakView.hidden = false
                             self.breakView.animation = "pop"

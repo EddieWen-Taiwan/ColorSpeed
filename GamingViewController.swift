@@ -245,7 +245,7 @@ class GamingViewController: UIViewController {
 
     func checkRank() {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.checkTimeInLastRow )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
         httpRequest.HTTPMethod = "POST"
 
         let postString = "time=\(self.currentSecond)"

@@ -330,7 +330,7 @@
                                     <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView">
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView">
                                 <rect key="frame" x="20" y="20" width="560" height="550"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
@@ -417,11 +417,13 @@
                         <outlet property="LeftTopButton" destination="lcK-O0-LSy" id="fRM-BN-hEQ"/>
                         <outlet property="RightBottomButton" destination="Mzr-0c-mX0" id="MeE-iF-JmQ"/>
                         <outlet property="RightTopButton" destination="5eH-ON-orz" id="jbg-yb-a9x"/>
+                        <outlet property="breakView" destination="VOd-d2-4w3" id="d3x-b7-Mdd"/>
                         <outlet property="clock" destination="629-3M-paI" id="d2o-MG-i5z"/>
                         <outlet property="effectView" destination="fUR-vc-x3p" id="hOh-iv-6ns"/>
                         <outlet property="endingTimeLabel" destination="efH-zY-Vab" id="ZJu-Fm-iM1"/>
                         <outlet property="endingView" destination="mOI-qb-v48" id="L1H-hf-hQ7"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
+                        <outlet property="nameTextField" destination="cWJ-1J-Cjf" id="Ugh-v1-oHn"/>
                         <outlet property="one" destination="ebt-Ep-hUP" id="1Qf-VN-zMu"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>

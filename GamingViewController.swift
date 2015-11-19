@@ -16,6 +16,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var effectView: UIView!
     @IBOutlet var gameView: UIView!
     @IBOutlet var endingView: UIView!
+    @IBOutlet var breakView: UIView!
 
     // in effect view
     @IBOutlet var three: SpringLabel!
@@ -35,6 +36,9 @@ class GamingViewController: UIViewController {
     // in ending view
     @IBOutlet var endingTimeLabel: UILabel!
     @IBOutlet var topConstraintOfTimeLabel: NSLayoutConstraint!
+
+    // in break view
+    @IBOutlet var nameTextField: UITextField!
 
     let serverTalker = ServerTalker()
 

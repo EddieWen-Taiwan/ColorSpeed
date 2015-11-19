@@ -145,7 +145,7 @@ class RankTableViewController: UITableViewController {
             }
 
             // Set background-color
-            cell.cellView.backgroundColor = self.newDataRow == indexPath.row+1 ? UIColor(red: 255/255, green: 193/255, blue: 7/255, alpha: 1) : .whiteColor()
+            cell.markView.hidden = self.newDataRow == indexPath.row+1 ? false : true
 
         }
 

@@ -146,7 +146,7 @@ class RankTableViewController: UITableViewController {
 
             // Set background-color
             if self.newDataRow == indexPath.row+1 {
-                cell.cellView.backgroundColor = UIColor(red: 255/255, green: 139/255, blue: 0/255, alpha: 1)
+                cell.cellView.backgroundColor = UIColor(red: 255/255, green: 193/255, blue: 7/255, alpha: 1)
             }
 
         }

@@ -49,7 +49,7 @@ class RankTableViewController: UITableViewController {
                         let status = JSON( data: response! )
                         if status["new"] {
                             // Download new ranl data from server
-                        self.updateLocalRank()
+                            self.updateLocalRank()
                         }
                     }
 

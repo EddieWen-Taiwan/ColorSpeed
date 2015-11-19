@@ -50,6 +50,7 @@ class GamingViewController: UIViewController {
     var currentColor: String!
     let totalQuestion: Int = 5 // <-----
     var answeredQuestion: Int = 0
+    var newRank: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -272,6 +273,7 @@ class GamingViewController: UIViewController {
     }
 
     func recordBreaking( newRank: Int ) {
+        self.breakView.hidden = false
         
     }
 

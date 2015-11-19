@@ -311,6 +311,11 @@ class GamingViewController: UIViewController {
         // Hide this BreakView
         self.breakView.hidden = true
 
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
+        let navigationController = UINavigationController(rootViewController: rankViewController)
+        self.presentViewController(navigationController, animated: true, completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {

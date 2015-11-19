@@ -73,7 +73,7 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
@@ -84,7 +84,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                 <real key="value" value="3"/>
@@ -98,13 +98,10 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="0.69999999999999996"/>
+                                                <real key="value" value="0.80000000000000004"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="force">
                                                 <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                                <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>

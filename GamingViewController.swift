@@ -283,9 +283,11 @@ class GamingViewController: UIViewController {
 
     @IBAction func sendUpdateRequest(sender: AnyObject) {
 
-        let name = self.nameTextField.text
+        var name = self.nameTextField.text!
         if name != "" {
             self.userP.setValue( name, forKey: "username" )
+        } else {
+            name = ">__<"
         }
 
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)

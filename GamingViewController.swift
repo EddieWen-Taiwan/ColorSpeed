@@ -286,7 +286,19 @@ class GamingViewController: UIViewController {
             self.userP.setValue( name, forKey: "username" )
         }
 
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
+        httpRequest.HTTPMethod = "POST"
 
+        let postString = "name=\(name)&time=\(self.currentSecond)&rank=\(self.newRank)"
+        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+
+        let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+
+            if error == nil {
+            }
+
+        }
+        updateData.resume()
 
     }
 

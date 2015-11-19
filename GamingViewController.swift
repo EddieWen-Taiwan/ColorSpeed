@@ -311,6 +311,7 @@ class GamingViewController: UIViewController {
         // Hide this BreakView
         self.breakView.hidden = true
 
+        // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
         let navigationController = UINavigationController(rootViewController: rankViewController)

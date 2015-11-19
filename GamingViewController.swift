@@ -158,6 +158,9 @@ class GamingViewController: UIViewController {
                 // End game
                 self.timer.invalidate()
                 self.endingTimeLabel.text = self.clock.text
+
+                self.checkRank()
+
                 // Show ending view
                 self.gameView.hidden = true
                 self.endingView.hidden = false
@@ -236,6 +239,10 @@ class GamingViewController: UIViewController {
         self.prepareNewGame()
         self.endingView.hidden = true
         self.beReadyToGame()
+    }
+
+    func checkRank() {
+        
     }
 
     override func didReceiveMemoryWarning() {

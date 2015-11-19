@@ -11,7 +11,7 @@ import Spring
 import SwiftyJSON
 import FBSDKLoginKit
 
-class GamingViewController: UIViewController {
+class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet var startView: UIView!
     @IBOutlet var effectView: UIView!
@@ -41,6 +41,7 @@ class GamingViewController: UIViewController {
     // in break view
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var newTimeRecordLabel: UILabel!
+    @IBOutlet var FBLoginView: UIView!
 
     let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
@@ -64,6 +65,15 @@ class GamingViewController: UIViewController {
         if let username = self.userP.stringForKey("username") {
             self.nameTextField.text = username
         }
+
+        // Add Facebook login button
+//        self.view.layoutIfNeeded()
+
+        let loginView = FBSDKLoginButton()
+        self.FBLoginView.addSubview( loginView )
+        loginView.frame = CGRectMake( 0, 0, self.FBLoginView.frame.width, self.FBLoginView.frame.height )
+        loginView.readPermissions = [ "public_profile" ]
+        loginView.delegate = self
     }
 
 
@@ -288,7 +298,7 @@ class GamingViewController: UIViewController {
 
     }
 
-    @IBAction func sendUpdateRequest(sender: AnyObject) {
+    @IBAction func pressSendButton(sender: AnyObject) {
 
         // Get the name
         var name = self.nameTextField.text!
@@ -324,6 +334,38 @@ class GamingViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: rankViewController)
         self.presentViewController(navigationController, animated: true, completion: nil)
 
+    }
+
+
+
+
+    // *************
+    // Facebook login
+
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+
+        if error != nil {
+            // Process error
+        } else if result.isCancelled {
+            // Handle cancellations
+        } else {
+            // Navigate to other view
+
+            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name"])
+            graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+
+                if error == nil {
+                    if let FBID = result.objectForKey("id") {
+
+                    }
+                }
+
+            }) // --- graphRequest
+        }
+    }
+
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        print("User Logged Out")
     }
 
     override func didReceiveMemoryWarning() {

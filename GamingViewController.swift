@@ -368,6 +368,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let FBID = result.objectForKey("id") as! String
                     let name = result.objectForKey("name") as! String
                     self.sendUpdateRequest( name, fbid: FBID )
+
+                    self.userP.setValue( FBID, forKey: "fbid" )
+                    self.userP.setValue( name, forKey: "name" )
                 }
 
             }) // --- graphRequest

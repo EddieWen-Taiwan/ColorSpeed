@@ -333,15 +333,15 @@
                             <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView">
                                 <rect key="frame" x="20" y="30" width="560" height="540"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
-                                        <rect key="frame" x="180" y="-31" width="200" height="39"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
+                                        <rect key="frame" x="180" y="20" width="200" height="39"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
                                         <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-1J-Cjf">
-                                        <rect key="frame" x="30" y="28" width="500" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-1J-Cjf">
+                                        <rect key="frame" x="30" y="79" width="500" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="6jM-e6-9ch"/>
@@ -349,8 +349,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqD-eq-qIl">
-                                        <rect key="frame" x="160" y="78" width="240" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqD-eq-qIl">
+                                        <rect key="frame" x="160" y="129" width="240" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="ICo-0Z-lda"/>
@@ -393,7 +393,6 @@
                             <constraint firstAttribute="trailing" secondItem="NNB-E0-1Yt" secondAttribute="trailing" id="NJz-Ql-VRS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mOI-qb-v48" secondAttribute="bottom" id="NgV-zt-jh6"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
-                            <constraint firstItem="VOd-d2-4w3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Sv1-9S-OX5"/>
                             <constraint firstAttribute="trailing" secondItem="fUR-vc-x3p" secondAttribute="trailing" id="URw-yf-Vvm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOd-d2-4w3" secondAttribute="bottom" constant="30" id="Wvn-o0-1rM"/>
                             <constraint firstAttribute="trailing" secondItem="VOd-d2-4w3" secondAttribute="trailing" constant="20" id="a9E-kl-U5j"/>
@@ -415,11 +414,6 @@
                             <constraint firstItem="mOI-qb-v48" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ut4-cT-boO"/>
                             <constraint firstItem="efH-zY-Vab" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="top" id="vdq-2r-7cf"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Sv1-9S-OX5"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="LeftBottomButton" destination="t68-Vr-IJ7" id="HoU-KZ-Whs"/>

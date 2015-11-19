@@ -32,7 +32,7 @@ class RankTableViewController: UITableViewController {
         self.tableView.rowHeight = 70
         
         // Check should I download new rank data
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.checkNew )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkNew )!)
         httpRequest.HTTPMethod = "POST"
 
         if let time = self.userP.stringForKey("time") {
@@ -60,7 +60,7 @@ class RankTableViewController: UITableViewController {
     // Update local rank JSON in UserPreference
     func updateLocalRank() {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: self.serverTalker.readAllData )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.readAllData )!)
         httpRequest.HTTPMethod = "GET"
         let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
 

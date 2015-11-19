@@ -317,7 +317,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate {
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
         httpRequest.HTTPMethod = "POST"
 
-        let postString = "name=\(username)&time=\(self.currentSecond)&rank=\(self.newRank)"
+        var postString = "name=\(username)&time=\(self.currentSecond)&rank=\(self.newRank)"
+        if fbid != "" {
+            postString += "&fbid=\(fbid)"
+        }
         httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
         let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in

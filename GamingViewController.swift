@@ -283,6 +283,10 @@ class GamingViewController: UIViewController {
 
     @IBAction func sendUpdateRequest(sender: AnyObject) {
 
+        // Hide this BreakView
+        self.breakView.hidden = true
+
+        // Get the name
         var name = self.nameTextField.text!
         if name != "" {
             self.userP.setValue( name, forKey: "username" )

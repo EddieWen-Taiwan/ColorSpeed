@@ -450,6 +450,7 @@
                         <outlet property="endingView" destination="mOI-qb-v48" id="L1H-hf-hQ7"/>
                         <outlet property="gameView" destination="NNB-E0-1Yt" id="Jhi-Fs-M04"/>
                         <outlet property="nameTextField" destination="cWJ-1J-Cjf" id="Ugh-v1-oHn"/>
+                        <outlet property="newTimeRecordLabel" destination="uIF-6r-lIf" id="VUa-V4-VYg"/>
                         <outlet property="one" destination="ebt-Ep-hUP" id="1Qf-VN-zMu"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>

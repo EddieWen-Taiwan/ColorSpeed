@@ -39,6 +39,7 @@ class GamingViewController: UIViewController {
 
     // in break view
     @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var newTimeRecordLabel: UILabel!
 
     let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()

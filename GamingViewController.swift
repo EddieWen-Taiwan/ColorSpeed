@@ -41,6 +41,7 @@ class GamingViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
 
     let serverTalker = ServerTalker()
+    let userP = NSUserDefaults.standardUserDefaults()
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -56,6 +57,11 @@ class GamingViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.prepareNewGame()
+
+        // Preenter user name
+        if let username = self.userP.stringForKey("username") {
+            self.nameTextField.text = username
+        }
     }
 
 
@@ -274,6 +280,7 @@ class GamingViewController: UIViewController {
     }
 
     @IBAction func sendUpdateRequest(sender: AnyObject) {
+
     }
 
     override func didReceiveMemoryWarning() {

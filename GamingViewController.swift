@@ -414,7 +414,11 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
+        self.sameUserButton.hidden = true
+        self.sameUserButton.setTitle("", forState: .Normal)
+
+        self.userP.removeObjectForKey("fb_id")
+        self.userP.removeObjectForKey("fb_name")
     }
 
     override func didReceiveMemoryWarning() {

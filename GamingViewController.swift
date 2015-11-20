@@ -393,7 +393,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             // Process error
         } else if result.isCancelled {
             // Handle cancellations
-            print("cancel") // Add alert
+            print("cancel")
         } else {
             // Navigate to other view
 

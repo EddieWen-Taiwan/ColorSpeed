@@ -51,7 +51,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     var colorArray: [String] = ["green","blue","black","red"]
 
     var timer = NSTimer()
-    var currentSecond: Float = 0.0
+    var currentSecond: Int = 0 // output = currentSecond / 100
     var currentColor: String!
     let totalQuestion: Int = 20 // <-----
     var answeredQuestion: Int = 0

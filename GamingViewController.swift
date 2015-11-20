@@ -44,7 +44,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     @IBOutlet var FBLoginView: UIView!
     @IBOutlet var sameUserButton: UIButton!
 
-    let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
@@ -280,7 +279,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     func checkRank() {
 
         if Reachability().isConnectedToNetwork() {
-            let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkTimeInLastRow )!)
             httpRequest.HTTPMethod = "POST"
 
             let postString = "time=\(self.currentSecond.displayText())"
@@ -344,7 +343,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     func sendUpdateRequest( username: String, fbid: String = "" ) {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)
         httpRequest.HTTPMethod = "POST"
 
         var postString = "name=\(username)&time=\(self.currentSecond.displayText())&rank=\(self.newRank)"

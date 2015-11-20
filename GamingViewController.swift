@@ -283,7 +283,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
             httpRequest.HTTPMethod = "POST"
 
-            let postString = "time=\(self.currentSecond)"
+            let postString = "time=\(self.currentSecond.displayText())"
             httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
             let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
@@ -347,7 +347,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
         httpRequest.HTTPMethod = "POST"
 
-        var postString = "name=\(username)&time=\(self.currentSecond)&rank=\(self.newRank)"
+        var postString = "name=\(username)&time=\(self.currentSecond.displayText())&rank=\(self.newRank)"
         if fbid != "" {
             postString += "&fbid=\(fbid)"
         }

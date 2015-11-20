@@ -353,13 +353,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         }
         httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-        let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
-
-            if error == nil {
-                print( JSON(data: response!) )
-            }
-
-        }
+        let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest )
         updateData.resume()
 
         // Hide this BreakView

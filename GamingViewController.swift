@@ -235,7 +235,13 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     func addTimer( timer: NSTimer ) {
         self.currentSecond += 1
-        self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
+
+        var displayT = self.currentSecond.displayText()
+        displayT.removeAtIndex(displayT.endIndex.predecessor())
+
+        if self.clock.text != displayT {
+            self.clock.text = displayT
+        }
     }
 
     func updateQuestion() {

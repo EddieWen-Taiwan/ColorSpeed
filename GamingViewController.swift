@@ -136,7 +136,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
                     self.effectView.hidden = true
                     self.gameView.hidden = false
                     // Start timer
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.1, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.01, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
                     self.initEffectTransform()
                 })
             })

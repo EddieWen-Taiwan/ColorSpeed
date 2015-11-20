@@ -229,7 +229,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
             // Punish: plus two seconds
             self.currentSecond += 200
-            self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
+            var displayT = self.currentSecond.displayText()
+            displayT.removeAtIndex(displayT.endIndex.predecessor())
+            self.clock.text = displayT
         }
     }
 

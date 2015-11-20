@@ -92,7 +92,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     func prepareNewGame() {
 
         // Initialize variables
-        self.currentSecond = 0.0
+        self.currentSecond = 0
         self.answeredQuestion = 0
         self.clock.text = "0"
 
@@ -228,13 +228,13 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             })
 
             // Punish: plus two seconds
-            self.currentSecond += 2.0
+            self.currentSecond += 200
             self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
         }
     }
 
     func addTimer( timer: NSTimer ) {
-        self.currentSecond += 0.1
+        self.currentSecond += 1
         self.clock.text = NSString( format: "%.1f", self.currentSecond ) as String
     }
 

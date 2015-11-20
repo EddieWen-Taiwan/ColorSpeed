@@ -185,7 +185,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
                 self.timer.invalidate()
-                self.endingTimeLabel.text = self.clock.text
+                self.endingTimeLabel.text = self.currentSecond.displayText()
 
                 self.checkRank()
 
@@ -294,7 +294,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
                         // Download new ranl data from server
                         self.newRank = status["rank"].int!
                         dispatch_async( dispatch_get_main_queue(), {
-                            self.newTimeRecordLabel.text = self.clock.text
+                            self.newTimeRecordLabel.text = self.endingTimeLabel.text
                             // Show break view
                             if FBSDKAccessToken.currentAccessToken() == nil {
                                 self.sameUserButton.hidden = true

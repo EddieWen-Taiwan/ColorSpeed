@@ -247,22 +247,29 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     func updateQuestion() {
-        self.currentText = self.colorTextArray.randomItem()
-        self.questionTitle.text = self.currentText
-        switch( self.colorArray.randomItem() ) {
-            case "red":
-                self.questionTitle.textColor = UIColor.redColor()
-                self.currentColor = "red"
-            case "blue":
-                self.questionTitle.textColor = UIColor.blueColor()
-                self.currentColor = "blue"
-            case "black":
-                self.questionTitle.textColor = UIColor.blackColor()
-                self.currentColor = "black"
-            default: // green
-                self.questionTitle.textColor = UIColor.greenColor()
-                self.currentColor = "green"
+
+        let nextText = self.colorTextArray.randomItem()
+        let nextColor = self.colorArray.randomItem()
+
+        if nextText != self.currentText || nextColor != self.currentColor {
+            self.currentText = nextText
+            self.questionTitle.text = self.currentText
+            
+            self.currentColor = nextColor
+            switch( nextColor ) {
+                case "red":
+                    self.questionTitle.textColor = UIColor.redColor()
+                case "blue":
+                    self.questionTitle.textColor = UIColor.blueColor()
+                case "black":
+                    self.questionTitle.textColor = UIColor.blackColor()
+                default: // green
+                    self.questionTitle.textColor = UIColor.greenColor()
+            }
+        } else {
+            updateQuestion()
         }
+        
     }
 
 

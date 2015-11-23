@@ -51,6 +51,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
+    var currentText: String!
     var currentColor: String!
     let totalQuestion: Int = 20 // <-----
     var answeredQuestion: Int = 0
@@ -246,7 +247,8 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     func updateQuestion() {
-        self.questionTitle.text = self.colorTextArray.randomItem()
+        self.currentText = self.colorTextArray.randomItem()
+        self.questionTitle.text = self.currentText
         switch( self.colorArray.randomItem() ) {
             case "red":
                 self.questionTitle.textColor = UIColor.redColor()

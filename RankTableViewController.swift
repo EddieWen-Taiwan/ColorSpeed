@@ -44,7 +44,7 @@ class RankTableViewController: UITableViewController {
                 let postString = "time=\(time)"
                 httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
                     if error == nil {
                         let status = JSON( data: response! )
@@ -76,7 +76,7 @@ class RankTableViewController: UITableViewController {
 
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.readAllData )!)
         httpRequest.HTTPMethod = "GET"
-        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
             if error == nil {
                 self.isDataExisted = true

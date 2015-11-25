@@ -294,7 +294,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             let postString = "time=\(self.currentSecond.displayText())"
             httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
                 if error == nil {
                     let status = JSON( data: response! )

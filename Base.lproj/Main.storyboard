@@ -10,6 +10,16 @@
         <mutableArray key="Quicksand-Light.otf">
             <string>Quicksand-Light</string>
             <string>Quicksand-Light</string>
+            <string>Quicksand-Light</string>
+        </mutableArray>
+        <mutableArray key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -133,7 +143,7 @@
                                             <constraint firstAttribute="width" constant="100" id="GLf-qu-wch"/>
                                             <constraint firstAttribute="height" constant="50" id="e3M-br-M6T"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97k-VX-qmF">
@@ -142,7 +152,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="svf-RK-BU7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="58"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-oM-d7u" userLabel="left">
@@ -156,6 +166,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="0eR-Zm-E1M"/>
                                                     <constraint firstAttribute="height" constant="70" id="r4q-ZJ-E0I"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -174,6 +185,7 @@
                                                     <constraint firstAttribute="height" constant="70" id="1Sl-IT-5Nj"/>
                                                     <constraint firstAttribute="width" constant="100" id="UrM-8b-Oti"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -205,6 +217,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="WP2-mt-NU5"/>
                                                     <constraint firstAttribute="height" constant="70" id="hqP-hC-o1E"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -223,6 +236,7 @@
                                                     <constraint firstAttribute="height" constant="70" id="5FG-QN-pB9"/>
                                                     <constraint firstAttribute="width" constant="100" id="ama-xV-6Gm"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -247,9 +261,9 @@
                                         <rect key="frame" x="200" y="30" width="200" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong color !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53l-R2-k2u">
-                                                <rect key="frame" x="51" y="15" width="98" height="20"/>
+                                                <rect key="frame" x="46" y="16" width="108" height="19"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -275,9 +289,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
-                                        <rect key="frame" x="159" y="135" width="41" height="29"/>
+                                        <rect key="frame" x="159" y="135" width="41" height="28"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>

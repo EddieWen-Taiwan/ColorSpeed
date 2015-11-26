@@ -9,10 +9,13 @@
     <customFonts key="customFonts">
         <mutableArray key="Quicksand-Light.otf">
             <string>Quicksand-Light</string>
-            <string>Quicksand-Light</string>
-            <string>Quicksand-Light</string>
         </mutableArray>
         <mutableArray key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
@@ -48,7 +51,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,7 +64,7 @@
                                             <constraint firstAttribute="height" constant="50" id="35V-k9-kpc"/>
                                             <constraint firstAttribute="width" constant="80" id="Xdl-Vg-QZU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="28"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDx-v0-bQc"/>
@@ -289,7 +292,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
-                                        <rect key="frame" x="159" y="135" width="41" height="28"/>
+                                        <rect key="frame" x="160" y="135" width="40" height="28"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="24"/>
                                         <nil key="highlightedColor"/>
@@ -323,22 +326,22 @@
                                             <constraint firstAttribute="height" constant="50" id="FRR-ym-K5Z"/>
                                             <constraint firstAttribute="width" constant="100" id="gIB-ae-0Ui"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-lD-NV6">
-                                        <rect key="frame" x="113" y="508" width="74" height="32"/>
+                                        <rect key="frame" x="108" y="509" width="84" height="31"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                         <state key="normal" title="Play again"/>
                                         <connections>
                                             <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6b-BH-IRK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8b-It-GYM">
-                                        <rect key="frame" x="426" y="508" width="49" height="32"/>
+                                        <rect key="frame" x="425" y="509" width="51" height="31"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                         <state key="normal" title="Top 10"/>
                                         <connections>
                                             <segue destination="1xH-H7-seh" kind="show" id="2n3-P5-9tE"/>

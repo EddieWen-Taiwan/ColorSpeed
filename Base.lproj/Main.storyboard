@@ -9,6 +9,7 @@
     <customFonts key="customFonts">
         <mutableArray key="Quicksand-Light.otf">
             <string>Quicksand-Light</string>
+            <string>Quicksand-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -37,20 +38,20 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNp-pv-e82">
-                                        <rect key="frame" x="260" y="325" width="80" height="50"/>
+                                        <rect key="frame" x="260" y="355" width="80" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="35V-k9-kpc"/>
                                             <constraint firstAttribute="width" constant="80" id="Xdl-Vg-QZU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="28"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDx-v0-bQc"/>
@@ -59,7 +60,7 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="iNp-pv-e82" firstAttribute="top" secondItem="XUa-AU-DaJ" secondAttribute="bottom" constant="70" id="0EU-ue-xdE"/>
+                                    <constraint firstItem="iNp-pv-e82" firstAttribute="top" secondItem="XUa-AU-DaJ" secondAttribute="bottom" constant="100" id="0EU-ue-xdE"/>
                                     <constraint firstItem="XUa-AU-DaJ" firstAttribute="leading" secondItem="UNW-cW-U10" secondAttribute="leading" id="S8V-GK-BhP"/>
                                     <constraint firstItem="XUa-AU-DaJ" firstAttribute="centerY" secondItem="UNW-cW-U10" secondAttribute="centerY" constant="-80" id="YiD-QM-9W0"/>
                                     <constraint firstAttribute="trailing" secondItem="XUa-AU-DaJ" secondAttribute="trailing" id="gTm-i9-8KK"/>

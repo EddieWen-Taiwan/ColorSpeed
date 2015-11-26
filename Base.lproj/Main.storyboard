@@ -6,6 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Quicksand-Light.otf">
+            <string>Quicksand-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Gaming View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -32,7 +37,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,6 +375,7 @@
                                             <constraint firstAttribute="width" constant="240" id="ICo-0Z-lda"/>
                                             <constraint firstAttribute="height" constant="40" id="lwV-tz-h8N"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="SEND"/>
                                         <connections>
                                             <action selector="pressSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIB-Pc-CWX"/>

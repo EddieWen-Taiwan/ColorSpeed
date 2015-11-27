@@ -87,7 +87,6 @@
                     </subviews>
                     <animations/>
                     <constraints>
-                        <constraint firstItem="pfv-I2-5sg" firstAttribute="leading" secondItem="FaN-RF-bk4" secondAttribute="leading" constant="5" id="2xn-ir-crU"/>
                         <constraint firstItem="ENN-3a-HpU" firstAttribute="leading" secondItem="FaN-RF-bk4" secondAttribute="leading" id="68N-vx-As2"/>
                         <constraint firstAttribute="bottom" secondItem="G7h-pP-sFy" secondAttribute="bottom" id="69s-4O-x2X"/>
                         <constraint firstItem="yb0-gn-uBM" firstAttribute="leading" secondItem="pfv-I2-5sg" secondAttribute="trailing" constant="7" id="8O7-C3-XDL"/>
@@ -100,7 +99,6 @@
                         <constraint firstAttribute="bottom" secondItem="3Ki-zb-bAg" secondAttribute="bottom" id="NWt-Ma-aCc"/>
                         <constraint firstAttribute="bottom" secondItem="b6e-Zj-nKg" secondAttribute="bottom" id="OgT-uy-pUc"/>
                         <constraint firstAttribute="bottom" secondItem="yb0-gn-uBM" secondAttribute="bottom" id="PjN-Rf-q17"/>
-                        <constraint firstItem="3Ki-zb-bAg" firstAttribute="leading" secondItem="yb0-gn-uBM" secondAttribute="trailing" constant="5" id="QVe-8d-i9S"/>
                         <constraint firstItem="5m4-Pt-fQf" firstAttribute="leading" secondItem="yb0-gn-uBM" secondAttribute="trailing" constant="7" id="QZF-Qr-oOC"/>
                         <constraint firstItem="URE-M8-rH7" firstAttribute="leading" secondItem="ENN-3a-HpU" secondAttribute="trailing" constant="7" id="Qc5-j0-0CW"/>
                         <constraint firstItem="3Ki-zb-bAg" firstAttribute="leading" secondItem="5m4-Pt-fQf" secondAttribute="trailing" constant="7" id="Qxn-Rj-WdX"/>
@@ -112,12 +110,6 @@
                         <constraint firstAttribute="bottom" secondItem="pfv-I2-5sg" secondAttribute="bottom" id="nAc-4e-4Pa"/>
                         <constraint firstItem="b6e-Zj-nKg" firstAttribute="leading" secondItem="URE-M8-rH7" secondAttribute="trailing" constant="7" id="rgn-1G-D9H"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="2xn-ir-crU"/>
-                            <exclude reference="QVe-8d-i9S"/>
-                        </mask>
-                    </variation>
                 </view>
             </subviews>
             <animations/>

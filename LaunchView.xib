@@ -11,16 +11,16 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchTitle" translatesAutoresizingMaskIntoConstraints="NO" id="swk-fG-oLe">
-                    <rect key="frame" x="150" y="200" width="300" height="100"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchTitle" translatesAutoresizingMaskIntoConstraints="NO" id="dgO-47-qBI">
+                    <rect key="frame" x="150" y="180" width="300" height="100"/>
                     <animations/>
                 </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="swk-fG-oLe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ith-az-PXi"/>
-                <constraint firstItem="swk-fG-oLe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-50" id="Z5F-XB-mao"/>
+                <constraint firstItem="dgO-47-qBI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gHB-y0-brU"/>
+                <constraint firstItem="dgO-47-qBI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-70" id="wg0-bG-1Cs"/>
             </constraints>
         </view>
     </objects>

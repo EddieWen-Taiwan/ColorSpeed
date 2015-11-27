@@ -6,6 +6,32 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Gaming View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -32,20 +58,20 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="uHu-Qd-ELz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNp-pv-e82">
-                                        <rect key="frame" x="260" y="325" width="80" height="50"/>
+                                        <rect key="frame" x="260" y="355" width="80" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="35V-k9-kpc"/>
                                             <constraint firstAttribute="width" constant="80" id="Xdl-Vg-QZU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="28"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDx-v0-bQc"/>
@@ -54,7 +80,7 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="iNp-pv-e82" firstAttribute="top" secondItem="XUa-AU-DaJ" secondAttribute="bottom" constant="70" id="0EU-ue-xdE"/>
+                                    <constraint firstItem="iNp-pv-e82" firstAttribute="top" secondItem="XUa-AU-DaJ" secondAttribute="bottom" constant="100" id="0EU-ue-xdE"/>
                                     <constraint firstItem="XUa-AU-DaJ" firstAttribute="leading" secondItem="UNW-cW-U10" secondAttribute="leading" id="S8V-GK-BhP"/>
                                     <constraint firstItem="XUa-AU-DaJ" firstAttribute="centerY" secondItem="UNW-cW-U10" secondAttribute="centerY" constant="-80" id="YiD-QM-9W0"/>
                                     <constraint firstAttribute="trailing" secondItem="XUa-AU-DaJ" secondAttribute="trailing" id="gTm-i9-8KK"/>
@@ -121,13 +147,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
-                                        <rect key="frame" x="250" y="135" width="100" height="50"/>
+                                        <rect key="frame" x="200" y="135" width="200" height="50"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="GLf-qu-wch"/>
+                                            <constraint firstAttribute="width" constant="200" id="GLf-qu-wch"/>
                                             <constraint firstAttribute="height" constant="50" id="e3M-br-M6T"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97k-VX-qmF">
@@ -136,7 +162,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="svf-RK-BU7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="58"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmM-oM-d7u" userLabel="left">
@@ -150,6 +176,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="0eR-Zm-E1M"/>
                                                     <constraint firstAttribute="height" constant="70" id="r4q-ZJ-E0I"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -168,6 +195,7 @@
                                                     <constraint firstAttribute="height" constant="70" id="1Sl-IT-5Nj"/>
                                                     <constraint firstAttribute="width" constant="100" id="UrM-8b-Oti"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -199,6 +227,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="WP2-mt-NU5"/>
                                                     <constraint firstAttribute="height" constant="70" id="hqP-hC-o1E"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -217,6 +246,7 @@
                                                     <constraint firstAttribute="height" constant="70" id="5FG-QN-pB9"/>
                                                     <constraint firstAttribute="width" constant="100" id="ama-xV-6Gm"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                                 <state key="normal" title="Button"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -241,9 +271,9 @@
                                         <rect key="frame" x="200" y="30" width="200" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong color !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53l-R2-k2u">
-                                                <rect key="frame" x="51" y="15" width="98" height="20"/>
+                                                <rect key="frame" x="46" y="16" width="108" height="19"/>
                                                 <animations/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -269,9 +299,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk0-CT-0gn">
-                                        <rect key="frame" x="159" y="135" width="41" height="29"/>
+                                        <rect key="frame" x="169" y="135" width="41" height="28"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -290,35 +320,35 @@
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="mTZ-ix-g6t"/>
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="30" id="sdx-VH-riY"/>
-                                    <constraint firstItem="rk0-CT-0gn" firstAttribute="trailing" secondItem="629-3M-paI" secondAttribute="leading" constant="-50" id="tHn-pW-bNw"/>
+                                    <constraint firstItem="rk0-CT-0gn" firstAttribute="trailing" secondItem="629-3M-paI" secondAttribute="leading" constant="10" id="tHn-pW-bNw"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOI-qb-v48" userLabel="EndingView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efH-zY-Vab">
-                                        <rect key="frame" x="250" y="135" width="100" height="50"/>
+                                        <rect key="frame" x="200" y="135" width="200" height="50"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="FRR-ym-K5Z"/>
-                                            <constraint firstAttribute="width" constant="100" id="gIB-ae-0Ui"/>
+                                            <constraint firstAttribute="width" constant="200" id="gIB-ae-0Ui"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRN-lD-NV6">
-                                        <rect key="frame" x="113" y="508" width="74" height="32"/>
+                                        <rect key="frame" x="108" y="509" width="84" height="31"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                         <state key="normal" title="Play again"/>
                                         <connections>
                                             <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6b-BH-IRK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8b-It-GYM">
-                                        <rect key="frame" x="426" y="508" width="49" height="32"/>
+                                        <rect key="frame" x="425" y="509" width="51" height="31"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                         <state key="normal" title="Top 10"/>
                                         <connections>
                                             <segue destination="1xH-H7-seh" kind="show" id="2n3-P5-9tE"/>
@@ -332,51 +362,52 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="20" y="30" width="560" height="540"/>
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
-                                        <rect key="frame" x="180" y="20" width="200" height="39"/>
+                                        <rect key="frame" x="170" y="20" width="220" height="38"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="32"/>
                                         <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIF-6r-lIf">
-                                        <rect key="frame" x="268" y="74" width="15" height="29"/>
+                                        <rect key="frame" x="266" y="73" width="18" height="28"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE1-EP-mfD">
-                                        <rect key="frame" x="286" y="81" width="9" height="20"/>
+                                        <rect key="frame" x="287" y="80" width="8" height="19"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-1J-Cjf">
-                                        <rect key="frame" x="20" y="118" width="520" height="40"/>
+                                        <rect key="frame" x="20" y="116" width="520" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="6jM-e6-9ch"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqD-eq-qIl">
-                                        <rect key="frame" x="160" y="168" width="240" height="40"/>
+                                        <rect key="frame" x="160" y="166" width="240" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="ICo-0Z-lda"/>
                                             <constraint firstAttribute="height" constant="40" id="lwV-tz-h8N"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <state key="normal" title="SEND"/>
                                         <connections>
                                             <action selector="pressSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIB-Pc-CWX"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Af3-lB-T8w">
-                                        <rect key="frame" x="20" y="218" width="520" height="1"/>
+                                        <rect key="frame" x="20" y="216" width="520" height="1"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.90670375631313127" green="0.90670375631313127" blue="0.90670375631313127" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -384,7 +415,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqc-3D-cc4">
-                                        <rect key="frame" x="20" y="239" width="520" height="50"/>
+                                        <rect key="frame" x="20" y="237" width="520" height="50"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -392,12 +423,13 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-Is-R54">
-                                        <rect key="frame" x="180" y="314" width="200" height="40"/>
+                                        <rect key="frame" x="180" y="312" width="200" height="40"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="9xf-Js-U1G"/>
                                             <constraint firstAttribute="width" constant="200" id="Ptg-ES-GtS"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <connections>
                                             <action selector="loginAsSameUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uO6-Ea-hg2"/>
                                         </connections>
@@ -428,7 +460,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1.2"/>
@@ -453,7 +485,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mOI-qb-v48" secondAttribute="bottom" id="NgV-zt-jh6"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
                             <constraint firstAttribute="trailing" secondItem="fUR-vc-x3p" secondAttribute="trailing" id="URw-yf-Vvm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOd-d2-4w3" secondAttribute="bottom" constant="30" id="Wvn-o0-1rM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOd-d2-4w3" secondAttribute="bottom" constant="20" id="Wvn-o0-1rM"/>
                             <constraint firstAttribute="trailing" secondItem="VOd-d2-4w3" secondAttribute="trailing" constant="20" id="a9E-kl-U5j"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acS-81-b9c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fUR-vc-x3p" secondAttribute="bottom" id="bM5-rv-G8y"/>
@@ -461,7 +493,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHU-1W-0tz" secondAttribute="bottom" id="e3h-34-XPW"/>
                             <constraint firstItem="pEx-VC-pC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ecE-ao-AJh"/>
                             <constraint firstItem="efH-zY-Vab" firstAttribute="leading" secondItem="629-3M-paI" secondAttribute="leading" id="huT-0M-yJa"/>
-                            <constraint firstItem="VOd-d2-4w3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="lhR-39-ovA"/>
+                            <constraint firstItem="VOd-d2-4w3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lhR-39-ovA"/>
                             <constraint firstItem="mOI-qb-v48" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mve-E2-Ig8"/>
                             <constraint firstItem="NNB-E0-1Yt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o7h-sU-1q8"/>
                             <constraint firstItem="fUR-vc-x3p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oOG-0v-X2R"/>
@@ -543,12 +575,12 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-aK-E2J">
-                                            <rect key="frame" x="76" y="24" width="436" height="22"/>
+                                            <rect key="frame" x="76" y="24" width="436" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="140" id="ti9-dR-A9c"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
@@ -558,16 +590,16 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CJ-3R-Fcz">
-                                            <rect key="frame" x="565" y="25" width="10" height="20"/>
+                                            <rect key="frame" x="563" y="25" width="12" height="19"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEs-sj-Z1v">
-                                            <rect key="frame" x="576" y="27" width="8" height="18"/>
+                                            <rect key="frame" x="576" y="26" width="8" height="18"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>

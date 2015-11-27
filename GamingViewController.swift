@@ -44,7 +44,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     @IBOutlet var FBLoginView: UIView!
     @IBOutlet var sameUserButton: UIButton!
 
-    let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
@@ -52,6 +51,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
+    var currentText: String!
     var currentColor: String!
     let totalQuestion: Int = 20 // <-----
     var answeredQuestion: Int = 0
@@ -247,21 +247,29 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     func updateQuestion() {
-        self.questionTitle.text = self.colorTextArray.randomItem()
-        switch( self.colorArray.randomItem() ) {
-            case "red":
-                self.questionTitle.textColor = UIColor.redColor()
-                self.currentColor = "red"
-            case "blue":
-                self.questionTitle.textColor = UIColor.blueColor()
-                self.currentColor = "blue"
-            case "black":
-                self.questionTitle.textColor = UIColor.blackColor()
-                self.currentColor = "black"
-            default: // green
-                self.questionTitle.textColor = UIColor.greenColor()
-                self.currentColor = "green"
+
+        let nextText = self.colorTextArray.randomItem()
+        let nextColor = self.colorArray.randomItem()
+
+        if nextText != self.currentText || nextColor != self.currentColor {
+            self.currentText = nextText
+            self.questionTitle.text = self.currentText
+            
+            self.currentColor = nextColor
+            switch( nextColor ) {
+                case "red":
+                    self.questionTitle.textColor = UIColor.redColor()
+                case "blue":
+                    self.questionTitle.textColor = UIColor.blueColor()
+                case "black":
+                    self.questionTitle.textColor = UIColor.blackColor()
+                default: // green
+                    self.questionTitle.textColor = UIColor.greenColor()
+            }
+        } else {
+            updateQuestion()
         }
+        
     }
 
 
@@ -280,13 +288,13 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     func checkRank() {
 
         if Reachability().isConnectedToNetwork() {
-            let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkTimeInLastRow )!)
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkTimeInLastRow )!)
             httpRequest.HTTPMethod = "POST"
 
             let postString = "time=\(self.currentSecond.displayText())"
             httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
                 if error == nil {
                     let status = JSON( data: response! )
@@ -344,7 +352,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     func sendUpdateRequest( username: String, fbid: String = "" ) {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.update )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)
         httpRequest.HTTPMethod = "POST"
 
         var postString = "name=\(username)&time=\(self.currentSecond.displayText())&rank=\(self.newRank)"

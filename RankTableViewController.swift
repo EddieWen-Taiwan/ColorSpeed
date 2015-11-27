@@ -14,7 +14,6 @@ class RankTableViewController: UITableViewController {
     var rankJSON: JSON!
     var isDataExisted: Bool = false
     let reachability = Reachability()
-    let serverTalker = ServerTalker()
     let userP = NSUserDefaults.standardUserDefaults()
 
     var newDataRow: Int = 0
@@ -38,14 +37,14 @@ class RankTableViewController: UITableViewController {
         
         if reachability.isConnectedToNetwork() {
             // Check should I download new rank data
-            let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.checkNew )!)
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)
             httpRequest.HTTPMethod = "POST"
 
             if let time = self.userP.stringForKey("time") {
                 let postString = "time=\(time)"
                 httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
                     if error == nil {
                         let status = JSON( data: response! )
@@ -75,9 +74,9 @@ class RankTableViewController: UITableViewController {
     // Update local rank JSON in UserPreference
     func updateLocalRank() {
 
-        let httpRequest = NSMutableURLRequest(URL: NSURL( string: serverTalker.readAllData )!)
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.readAllData )!)
         httpRequest.HTTPMethod = "GET"
-        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, data, error) in
+        let getJsonTask = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
             if error == nil {
                 self.isDataExisted = true

@@ -368,7 +368,7 @@
                                 </variation>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="20" y="30" width="560" height="540"/>
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
                                         <rect key="frame" x="170" y="20" width="220" height="38"/>
@@ -466,7 +466,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="1.2"/>
@@ -491,7 +491,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mOI-qb-v48" secondAttribute="bottom" id="NgV-zt-jh6"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SDn-Ce-BSP"/>
                             <constraint firstAttribute="trailing" secondItem="fUR-vc-x3p" secondAttribute="trailing" id="URw-yf-Vvm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOd-d2-4w3" secondAttribute="bottom" constant="30" id="Wvn-o0-1rM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOd-d2-4w3" secondAttribute="bottom" constant="20" id="Wvn-o0-1rM"/>
                             <constraint firstAttribute="trailing" secondItem="VOd-d2-4w3" secondAttribute="trailing" constant="20" id="a9E-kl-U5j"/>
                             <constraint firstItem="uHU-1W-0tz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acS-81-b9c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fUR-vc-x3p" secondAttribute="bottom" id="bM5-rv-G8y"/>
@@ -499,7 +499,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHU-1W-0tz" secondAttribute="bottom" id="e3h-34-XPW"/>
                             <constraint firstItem="pEx-VC-pC7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ecE-ao-AJh"/>
                             <constraint firstItem="efH-zY-Vab" firstAttribute="leading" secondItem="629-3M-paI" secondAttribute="leading" id="huT-0M-yJa"/>
-                            <constraint firstItem="VOd-d2-4w3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="lhR-39-ovA"/>
+                            <constraint firstItem="VOd-d2-4w3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lhR-39-ovA"/>
                             <constraint firstItem="mOI-qb-v48" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mve-E2-Ig8"/>
                             <constraint firstItem="NNB-E0-1Yt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o7h-sU-1q8"/>
                             <constraint firstItem="fUR-vc-x3p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oOG-0v-X2R"/>

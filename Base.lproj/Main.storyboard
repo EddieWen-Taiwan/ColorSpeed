@@ -358,14 +358,8 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="RRN-lD-NV6" secondAttribute="bottom" constant="60" id="AjE-Te-YCC"/>
-                                    <constraint firstItem="efH-zY-Vab" firstAttribute="centerX" secondItem="mOI-qb-v48" secondAttribute="centerX" id="BUZ-Zf-EUc"/>
                                     <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="BUZ-Zf-EUc"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="40" width="560" height="540"/>

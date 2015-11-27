@@ -10,8 +10,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jjD-a6-baT">
+                    <rect key="frame" x="235" y="150" width="130" height="130"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="3f9-FP-dvz"/>
+                        <constraint firstAttribute="height" constant="130" id="kCU-Tc-ACP"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jjD-a6-baT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="150" id="3zT-D9-jTZ"/>
+                <constraint firstItem="jjD-a6-baT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FAl-uh-IsI"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="LaunchIcon" width="200" height="200"/>
+    </resources>
 </document>

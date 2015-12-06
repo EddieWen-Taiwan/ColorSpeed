@@ -143,7 +143,7 @@
                                     <constraint firstItem="ebt-Ep-hUP" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="hHN-NL-gQb"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
@@ -304,24 +304,46 @@
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-SU-mUd">
+                                        <rect key="frame" x="530" y="20" width="50" height="50"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7Ci-5h-7ho"/>
+                                            <constraint firstAttribute="width" constant="50" id="A6X-qQ-yVp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="7sN-bJ-IDJ"/>
                                     <constraint firstAttribute="trailing" secondItem="97k-VX-qmF" secondAttribute="trailing" id="8PG-pU-J83"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerY" secondItem="NNB-E0-1Yt" secondAttribute="centerY" constant="-50" id="9e1-D1-Drk"/>
+                                    <constraint firstItem="IKg-SU-mUd" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="bottom" constant="20" id="Ceu-Fh-wDG"/>
                                     <constraint firstItem="rk0-CT-0gn" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="top" id="EEX-DD-KZS"/>
                                     <constraint firstAttribute="bottom" secondItem="pEx-VC-pC7" secondAttribute="bottom" id="KA2-9e-QE4"/>
                                     <constraint firstItem="YmM-oM-d7u" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="Nyr-nv-Pel"/>
                                     <constraint firstItem="629-3M-paI" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="RO2-9y-IWN"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="bottom" constant="30" id="c9h-G9-FOB"/>
                                     <constraint firstAttribute="trailing" secondItem="pEx-VC-pC7" secondAttribute="trailing" id="chK-5Y-d2w"/>
+                                    <constraint firstAttribute="trailing" secondItem="IKg-SU-mUd" secondAttribute="trailing" constant="20" id="dSf-fK-1yF"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="dbW-ee-Cld"/>
+                                    <constraint firstItem="IKg-SU-mUd" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="20" id="kcc-zA-Oib"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="mTZ-ix-g6t"/>
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="30" id="sdx-VH-riY"/>
                                     <constraint firstItem="rk0-CT-0gn" firstAttribute="trailing" secondItem="629-3M-paI" secondAttribute="leading" constant="10" id="tHn-pW-bNw"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ceu-Fh-wDG"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOI-qb-v48" userLabel="EndingView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -523,6 +545,7 @@
                         <outlet property="one" destination="ebt-Ep-hUP" id="1Qf-VN-zMu"/>
                         <outlet property="plus2second" destination="rk0-CT-0gn" id="RZx-zi-gjJ"/>
                         <outlet property="questionTitle" destination="97k-VX-qmF" id="3au-vN-6h9"/>
+                        <outlet property="restartButton" destination="IKg-SU-mUd" id="KE2-JO-Cqg"/>
                         <outlet property="sameUserButton" destination="6f5-Is-R54" id="4Zz-7o-YkD"/>
                         <outlet property="startView" destination="UNW-cW-U10" id="g55-lB-LbP"/>
                         <outlet property="three" destination="kt0-g4-ptA" id="PfM-QX-oCg"/>

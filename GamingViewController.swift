@@ -33,6 +33,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     @IBOutlet var questionTitle: UILabel!
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
+    @IBOutlet var restartButton: UIView!
 
     // in ending view
     @IBOutlet var endingTimeLabel: UILabel!
@@ -61,6 +62,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.prepareNewGame()
+
+        // Add border to restartButton
+        self.restartButton.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).CGColor
+        self.restartButton.layer.borderWidth = 2
 
         // Preenter user name
         if let username = self.userP.stringForKey("username") {

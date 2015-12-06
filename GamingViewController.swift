@@ -66,6 +66,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         // Add border to restartButton
         self.restartButton.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).CGColor
         self.restartButton.layer.borderWidth = 2
+        // Add gesture
+        let restartGesture = UITapGestureRecognizer(target: self, action: "restartGame")
+        self.restartButton.addGestureRecognizer( restartGesture )
 
         // Preenter user name
         if let username = self.userP.stringForKey("username") {
@@ -275,6 +278,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             updateQuestion()
         }
         
+    }
+
+    func restartGame() {
+        print("RESTART")
     }
 
 

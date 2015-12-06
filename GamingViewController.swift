@@ -169,22 +169,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // *************
     // Game View
 
-    @IBAction func clickLeftTopButton(sender: AnyObject) {
-        self.answerColor(0)
-    }
-
-    @IBAction func clickLeftBottomButton(sender: AnyObject) {
-        self.answerColor(1)
-    }
-
-    @IBAction func clickRightTopButton(sender: AnyObject) {
-        self.answerColor(2)
-    }
-
-    @IBAction func clickRightBottomButton(sender: AnyObject) {
-        self.answerColor(3)
-    }
-
     func answerColor( buttonIndex: Int ) {
         let buttonColor = self.colorArray[buttonIndex]
 

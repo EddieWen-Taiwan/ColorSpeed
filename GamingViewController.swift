@@ -170,7 +170,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // Game View
 
     @IBAction func clickColorButton(sender: UIButton) {
-        print(sender.tag)
+        self.answerColor( sender.tag )
     }
 
     func answerColor( buttonIndex: Int ) {

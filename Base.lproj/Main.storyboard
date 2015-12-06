@@ -306,11 +306,23 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-SU-mUd">
                                         <rect key="frame" x="530" y="20" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restart" translatesAutoresizingMaskIntoConstraints="NO" id="WqA-p6-1m0">
+                                                <rect key="frame" x="13" y="13" width="25" height="25"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="49q-91-A6R"/>
+                                                    <constraint firstAttribute="height" constant="25" id="Lea-rd-fEO"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7Ci-5h-7ho"/>
                                             <constraint firstAttribute="width" constant="50" id="A6X-qQ-yVp"/>
+                                            <constraint firstItem="WqA-p6-1m0" firstAttribute="centerY" secondItem="IKg-SU-mUd" secondAttribute="centerY" id="Z6X-58-Umu"/>
+                                            <constraint firstItem="WqA-p6-1m0" firstAttribute="centerX" secondItem="IKg-SU-mUd" secondAttribute="centerX" id="wis-lg-ard"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -699,5 +711,6 @@
     <resources>
         <image name="colorwater" width="453" height="640"/>
         <image name="defaultUser" width="50" height="50"/>
+        <image name="restart" width="25" height="25"/>
     </resources>
 </document>

@@ -287,6 +287,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
             self.restartButton.backgroundColor = UIColor.whiteColor()
         }, completion: { finish in
             print("DONE")
+            self.timer.invalidate()
+            self.prepareNewGame()
+            self.gameView.hidden = true
+            self.startView.hidden = false
         })
     }
 

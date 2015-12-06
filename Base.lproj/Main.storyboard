@@ -202,6 +202,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h44-jK-aiJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -231,6 +234,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eD-uv-fiI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-0c-mX0">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -247,6 +253,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CrB-A3-NhB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>

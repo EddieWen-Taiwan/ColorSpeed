@@ -169,6 +169,9 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // *************
     // Game View
 
+    @IBAction func clickColorButton(sender: AnyObject) {
+    }
+
     func answerColor( buttonIndex: Int ) {
         let buttonColor = self.colorArray[buttonIndex]
 

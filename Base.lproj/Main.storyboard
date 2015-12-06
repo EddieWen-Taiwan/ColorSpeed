@@ -183,6 +183,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uE-ae-p8w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t68-Vr-IJ7">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>

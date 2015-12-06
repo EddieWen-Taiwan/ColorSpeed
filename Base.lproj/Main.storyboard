@@ -184,10 +184,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="clickLeftTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBM-aF-x5q"/>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uE-ae-p8w"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t68-Vr-IJ7">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t68-Vr-IJ7">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -203,7 +203,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="clickLeftBottomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yF-Kj-1GB"/>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h44-jK-aiJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -219,7 +219,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-VC-pC7" userLabel="right">
                                         <rect key="frame" x="300" y="370" width="300" height="230"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eH-ON-orz">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eH-ON-orz">
                                                 <rect key="frame" x="100" y="30" width="100" height="70"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,10 +235,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="clickRightTopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VI2-3I-kwt"/>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eD-uv-fiI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-0c-mX0">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-0c-mX0">
                                                 <rect key="frame" x="100" y="130" width="100" height="70"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,7 +254,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="clickRightBottomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cO5-b7-ETM"/>
+                                                    <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CrB-A3-NhB"/>
                                                 </connections>
                                             </button>
                                         </subviews>

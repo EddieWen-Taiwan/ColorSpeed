@@ -135,7 +135,7 @@
                                     <constraint firstItem="ebt-Ep-hUP" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="hHN-NL-gQb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
@@ -286,7 +286,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKg-SU-mUd">
-                                        <rect key="frame" x="535" y="15" width="50" height="50"/>
+                                        <rect key="frame" x="540" y="10" width="50" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restart" translatesAutoresizingMaskIntoConstraints="NO" id="WqA-p6-1m0">
                                                 <rect key="frame" x="13" y="13" width="25" height="25"/>
@@ -314,9 +314,9 @@
                                     <constraint firstItem="629-3M-paI" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="RO2-9y-IWN"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="top" secondItem="629-3M-paI" secondAttribute="bottom" constant="30" id="c9h-G9-FOB"/>
                                     <constraint firstAttribute="trailing" secondItem="pEx-VC-pC7" secondAttribute="trailing" id="chK-5Y-d2w"/>
-                                    <constraint firstAttribute="trailing" secondItem="IKg-SU-mUd" secondAttribute="trailing" constant="15" id="dSf-fK-1yF"/>
+                                    <constraint firstAttribute="trailing" secondItem="IKg-SU-mUd" secondAttribute="trailing" constant="10" id="dSf-fK-1yF"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="centerX" secondItem="NNB-E0-1Yt" secondAttribute="centerX" id="dbW-ee-Cld"/>
-                                    <constraint firstItem="IKg-SU-mUd" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="15" id="kcc-zA-Oib"/>
+                                    <constraint firstItem="IKg-SU-mUd" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="10" id="kcc-zA-Oib"/>
                                     <constraint firstItem="97k-VX-qmF" firstAttribute="leading" secondItem="NNB-E0-1Yt" secondAttribute="leading" id="mTZ-ix-g6t"/>
                                     <constraint firstAttribute="bottom" secondItem="YmM-oM-d7u" secondAttribute="bottom" id="pFz-fJ-qoN"/>
                                     <constraint firstItem="Msi-yx-1wL" firstAttribute="top" secondItem="NNB-E0-1Yt" secondAttribute="top" constant="30" id="sdx-VH-riY"/>

@@ -62,10 +62,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.prepareNewGame()
-
-        // Add border to restartButton
-        self.restartButton.layer.borderColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1).CGColor
-        self.restartButton.layer.borderWidth = 2
         // Add gesture
         let restartGesture = UITapGestureRecognizer(target: self, action: "restartGame")
         self.restartButton.addGestureRecognizer( restartGesture )

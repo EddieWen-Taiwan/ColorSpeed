@@ -135,7 +135,7 @@
                                     <constraint firstItem="ebt-Ep-hUP" firstAttribute="centerY" secondItem="fUR-vc-x3p" secondAttribute="centerY" id="hHN-NL-gQb"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNB-E0-1Yt" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="629-3M-paI">
@@ -296,18 +296,12 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7Ci-5h-7ho"/>
                                             <constraint firstAttribute="width" constant="50" id="A6X-qQ-yVp"/>
                                             <constraint firstItem="WqA-p6-1m0" firstAttribute="centerY" secondItem="IKg-SU-mUd" secondAttribute="centerY" id="Z6X-58-Umu"/>
                                             <constraint firstItem="WqA-p6-1m0" firstAttribute="centerX" secondItem="IKg-SU-mUd" secondAttribute="centerX" id="wis-lg-ard"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="25"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>

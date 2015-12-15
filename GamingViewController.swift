@@ -265,15 +265,10 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     }
 
     func restartGame() {
-        self.restartButton.backgroundColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
-        UIView.animateWithDuration( 0.2, animations: {
-            self.restartButton.backgroundColor = UIColor.whiteColor()
-        }, completion: { finish in
-            self.timer.invalidate()
-            self.prepareNewGame()
-            self.gameView.hidden = true
-            self.startView.hidden = false
-        })
+        self.timer.invalidate()
+        self.prepareNewGame()
+        self.gameView.hidden = true
+        self.startView.hidden = false
     }
 
 

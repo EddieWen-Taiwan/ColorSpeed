@@ -673,7 +673,7 @@
                                     <segue destination="dji-ge-Fkc" kind="embed" id="FcO-NM-iEs"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-et-auU">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-et-auU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <segue destination="wDZ-lv-cpD" kind="embed" id="3k9-Cw-fDz"/>
@@ -698,6 +698,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="effectViewContainer" destination="eyR-et-auU" id="CI6-cy-UZl"/>
                         <outlet property="startViewContainer" destination="Ycu-gJ-g0U" id="dsY-PS-tTK"/>
                     </connections>
                 </viewController>
@@ -759,6 +760,10 @@
         <scene sceneID="QDT-2u-sJK">
             <objects>
                 <viewController id="wDZ-lv-cpD" customClass="EffectViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jGq-tJ-A8p"/>
+                        <viewControllerLayoutGuide type="bottom" id="xks-za-96W"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Hnr-ny-hfP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -803,7 +808,6 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fJW-0O-OQE" firstAttribute="centerY" secondItem="Hnr-ny-hfP" secondAttribute="centerY" id="1ts-Wi-o6F"/>
                             <constraint firstItem="fJW-0O-OQE" firstAttribute="centerX" secondItem="Hnr-ny-hfP" secondAttribute="centerX" id="Rgl-5E-Puu"/>

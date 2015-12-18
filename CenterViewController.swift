@@ -11,6 +11,7 @@ import UIKit
 class CenterViewController: UIViewController {
 
     @IBOutlet var startViewContainer: UIView!
+    @IBOutlet var effectViewContainer: UIView!
 
 
 

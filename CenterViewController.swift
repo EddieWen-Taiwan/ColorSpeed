@@ -30,8 +30,8 @@ class CenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.startViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StartView")
-        self.effectViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EffectView")
+        self.startViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StartView") as? StartViewController
+        self.effectViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EffectView") as? EffectViewController
 
         self.currentViewController = self.startViewController
     }

@@ -20,7 +20,25 @@ class EffectViewController: UIViewController {
     }
 
     func countdownGame() {
-        
+
+        self.three.animation = "zoomOut"
+        self.three.animateToNext({
+            self.two.hidden = false
+            self.two.animation = "zoomOut"
+            self.two.animateToNext({
+                self.one.hidden = false
+                self.one.animation = "zoomOut"
+                self.one.animateToNext({
+                    // Game Start
+                    self.effectView.hidden = true
+                    self.gameView.hidden = false
+                    // Start timer
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                    self.initEffectTransform()
+                })
+            })
+        })
+
     }
 
 }

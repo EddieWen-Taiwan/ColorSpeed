@@ -6,7 +6,7 @@
 //  Copyright © 2015 Wen. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class StartViewController: UIViewController {
 

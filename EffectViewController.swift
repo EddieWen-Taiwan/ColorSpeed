@@ -17,6 +17,8 @@ class EffectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.countdownGame()
     }
 
     func countdownGame() {

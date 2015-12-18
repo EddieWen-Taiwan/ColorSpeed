@@ -16,7 +16,9 @@ class StartViewController: UIViewController {
 
     @IBAction func gameStart(sender: AnyObject) {
         print("click")
-        print(self.parentViewController)
+
+        let parentVC = self.parentViewController as! CenterViewController
+        parentVC.currentViewController = parentVC.effectViewController
     }
 
 }

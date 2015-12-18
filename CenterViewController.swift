@@ -12,7 +12,7 @@ class CenterViewController: UIViewController {
 
     @IBOutlet var containerView: UIView!
 
-    private var currentViewController: UIViewController? {
+    var currentViewController: UIViewController? {
         didSet {
             removeInactiveViewController(oldValue)
             updateActiveViewController()
@@ -20,7 +20,7 @@ class CenterViewController: UIViewController {
     }
 
     var startViewController: StartViewController?
-
+    var effectViewController: EffectViewController?
 
 
 

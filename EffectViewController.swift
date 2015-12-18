@@ -30,15 +30,28 @@ class EffectViewController: UIViewController {
                 self.one.animation = "zoomOut"
                 self.one.animateToNext({
                     // Game Start
-                    self.effectView.hidden = true
-                    self.gameView.hidden = false
+                    let parentVC = self.parentViewController as! CenterViewController
+                    parentVC.effectViewContainer.hidden = true
+//                    self.gameView.hidden = false
                     // Start timer
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+//                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
                     self.initEffectTransform()
                 })
             })
         })
 
+    }
+
+    func initEffectTransform() {
+        self.three.transform = CGAffineTransformIdentity
+        self.two.hidden = true
+        self.two.transform = CGAffineTransformIdentity
+        self.one.hidden = true
+        self.one.transform = CGAffineTransformIdentity
+        
+//        self.endingTimeLabel.transform = CGAffineTransformIdentity
+//        self.topConstraintOfTimeLabel.constant = 0
+        self.view.layoutIfNeeded()
     }
 
 }

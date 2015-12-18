@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fe8-fK-Yoa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -8,6 +8,8 @@
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Quicksand-Regular.otf">
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
@@ -357,7 +359,7 @@
                                     <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="40" width="560" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
@@ -661,18 +663,76 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorwater" translatesAutoresizingMaskIntoConstraints="NO" id="AU4-vc-fzm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-gJ-g0U">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="dji-ge-Fkc" kind="embed" id="FcO-NM-iEs"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="AU4-vc-fzm" secondAttribute="trailing" id="3ZC-8q-Cmb"/>
+                            <constraint firstItem="Ycu-gJ-g0U" firstAttribute="top" secondItem="Pmu-mz-Mpl" secondAttribute="top" id="Dun-VP-8lx"/>
                             <constraint firstItem="AU4-vc-fzm" firstAttribute="top" secondItem="Pmu-mz-Mpl" secondAttribute="top" id="OKF-ZJ-OR9"/>
+                            <constraint firstAttribute="bottom" secondItem="Ycu-gJ-g0U" secondAttribute="bottom" id="Ob6-2g-ryz"/>
+                            <constraint firstItem="Ycu-gJ-g0U" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="fMK-s2-is9"/>
                             <constraint firstAttribute="bottom" secondItem="AU4-vc-fzm" secondAttribute="bottom" id="jDk-A6-0C7"/>
                             <constraint firstItem="AU4-vc-fzm" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="whj-LR-MXL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ycu-gJ-g0U" secondAttribute="trailing" id="zao-YI-LSF"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQj-t1-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="401" y="1925"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Ze-EI-H5I">
+            <objects>
+                <viewController id="dji-ge-Fkc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGd-1O-tAk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ColorSpeed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssL-3x-k0p">
+                                <rect key="frame" x="0.0" y="185" width="600" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Guz-Kb-Bkk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="sM7-Cx-YZW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4t-fd-weM">
+                                <rect key="frame" x="260" y="355" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ha9-OF-LEO"/>
+                                    <constraint firstAttribute="height" constant="50" id="hg7-x0-aWY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="28"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgb-W5-8Pz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="o4t-fd-weM" firstAttribute="top" secondItem="ssL-3x-k0p" secondAttribute="bottom" constant="100" id="a8z-Kf-nSQ"/>
+                            <constraint firstItem="o4t-fd-weM" firstAttribute="centerX" secondItem="gGd-1O-tAk" secondAttribute="centerX" id="n0G-zl-3Ti"/>
+                            <constraint firstAttribute="trailing" secondItem="ssL-3x-k0p" secondAttribute="trailing" id="pRD-1T-3yD"/>
+                            <constraint firstItem="ssL-3x-k0p" firstAttribute="centerY" secondItem="gGd-1O-tAk" secondAttribute="centerY" constant="-80" id="pcy-Fo-qvu"/>
+                            <constraint firstItem="ssL-3x-k0p" firstAttribute="leading" secondItem="gGd-1O-tAk" secondAttribute="leading" id="tbU-Ph-Jfu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Iy-ll-0Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="1925"/>
         </scene>
     </scenes>
     <resources>

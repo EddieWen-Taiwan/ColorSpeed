@@ -17,6 +17,9 @@ class CenterViewController: UIViewController {
             updateActiveViewController()
         }
     }
+    var startViewController: StartViewController?
+    var effectViewController: EffectViewController?
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
@@ -26,6 +29,11 @@ class CenterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.startViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StartView")
+        self.effectViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EffectView")
+
+        self.currentViewController = self.startViewController
     }
     
     func prepareNewGame() {

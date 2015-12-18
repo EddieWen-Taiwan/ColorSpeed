@@ -981,7 +981,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AZ9-9T-3cs" firstAttribute="centerX" secondItem="3Zp-0x-BWU" secondAttribute="centerX" id="1H3-aA-5PU"/>
                             <constraint firstItem="ALM-OF-NYO" firstAttribute="width" secondItem="3Zp-0x-BWU" secondAttribute="width" multiplier="0.5" id="1y0-rl-nuc"/>

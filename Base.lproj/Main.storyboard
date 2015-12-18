@@ -357,7 +357,7 @@
                                     <constraint firstAttribute="bottom" secondItem="u8b-It-GYM" secondAttribute="bottom" constant="60" id="g3g-VE-0yo"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOd-d2-4w3" userLabel="BreakView" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="40" width="560" height="540"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW RECORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-1X-uOL">
@@ -649,6 +649,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qnh-5C-KaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="1157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iBn-UZ-uXF">
+            <objects>
+                <viewController id="fe8-fK-Yoa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pmu-mz-Mpl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorwater" translatesAutoresizingMaskIntoConstraints="NO" id="AU4-vc-fzm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AU4-vc-fzm" secondAttribute="trailing" id="3ZC-8q-Cmb"/>
+                            <constraint firstItem="AU4-vc-fzm" firstAttribute="top" secondItem="Pmu-mz-Mpl" secondAttribute="top" id="OKF-ZJ-OR9"/>
+                            <constraint firstAttribute="bottom" secondItem="AU4-vc-fzm" secondAttribute="bottom" id="jDk-A6-0C7"/>
+                            <constraint firstItem="AU4-vc-fzm" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="whj-LR-MXL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQj-t1-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

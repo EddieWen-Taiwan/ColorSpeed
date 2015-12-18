@@ -745,10 +745,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="2687"/>
         </scene>
-        <!--View Controller-->
+        <!--Effect View Controller-->
         <scene sceneID="seo-z5-xMJ">
             <objects>
-                <viewController id="ZtD-hb-AFY" sceneMemberID="viewController">
+                <viewController id="ZtD-hb-AFY" customClass="EffectViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kdw-KO-Yw5"/>
                         <viewControllerLayoutGuide type="bottom" id="edF-ox-eBI"/>

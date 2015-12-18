@@ -652,10 +652,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="1157"/>
         </scene>
-        <!--View Controller-->
+        <!--Center View Controller-->
         <scene sceneID="iBn-UZ-uXF">
             <objects>
-                <viewController id="fe8-fK-Yoa" sceneMemberID="viewController">
+                <viewController id="fe8-fK-Yoa" customClass="CenterViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pmu-mz-Mpl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -686,7 +686,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQj-t1-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="1925"/>
+            <point key="canvasLocation" x="410" y="1925"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6Ze-EI-H5I">
@@ -732,7 +732,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Iy-ll-0Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="1925"/>
+            <point key="canvasLocation" x="1207" y="1925"/>
         </scene>
     </scenes>
     <resources>

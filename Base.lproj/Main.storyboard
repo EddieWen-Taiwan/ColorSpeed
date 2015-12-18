@@ -656,6 +656,10 @@
         <scene sceneID="iBn-UZ-uXF">
             <objects>
                 <viewController id="fe8-fK-Yoa" customClass="CenterViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B4l-ai-tf2"/>
+                        <viewControllerLayoutGuide type="bottom" id="2sx-DT-VjR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pmu-mz-Mpl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -691,10 +695,14 @@
             </objects>
             <point key="canvasLocation" x="410" y="1925"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="6Ze-EI-H5I">
             <objects>
-                <viewController id="dji-ge-Fkc" sceneMemberID="viewController">
+                <viewController id="dji-ge-Fkc" customClass="StartViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GJh-A3-xvF"/>
+                        <viewControllerLayoutGuide type="bottom" id="bFh-wi-gVK"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gGd-1O-tAk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -720,7 +728,7 @@
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="28"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="gameStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgb-W5-8Pz"/>
+                                    <action selector="gameStart:" destination="dji-ge-Fkc" eventType="touchUpInside" id="O7c-nP-2FH"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -10,4 +10,13 @@ import UIKit
 
 class StartViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func gameStart(sender: AnyObject) {
+        print("click")
+        print(self.parentViewController)
+    }
+
 }

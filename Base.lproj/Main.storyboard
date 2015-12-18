@@ -817,10 +817,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="2687"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="LVB-fq-xSJ">
             <objects>
-                <viewController storyboardIdentifier="GameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VY1-TF-3Tr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VY1-TF-3Tr" customClass="GameViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lFP-KB-HXo"/>
                         <viewControllerLayoutGuide type="bottom" id="BWA-ck-dHl"/>

@@ -19,4 +19,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func clickColorButton(sender: AnyObject) {
+    }
 }

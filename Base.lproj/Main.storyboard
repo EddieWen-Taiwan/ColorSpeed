@@ -872,6 +872,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="VY1-TF-3Tr" eventType="touchUpInside" id="oik-Np-wQ4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-gz-zay">
                                         <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -887,6 +890,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="VY1-TF-3Tr" eventType="touchUpInside" id="c9M-s0-uF6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -914,6 +920,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="VY1-TF-3Tr" eventType="touchUpInside" id="l4c-Pr-BA6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-JN-06W">
                                         <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -929,6 +938,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="VY1-TF-3Tr" eventType="touchUpInside" id="Lep-Eg-dTc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -989,6 +1001,7 @@
                     </view>
                     <connections>
                         <outlet property="LeftBottomButton" destination="aIr-gz-zay" id="dcR-UK-hOs"/>
+                        <outlet property="LeftTopButton" destination="0hL-Kq-evo" id="65e-jB-kAW"/>
                         <outlet property="RightBottomButton" destination="S5L-JN-06W" id="6m0-iC-HGH"/>
                         <outlet property="RightTopButton" destination="bN5-rs-ljs" id="zu7-yy-xQh"/>
                     </connections>

@@ -32,6 +32,10 @@
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -824,7 +828,113 @@
                     <view key="view" contentMode="scaleToFill" id="3Zp-0x-BWU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-V1-BRc" userLabel="right">
+                                <rect key="frame" x="300" y="370" width="300" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN5-rs-ljs">
+                                        <rect key="frame" x="100" y="30" width="100" height="70"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="JAq-LM-yOt"/>
+                                            <constraint firstAttribute="width" constant="100" id="sqD-GG-EOe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBT-HP-ZiW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-JN-06W">
+                                        <rect key="frame" x="100" y="130" width="100" height="70"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="APL-1d-kSM"/>
+                                            <constraint firstAttribute="width" constant="100" id="bbJ-qX-cf9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLd-7M-ZLb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="S5L-JN-06W" secondAttribute="bottom" constant="30" id="3qb-8c-1sq"/>
+                                    <constraint firstItem="S5L-JN-06W" firstAttribute="top" secondItem="bN5-rs-ljs" secondAttribute="bottom" constant="30" id="9Kb-YG-mos"/>
+                                    <constraint firstItem="bN5-rs-ljs" firstAttribute="centerX" secondItem="7Pe-V1-BRc" secondAttribute="centerX" id="Rq0-9G-Y3W"/>
+                                    <constraint firstItem="bN5-rs-ljs" firstAttribute="top" secondItem="7Pe-V1-BRc" secondAttribute="top" constant="30" id="YLp-Tf-i4c"/>
+                                    <constraint firstItem="S5L-JN-06W" firstAttribute="centerX" secondItem="7Pe-V1-BRc" secondAttribute="centerX" id="kEI-3T-8oD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALM-OF-NYO" userLabel="left">
+                                <rect key="frame" x="0.0" y="370" width="300" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hL-Kq-evo">
+                                        <rect key="frame" x="100" y="30" width="100" height="70"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="U9a-og-aA1"/>
+                                            <constraint firstAttribute="height" constant="70" id="WQM-Pr-IMQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnV-Sq-czu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-gz-zay">
+                                        <rect key="frame" x="100" y="130" width="100" height="70"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="fBw-hY-gc8"/>
+                                            <constraint firstAttribute="height" constant="70" id="nMz-KR-k4m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ich-sJ-Zdj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0hL-Kq-evo" firstAttribute="centerX" secondItem="ALM-OF-NYO" secondAttribute="centerX" id="4Op-CG-M2I"/>
+                                    <constraint firstItem="aIr-gz-zay" firstAttribute="top" secondItem="0hL-Kq-evo" secondAttribute="bottom" constant="30" id="9Pj-YM-eHm"/>
+                                    <constraint firstItem="aIr-gz-zay" firstAttribute="centerX" secondItem="ALM-OF-NYO" secondAttribute="centerX" id="AMN-cg-1Zk"/>
+                                    <constraint firstItem="0hL-Kq-evo" firstAttribute="top" secondItem="ALM-OF-NYO" secondAttribute="top" constant="30" id="B7t-wQ-RJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="aIr-gz-zay" secondAttribute="bottom" constant="30" id="Zpo-Cm-F1X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ALM-OF-NYO" firstAttribute="width" secondItem="3Zp-0x-BWU" secondAttribute="width" multiplier="0.5" id="1y0-rl-nuc"/>
+                            <constraint firstItem="ALM-OF-NYO" firstAttribute="leading" secondItem="3Zp-0x-BWU" secondAttribute="leading" id="3KO-8B-sFk"/>
+                            <constraint firstItem="BWA-ck-dHl" firstAttribute="top" secondItem="ALM-OF-NYO" secondAttribute="bottom" id="dnk-B5-eXn"/>
+                            <constraint firstItem="7Pe-V1-BRc" firstAttribute="width" secondItem="3Zp-0x-BWU" secondAttribute="width" multiplier="0.5" id="lvH-sd-WlQ"/>
+                            <constraint firstItem="BWA-ck-dHl" firstAttribute="top" secondItem="7Pe-V1-BRc" secondAttribute="bottom" id="oIz-GN-wdE"/>
+                            <constraint firstAttribute="trailing" secondItem="7Pe-V1-BRc" secondAttribute="trailing" id="s6u-Hb-Bbi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEe-VM-oAN" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -695,7 +695,7 @@
         <!--Start View Controller-->
         <scene sceneID="6Ze-EI-H5I">
             <objects>
-                <viewController id="dji-ge-Fkc" customClass="StartViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dji-ge-Fkc" customClass="StartViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GJh-A3-xvF"/>
                         <viewControllerLayoutGuide type="bottom" id="bFh-wi-gVK"/>
@@ -745,7 +745,7 @@
         <!--Effect View Controller-->
         <scene sceneID="QDT-2u-sJK">
             <objects>
-                <viewController id="wDZ-lv-cpD" customClass="EffectViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EffectView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wDZ-lv-cpD" customClass="EffectViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jGq-tJ-A8p"/>
                         <viewControllerLayoutGuide type="bottom" id="xks-za-96W"/>

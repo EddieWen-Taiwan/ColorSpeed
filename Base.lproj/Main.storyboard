@@ -872,9 +872,6 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnV-Sq-czu"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-gz-zay">
                                         <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -890,9 +887,6 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ich-sJ-Zdj"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -920,9 +914,6 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBT-HP-ZiW"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5L-JN-06W">
                                         <rect key="frame" x="100" y="130" width="100" height="70"/>
@@ -938,9 +929,6 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLd-7M-ZLb"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -999,6 +987,11 @@
                             <constraint firstItem="7cd-BN-sjl" firstAttribute="centerX" secondItem="3Zp-0x-BWU" secondAttribute="centerX" id="y9e-hG-qvK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LeftBottomButton" destination="aIr-gz-zay" id="dcR-UK-hOs"/>
+                        <outlet property="RightBottomButton" destination="S5L-JN-06W" id="6m0-iC-HGH"/>
+                        <outlet property="RightTopButton" destination="bN5-rs-ljs" id="zu7-yy-xQh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEe-VM-oAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

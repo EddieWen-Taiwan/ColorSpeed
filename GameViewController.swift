@@ -10,6 +10,11 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet var LeftTopButton: UIButton!
+    @IBOutlet var LeftBottomButton: UIButton!
+    @IBOutlet var RightTopButton: UIButton!
+    @IBOutlet var RightBottomButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

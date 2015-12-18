@@ -15,10 +15,8 @@ class StartViewController: UIViewController {
     }
 
     @IBAction func gameStart(sender: AnyObject) {
-        print("click")
-
         let parentVC = self.parentViewController as! CenterViewController
-        parentVC.currentViewController = parentVC.effectViewController
+        parentVC.containerView.hidden = true
     }
 
 }

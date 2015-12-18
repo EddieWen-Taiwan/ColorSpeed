@@ -1004,6 +1004,10 @@
                         <outlet property="LeftTopButton" destination="0hL-Kq-evo" id="65e-jB-kAW"/>
                         <outlet property="RightBottomButton" destination="S5L-JN-06W" id="6m0-iC-HGH"/>
                         <outlet property="RightTopButton" destination="bN5-rs-ljs" id="zu7-yy-xQh"/>
+                        <outlet property="clock" destination="R3d-We-6fU" id="5kT-Gs-Ddv"/>
+                        <outlet property="plus2second" destination="hBQ-2W-STQ" id="wsA-V7-heK"/>
+                        <outlet property="questionTitle" destination="AZ9-9T-3cs" id="Zbl-WZ-oLc"/>
+                        <outlet property="warningView" destination="7cd-BN-sjl" id="fts-Vp-fN1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEe-VM-oAN" userLabel="First Responder" sceneMemberID="firstResponder"/>

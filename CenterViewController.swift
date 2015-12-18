@@ -10,8 +10,7 @@ import UIKit
 
 class CenterViewController: UIViewController {
 
-    @IBOutlet var startViewContainer: UIView!
-    @IBOutlet var effectViewContainer: UIView!
+    @IBOutlet var containerView: UIView!
 
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]

@@ -669,15 +669,6 @@
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-gJ-g0U">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="dji-ge-Fkc" kind="embed" id="FcO-NM-iEs"/>
-                                </connections>
-                            </containerView>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-et-auU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="wDZ-lv-cpD" kind="embed" id="3k9-Cw-fDz"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -686,20 +677,15 @@
                             <constraint firstItem="Ycu-gJ-g0U" firstAttribute="top" secondItem="Pmu-mz-Mpl" secondAttribute="top" id="Dun-VP-8lx"/>
                             <constraint firstItem="AU4-vc-fzm" firstAttribute="top" secondItem="Pmu-mz-Mpl" secondAttribute="top" id="OKF-ZJ-OR9"/>
                             <constraint firstAttribute="bottom" secondItem="Ycu-gJ-g0U" secondAttribute="bottom" id="Ob6-2g-ryz"/>
-                            <constraint firstAttribute="trailing" secondItem="eyR-et-auU" secondAttribute="trailing" id="b11-Uc-Rxo"/>
-                            <constraint firstItem="eyR-et-auU" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="b1S-BT-VMB"/>
                             <constraint firstItem="Ycu-gJ-g0U" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="fMK-s2-is9"/>
                             <constraint firstAttribute="bottom" secondItem="AU4-vc-fzm" secondAttribute="bottom" id="jDk-A6-0C7"/>
-                            <constraint firstItem="eyR-et-auU" firstAttribute="top" secondItem="B4l-ai-tf2" secondAttribute="bottom" id="vlq-cY-iMc"/>
                             <constraint firstItem="AU4-vc-fzm" firstAttribute="leading" secondItem="Pmu-mz-Mpl" secondAttribute="leading" id="whj-LR-MXL"/>
-                            <constraint firstItem="2sx-DT-VjR" firstAttribute="top" secondItem="eyR-et-auU" secondAttribute="bottom" id="xgg-yf-0Aq"/>
                             <constraint firstAttribute="trailing" secondItem="Ycu-gJ-g0U" secondAttribute="trailing" id="zao-YI-LSF"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="effectViewContainer" destination="eyR-et-auU" id="CI6-cy-UZl"/>
-                        <outlet property="startViewContainer" destination="Ycu-gJ-g0U" id="dsY-PS-tTK"/>
+                        <outlet property="containerView" destination="Ycu-gJ-g0U" id="paO-Qz-ApE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQj-t1-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

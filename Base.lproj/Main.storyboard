@@ -817,6 +817,11 @@
                             <constraint firstItem="kpG-53-2lF" firstAttribute="centerX" secondItem="Hnr-ny-hfP" secondAttribute="centerX" id="iN1-tC-KOb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="kpG-53-2lF" id="es9-90-hAR"/>
+                        <outlet property="three" destination="jrL-2l-X5q" id="8db-tq-D4I"/>
+                        <outlet property="two" destination="fJW-0O-OQE" id="cOE-l8-O4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oX9-Rs-og4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

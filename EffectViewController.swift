@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Spring
 
 class EffectViewController: UIViewController {
 
+    @IBOutlet var three: SpringLabel!
+    @IBOutlet var two: SpringLabel!
+    @IBOutlet var one: SpringLabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func countdownGame() {
+        
     }
 
 }

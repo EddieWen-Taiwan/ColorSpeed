@@ -683,6 +683,9 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="Ycu-gJ-g0U" id="cJZ-h3-Fjr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQj-t1-EsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,9 +22,6 @@ class CenterViewController: UIViewController {
     var gameViewController: GameViewController?
     let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
-    var colorTextArray: [String] = ["red","blue","yellow","black","green"]
-    var colorArray: [String] = ["green","blue","black","red"]
-
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
 //    let totalQuestion: Int = 20

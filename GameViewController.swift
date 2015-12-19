@@ -11,6 +11,9 @@ import Spring
 
 class GameViewController: UIViewController {
 
+    var colorTextArray: [String] = [ "red", "blue", "yellow", "black", "green" ]
+    var colorArray: [String] = [ "green", "blue", "black", "red" ]
+
     @IBOutlet var LeftTopButton: UIButton!
     @IBOutlet var LeftBottomButton: UIButton!
     @IBOutlet var RightTopButton: UIButton!

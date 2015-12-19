@@ -43,11 +43,11 @@ class CenterViewController: UIViewController {
 //        self.clock.text = "0"
         
         // Resort array
-        colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
-            let a = Int( arc4random_uniform(50) )
-            let b = Int( arc4random_uniform(50) )
-            return a > b
-        })
+//        colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
+//            let a = Int( arc4random_uniform(50) )
+//            let b = Int( arc4random_uniform(50) )
+//            return a > b
+//        })
         
 //        // Set text on the buttons
 //        self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
@@ -58,6 +58,17 @@ class CenterViewController: UIViewController {
 //        // First question
 //        self.updateQuestion()
         
+    }
+
+    func addTimer( timer: NSTimer ) {
+        self.currentSecond += 2
+
+        var displayT = self.currentSecond.displayText()
+        displayT.removeAtIndex(displayT.endIndex.predecessor())
+
+        if self.clock.text != displayT {
+            self.clock.text = displayT
+        }
     }
 
     // COPY

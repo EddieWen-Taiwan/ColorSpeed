@@ -68,12 +68,13 @@ class GameViewController: UIViewController {
             // Answer is correct
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
-                self.parentVC.timer.invalidate()
+                parentVC.timer.invalidate()
 //                self.endingTimeLabel.text = self.currentSecond.displayText()
 //
 //                self.checkRank()
 
                 // Show ending view
+                parentVC.currentViewController = parentVC.endingViewController
 
                 // TimeLabel animation
 //                self.topConstraintOfTimeLabel.constant = 50

@@ -48,6 +48,12 @@ class GameViewController: UIViewController {
         self.parentVC = self.parentViewController as! CenterViewController
 
         self.updateQuestion()
+        
+        // Set text on the buttons
+        self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
+        self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
+        self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
+        self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
     }
 
     @IBAction func clickColorButton(sender: UIButton) {

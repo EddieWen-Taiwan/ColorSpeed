@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     var colorTextArray: [String] = [ "red", "blue", "yellow", "black", "green" ]
     var colorArray: [String] = [ "green", "blue", "black", "red" ]
 
+    let totalQuestion: Int = 20
+    var answeredQuestion: Int = 0
     var currentText: String!
     var currentColor: String!
 

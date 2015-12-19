@@ -25,8 +25,10 @@ class CenterViewController: UIViewController {
     var colorTextArray: [String] = ["red","blue","yellow","black","green"]
     var colorArray: [String] = ["green","blue","black","red"]
 
+    var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
-    var answeredQuestion: Int = 0
+//    let totalQuestion: Int = 20
+//    var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

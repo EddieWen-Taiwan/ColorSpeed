@@ -19,6 +19,7 @@ class EndingViewController: UIViewController {
         super.viewDidLoad()
 
         self.parentVC = self.parentViewController as? CenterViewController
+        self.view.layoutIfNeeded()
 
         self.finalTimeLabel.text = parentVC?.currentSecond.displayText()
         self.centerYConstraint.constant = -100

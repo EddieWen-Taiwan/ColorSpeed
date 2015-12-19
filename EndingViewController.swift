@@ -11,6 +11,7 @@ import UIKit
 class EndingViewController: UIViewController {
 
     @IBOutlet var finalTimeLabel: UILabel!
+    @IBOutlet var centerYConstraint: NSLayoutConstraint!
 
     var parentVC: CenterViewController?
 
@@ -20,6 +21,7 @@ class EndingViewController: UIViewController {
         self.parentVC = self.parentViewController as? CenterViewController
 
         self.finalTimeLabel.text = parentVC?.currentSecond.displayText()
+        self.centerYConstraint.constant = -100
         UIView.animateWithDuration( 1, animations: {
             self.finalTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
             self.view.layoutIfNeeded()

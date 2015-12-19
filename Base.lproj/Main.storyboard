@@ -1063,6 +1063,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="centerYConstraint" destination="Y5q-iF-D1z" id="263-qf-wij"/>
                         <outlet property="finalTimeLabel" destination="2Sf-OF-ucK" id="CzT-Tq-ZtB"/>
                     </connections>
                 </viewController>

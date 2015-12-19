@@ -44,7 +44,7 @@ class CenterViewController: UIViewController {
         
         // Initialize variables
         self.currentSecond = 0
-        self.answeredQuestion = 0
+//        self.answeredQuestion = 0
 //        self.clock.text = "0"
         
         // Resort array

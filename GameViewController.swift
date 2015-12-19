@@ -107,7 +107,7 @@ class GameViewController: UIViewController {
                 self.plus2second.layer.position.y -= 70
                 self.plus2second.alpha = 0
             }, completion: { finish in
-                    self.plus2second.layer.position.y += 70
+                self.plus2second.layer.position.y += 70
             })
 
             // Punish: plus two seconds

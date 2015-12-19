@@ -10,8 +10,13 @@ import UIKit
 
 class EndingViewController: UIViewController {
 
+    @IBOutlet var finalTimeLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction func playAgain(sender: AnyObject) {
     }
 
 }

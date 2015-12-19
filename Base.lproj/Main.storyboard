@@ -1041,6 +1041,9 @@
                                 <rect key="frame" x="0.0" y="509" width="300" height="31"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                 <state key="normal" title="Play again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="qEA-Ry-T28" eventType="touchUpInside" id="ei2-vF-pYW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQU-ql-b7s">
                                 <rect key="frame" x="300" y="509" width="300" height="31"/>
@@ -1059,6 +1062,9 @@
                             <constraint firstItem="SOq-kh-kAm" firstAttribute="top" secondItem="uQU-ql-b7s" secondAttribute="bottom" constant="60" id="zkw-pN-UYt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finalTimeLabel" destination="2Sf-OF-ucK" id="CzT-Tq-ZtB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai2-84-VOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

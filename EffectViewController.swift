@@ -35,7 +35,7 @@ class EffectViewController: UIViewController {
                     let parentVC = self.parentViewController as! CenterViewController
                     parentVC.currentViewController = parentVC.gameViewController
                     // Start timer
-//                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
+                    parentVC.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: parentVC, selector: "addTimer:", userInfo: nil, repeats: true )
                     self.initEffectTransform()
                 })
             })

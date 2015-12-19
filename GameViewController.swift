@@ -31,6 +31,13 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Resort array
+        colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
+            let a = Int( arc4random_uniform(50) )
+            let b = Int( arc4random_uniform(50) )
+            return a > b
+        })
     }
 
     @IBAction func clickColorButton(sender: UIButton) {

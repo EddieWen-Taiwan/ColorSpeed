@@ -38,6 +38,8 @@ class GameViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
+
+        self.updateQuestion()
     }
 
     @IBAction func clickColorButton(sender: UIButton) {

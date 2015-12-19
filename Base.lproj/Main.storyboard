@@ -1048,7 +1048,6 @@
                                 <state key="normal" title="Top 10"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uQU-ql-b7s" firstAttribute="width" secondItem="YiU-cR-Lyk" secondAttribute="width" multiplier="0.5" id="15n-dX-kKw"/>
                             <constraint firstItem="W1F-9W-CEy" firstAttribute="leading" secondItem="YiU-cR-Lyk" secondAttribute="leading" id="5MX-h9-oR8"/>

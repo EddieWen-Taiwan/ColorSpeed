@@ -24,8 +24,6 @@ class CenterViewController: UIViewController {
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
-//    let totalQuestion: Int = 20
-//    var answeredQuestion: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

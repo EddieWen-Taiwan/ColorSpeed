@@ -14,6 +14,9 @@ class GameViewController: UIViewController {
     var colorTextArray: [String] = [ "red", "blue", "yellow", "black", "green" ]
     var colorArray: [String] = [ "green", "blue", "black", "red" ]
 
+    var currentText: String!
+    var currentColor: String!
+
     @IBOutlet var LeftTopButton: UIButton!
     @IBOutlet var LeftBottomButton: UIButton!
     @IBOutlet var RightTopButton: UIButton!
@@ -28,7 +31,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func clickColorButton(sender: AnyObject) {
+    @IBAction func clickColorButton(sender: UIButton) {
+        self.answerColor( sender.tag )
     }
     
     func answerColor( buttonIndex: Int ) {

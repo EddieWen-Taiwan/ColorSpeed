@@ -102,4 +102,30 @@ class GameViewController: UIViewController {
         }
     }
 
+    func updateQuestion() {
+
+        let nextText = self.colorTextArray.randomItem()
+        let nextColor = self.colorArray.randomItem()
+
+        if nextText != self.currentText || nextColor != self.currentColor {
+            self.currentText = nextText
+            self.questionTitle.text = self.currentText
+
+            self.currentColor = nextColor
+            switch( nextColor ) {
+                case "red":
+                    self.questionTitle.textColor = UIColor.redColor()
+                case "blue":
+                    self.questionTitle.textColor = UIColor.blueColor()
+                case "black":
+                    self.questionTitle.textColor = UIColor.blackColor()
+                default: // green
+                    self.questionTitle.textColor = UIColor.greenColor()
+            }
+        } else {
+            updateQuestion()
+        }
+
+    }
+
 }

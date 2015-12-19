@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     var currentText: String!
     var currentColor: String!
 
-    var parentVC: UIViewController!
+    var parentVC: CenterViewController!
 
     @IBOutlet var LeftTopButton: UIButton!
     @IBOutlet var LeftBottomButton: UIButton!
@@ -40,12 +40,12 @@ class GameViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
-
-        self.parentVC = self.parentViewController as! CenterViewController
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.parentVC = self.parentViewController as! CenterViewController
 
         self.updateQuestion()
     }

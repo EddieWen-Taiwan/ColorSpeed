@@ -98,3 +98,9 @@ class CenterViewController: UIViewController {
     }
 
 }
+
+extension Int {
+    func displayText() -> String {
+        return NSString( format: "%.2f", Double(self)/100 ) as String
+    }
+}

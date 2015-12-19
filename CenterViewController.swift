@@ -66,8 +66,8 @@ class CenterViewController: UIViewController {
         var displayT = self.currentSecond.displayText()
         displayT.removeAtIndex(displayT.endIndex.predecessor())
 
-        if self.clock.text != displayT {
-            self.clock.text = displayT
+        if gameViewController?.clock.text != displayT {
+            gameViewController?.clock.text = displayT
         }
     }
 

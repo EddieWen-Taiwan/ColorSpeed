@@ -40,6 +40,9 @@
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1024,7 +1027,38 @@
                     <view key="view" contentMode="scaleToFill" id="YiU-cR-Lyk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sf-OF-ucK">
+                                <rect key="frame" x="200" y="135" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dcW-T7-emH"/>
+                                    <constraint firstAttribute="height" constant="50" id="iA5-T9-7Ak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1F-9W-CEy">
+                                <rect key="frame" x="0.0" y="509" width="300" height="31"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
+                                <state key="normal" title="Play again"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQU-ql-b7s">
+                                <rect key="frame" x="300" y="509" width="300" height="31"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
+                                <state key="normal" title="Top 10"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uQU-ql-b7s" firstAttribute="width" secondItem="YiU-cR-Lyk" secondAttribute="width" multiplier="0.5" id="15n-dX-kKw"/>
+                            <constraint firstItem="W1F-9W-CEy" firstAttribute="leading" secondItem="YiU-cR-Lyk" secondAttribute="leading" id="5MX-h9-oR8"/>
+                            <constraint firstItem="SOq-kh-kAm" firstAttribute="top" secondItem="W1F-9W-CEy" secondAttribute="bottom" constant="60" id="IP1-yr-QXT"/>
+                            <constraint firstItem="2Sf-OF-ucK" firstAttribute="centerY" secondItem="YiU-cR-Lyk" secondAttribute="centerY" constant="-140" id="Y5q-iF-D1z"/>
+                            <constraint firstItem="2Sf-OF-ucK" firstAttribute="centerX" secondItem="YiU-cR-Lyk" secondAttribute="centerX" id="jOi-7u-8sz"/>
+                            <constraint firstItem="W1F-9W-CEy" firstAttribute="width" secondItem="YiU-cR-Lyk" secondAttribute="width" multiplier="0.5" id="trb-aZ-3lL"/>
+                            <constraint firstAttribute="trailing" secondItem="uQU-ql-b7s" secondAttribute="trailing" id="wH8-1f-qhl"/>
+                            <constraint firstItem="SOq-kh-kAm" firstAttribute="top" secondItem="uQU-ql-b7s" secondAttribute="bottom" constant="60" id="zkw-pN-UYt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai2-84-VOW" userLabel="First Responder" sceneMemberID="firstResponder"/>

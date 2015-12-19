@@ -1016,7 +1016,7 @@
         <!--Ending View Controller-->
         <scene sceneID="ffr-vE-GSE">
             <objects>
-                <viewController id="qEA-Ry-T28" customClass="EndingViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qEA-Ry-T28" customClass="EndingViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hRO-ZV-YAZ"/>
                         <viewControllerLayoutGuide type="bottom" id="SOq-kh-kAm"/>

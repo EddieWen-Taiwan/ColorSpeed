@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     var currentText: String!
     var currentColor: String!
 
+    var parentVC: UIViewController!
+
     @IBOutlet var LeftTopButton: UIButton!
     @IBOutlet var LeftBottomButton: UIButton!
     @IBOutlet var RightTopButton: UIButton!
@@ -29,8 +31,8 @@ class GameViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
 
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
@@ -38,6 +40,12 @@ class GameViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
+
+        self.parentVC = self.parentViewController as! CenterViewController
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         self.updateQuestion()
     }

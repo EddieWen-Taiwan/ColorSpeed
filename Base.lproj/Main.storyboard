@@ -37,7 +37,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="PTr-21-4Ao" customClass="RankTableViewCell" customModule="ColorSpeed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTr-21-4Ao" id="89Q-OW-cDy">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
@@ -240,6 +240,7 @@
                             <constraint firstItem="ssL-3x-k0p" firstAttribute="leading" secondItem="gGd-1O-tAk" secondAttribute="leading" id="tbU-Ph-Jfu"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Iy-ll-0Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +307,7 @@
                             <constraint firstItem="kpG-53-2lF" firstAttribute="centerX" secondItem="Hnr-ny-hfP" secondAttribute="centerX" id="iN1-tC-KOb"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="one" destination="kpG-53-2lF" id="es9-90-hAR"/>
                         <outlet property="three" destination="jrL-2l-X5q" id="8db-tq-D4I"/>
@@ -447,7 +449,7 @@
                                 </constraints>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cd-BN-sjl" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="200" y="50" width="200" height="50"/>
+                                <rect key="frame" x="200" y="30" width="200" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong color !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rW-ZL-wTT">
                                         <rect key="frame" x="46" y="16" width="108" height="19"/>
@@ -493,6 +495,7 @@
                             <constraint firstItem="7cd-BN-sjl" firstAttribute="centerX" secondItem="3Zp-0x-BWU" secondAttribute="centerX" id="y9e-hG-qvK"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="LeftBottomButton" destination="aIr-gz-zay" id="dcR-UK-hOs"/>
                         <outlet property="LeftTopButton" destination="0hL-Kq-evo" id="65e-jB-kAW"/>
@@ -557,6 +560,7 @@
                             <constraint firstItem="SOq-kh-kAm" firstAttribute="top" secondItem="uQU-ql-b7s" secondAttribute="bottom" constant="60" id="zkw-pN-UYt"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="centerYConstraint" destination="Y5q-iF-D1z" id="263-qf-wij"/>
                         <outlet property="finalTimeLabel" destination="2Sf-OF-ucK" id="CzT-Tq-ZtB"/>

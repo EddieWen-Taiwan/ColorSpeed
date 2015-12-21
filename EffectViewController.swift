@@ -15,8 +15,8 @@ class EffectViewController: UIViewController {
     @IBOutlet var two: SpringLabel!
     @IBOutlet var one: SpringLabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
         self.countdownGame()
     }

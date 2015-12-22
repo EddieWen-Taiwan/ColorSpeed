@@ -33,4 +33,9 @@ class EndingViewController: UIViewController {
         self.parentVC?.prepareNewGame()
     }
 
+    func newGame() {
+        self.centerYConstraint.constant = -140
+        self.finalTimeLabel.transform = CGAffineTransformIdentity
+    }
+
 }

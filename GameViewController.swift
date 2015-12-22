@@ -60,6 +60,7 @@ class GameViewController: UIViewController {
         // Reset answered questions
         self.answeredQuestion = 0
 
+        // Force to layout
         self.view.layoutIfNeeded()
 
     }

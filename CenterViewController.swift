@@ -44,6 +44,7 @@ class CenterViewController: UIViewController {
 //        self.answeredQuestion = 0
 //        self.clock.text = "0"
         self.gameViewController?.newGame()
+        self.endingViewController?.newGame()
 
         self.currentViewController = self.effectViewController
 

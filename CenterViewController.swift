@@ -45,6 +45,8 @@ class CenterViewController: UIViewController {
 //        self.clock.text = "0"
         self.gameViewController?.newGame()
 
+        self.currentViewController = self.effectViewController
+
     }
 
     func addTimer( timer: NSTimer ) {

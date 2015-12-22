@@ -30,7 +30,7 @@ class EndingViewController: UIViewController {
     }
 
     @IBAction func playAgain(sender: AnyObject) {
-        self.parentVC?.currentViewController = self.parentVC?.effectViewController
+        self.parentVC?.prepareNewGame()
     }
 
 }

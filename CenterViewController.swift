@@ -43,6 +43,7 @@ class CenterViewController: UIViewController {
         self.currentSecond = 0
 //        self.answeredQuestion = 0
 //        self.clock.text = "0"
+        self.gameViewController?.newGame()
 
     }
 

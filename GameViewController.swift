@@ -31,8 +31,8 @@ class GameViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in

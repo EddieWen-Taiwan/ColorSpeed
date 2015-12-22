@@ -13,15 +13,15 @@ class EndingViewController: UIViewController {
     @IBOutlet var finalTimeLabel: UILabel!
     @IBOutlet var centerYConstraint: NSLayoutConstraint!
 
-    var parentVC: CenterViewController?
+    var parentVC: CenterViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.parentVC = self.parentViewController as? CenterViewController
+        self.parentVC = self.parentViewController as! CenterViewController
         self.view.layoutIfNeeded()
 
-        self.finalTimeLabel.text = parentVC?.currentSecond.displayText()
+        self.finalTimeLabel.text = parentVC.currentSecond.displayText()
         self.centerYConstraint.constant = -100
         UIView.animateWithDuration( 1, animations: {
             self.finalTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
@@ -30,7 +30,7 @@ class EndingViewController: UIViewController {
     }
 
     @IBAction func playAgain(sender: AnyObject) {
-        self.parentVC?.prepareNewGame()
+        parentVC.prepareNewGame()
     }
 
     func newGame() {

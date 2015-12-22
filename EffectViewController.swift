@@ -49,8 +49,6 @@ class EffectViewController: UIViewController {
         self.two.transform = CGAffineTransformIdentity
         self.one.hidden = true
         self.one.transform = CGAffineTransformIdentity
-
-        self.view.layoutIfNeeded()
     }
 
 }

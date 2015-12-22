@@ -20,6 +20,10 @@ class EndingViewController: UIViewController {
 
         self.parentVC = self.parentViewController as! CenterViewController
         self.view.layoutIfNeeded()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
         self.finalTimeLabel.text = parentVC.currentSecond.displayText()
         self.centerYConstraint.constant = -100

@@ -51,6 +51,9 @@ class GameViewController: UIViewController {
 
         // First question
         self.updateQuestion()
+
+        // Reset answered questions
+        self.answeredQuestion = 0
     }
 
     @IBAction func clickColorButton(sender: UIButton) {

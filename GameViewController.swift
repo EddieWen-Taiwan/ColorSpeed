@@ -31,10 +31,12 @@ class GameViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         self.parentVC = self.parentViewController as! CenterViewController
+
+        self.newGame()
     }
 
     func newGame() {

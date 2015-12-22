@@ -77,19 +77,10 @@ class GameViewController: UIViewController {
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
                 parentVC.timer.invalidate()
-//                self.endingTimeLabel.text = self.currentSecond.displayText()
-//
 //                self.checkRank()
 
                 // Show ending view
                 parentVC.currentViewController = parentVC.endingViewController
-
-                // TimeLabel animation
-//                self.topConstraintOfTimeLabel.constant = 50
-//                UIView.animateWithDuration( 1, animations: {
-//                    self.endingTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
-//                    self.view.layoutIfNeeded()
-//                })
 
             } else {
                 // Next one
@@ -119,8 +110,8 @@ class GameViewController: UIViewController {
             })
 
             // Punish: plus two seconds
-            self.parentVC.currentSecond += 200
-            var displayT = self.parentVC.currentSecond.displayText()
+            parentVC.currentSecond += 200
+            var displayT = parentVC.currentSecond.displayText()
             displayT.removeAtIndex(displayT.endIndex.predecessor())
             self.clock.text = displayT
         }

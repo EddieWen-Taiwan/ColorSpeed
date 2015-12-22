@@ -36,22 +36,20 @@ class EffectViewController: UIViewController {
                     parentVC.currentViewController = parentVC.gameViewController
                     // Start timer
                     parentVC.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: parentVC, selector: "addTimer:", userInfo: nil, repeats: true )
-                    self.initEffectTransform()
+
                 })
             })
         })
 
     }
 
-    func initEffectTransform() {
+    func newGame() {
         self.three.transform = CGAffineTransformIdentity
         self.two.hidden = true
         self.two.transform = CGAffineTransformIdentity
         self.one.hidden = true
         self.one.transform = CGAffineTransformIdentity
-        
-//        self.endingTimeLabel.transform = CGAffineTransformIdentity
-//        self.topConstraintOfTimeLabel.constant = 0
+
         self.view.layoutIfNeeded()
     }
 

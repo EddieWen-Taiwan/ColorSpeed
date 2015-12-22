@@ -19,7 +19,6 @@ class EndingViewController: UIViewController {
         super.viewDidLoad()
 
         self.parentVC = self.parentViewController as! CenterViewController
-        self.view.layoutIfNeeded()
     }
 
     override func viewDidAppear(animated: Bool) {

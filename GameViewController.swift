@@ -34,6 +34,11 @@ class GameViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+        self.parentVC = self.parentViewController as! CenterViewController
+    }
+
+    func newGame() {
+
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
             let a = Int( arc4random_uniform(50) )
@@ -41,8 +46,6 @@ class GameViewController: UIViewController {
             return a > b
         })
 
-        self.parentVC = self.parentViewController as! CenterViewController
-        
         // Set text on the buttons
         self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
         self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
@@ -54,6 +57,7 @@ class GameViewController: UIViewController {
 
         // Reset answered questions
         self.answeredQuestion = 0
+
     }
 
     @IBAction func clickColorButton(sender: UIButton) {

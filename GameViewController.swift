@@ -31,8 +31,8 @@ class GameViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
@@ -40,10 +40,6 @@ class GameViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
         self.parentVC = self.parentViewController as! CenterViewController
         

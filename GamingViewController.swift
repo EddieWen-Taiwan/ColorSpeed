@@ -13,31 +13,7 @@ import FBSDKLoginKit
 
 class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
 
-    @IBOutlet var startView: UIView!
-    @IBOutlet var effectView: UIView!
-    @IBOutlet var gameView: UIView!
-    @IBOutlet var endingView: UIView!
     @IBOutlet var breakView: SpringView!
-
-    // in effect view
-    @IBOutlet var three: SpringLabel!
-    @IBOutlet var two: SpringLabel!
-    @IBOutlet var one: SpringLabel!
-
-    // in game view
-    @IBOutlet var LeftTopButton: UIButton!
-    @IBOutlet var LeftBottomButton: UIButton!
-    @IBOutlet var RightTopButton: UIButton!
-    @IBOutlet var RightBottomButton: UIButton!
-    @IBOutlet var clock: UILabel!
-    @IBOutlet var questionTitle: UILabel!
-    @IBOutlet var warningView: SpringView!
-    @IBOutlet var plus2second: UILabel!
-    @IBOutlet var restartButton: UIView!
-
-    // in ending view
-    @IBOutlet var endingTimeLabel: UILabel!
-    @IBOutlet var topConstraintOfTimeLabel: NSLayoutConstraint!
 
     // in break view
     @IBOutlet var nameTextField: UITextField!
@@ -47,24 +23,14 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
     let userP = NSUserDefaults.standardUserDefaults()
 
-    var colorTextArray: [String] = ["red","blue","yellow","black","green"]
-    var colorArray: [String] = ["green","blue","black","red"]
-
-    var timer = NSTimer()
-    var currentSecond: Int = 0 // output = currentSecond / 100
-    var currentText: String!
-    var currentColor: String!
-    let totalQuestion: Int = 20 // <-----
-    var answeredQuestion: Int = 0
     var newRank: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.prepareNewGame()
         // Add gesture
-        let restartGesture = UITapGestureRecognizer(target: self, action: "restartGame")
-        self.restartButton.addGestureRecognizer( restartGesture )
+//        let restartGesture = UITapGestureRecognizer(target: self, action: "restartGame")
+//        self.restartButton.addGestureRecognizer( restartGesture )
 
         // Preenter user name
         if let username = self.userP.stringForKey("username") {
@@ -85,204 +51,15 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
 
 
-    // *************
-    // Start View
-
-    @IBAction func gameStart(sender: AnyObject) {
-        self.startView.hidden = true
-        self.beReadyToGame()
-    }
-
-    func prepareNewGame() {
-
-        // Initialize variables
-        self.currentSecond = 0
-        self.answeredQuestion = 0
-        self.clock.text = "0"
-
-        // Resort array
-        colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
-            let a = Int( arc4random_uniform(50) )
-            let b = Int( arc4random_uniform(50) )
-            return a > b
-        })
-
-        // Set text on the buttons
-        self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
-        self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
-        self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
-        self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
-
-        // First question
-        self.updateQuestion()
-
-    }
-    
-    
-    
-    
-    // *************
-    // Effect View
-
-    // Countdown animation 3... 2... 1...
-    func beReadyToGame() {
-        self.effectView.hidden = false
-
-        self.three.animation = "zoomOut"
-        self.three.animateToNext({
-            self.two.hidden = false
-            self.two.animation = "zoomOut"
-            self.two.animateToNext({
-                self.one.hidden = false
-                self.one.animation = "zoomOut"
-                self.one.animateToNext({
-                    // Game Start
-                    self.effectView.hidden = true
-                    self.gameView.hidden = false
-                    // Start timer
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: self, selector: "addTimer:", userInfo: nil, repeats: true )
-                    self.initEffectTransform()
-                })
-            })
-        })
-    }
-
-    func initEffectTransform() {
-        self.three.transform = CGAffineTransformIdentity
-        self.two.hidden = true
-        self.two.transform = CGAffineTransformIdentity
-        self.one.hidden = true
-        self.one.transform = CGAffineTransformIdentity
-
-        self.endingTimeLabel.transform = CGAffineTransformIdentity
-        self.topConstraintOfTimeLabel.constant = 0
-        self.view.layoutIfNeeded()
-    }
 
 
 
-
-    // *************
-    // Game View
-
-    @IBAction func clickColorButton(sender: UIButton) {
-        self.answerColor( sender.tag )
-    }
-
-    func answerColor( buttonIndex: Int ) {
-        let buttonColor = self.colorArray[buttonIndex]
-
-        if buttonColor == self.currentColor {
-            // Answer is correct
-            if self.answeredQuestion == self.totalQuestion-1 {
-                // End game
-                self.timer.invalidate()
-                self.endingTimeLabel.text = self.currentSecond.displayText()
-
-                self.checkRank()
-
-                // Show ending view
-                self.gameView.hidden = true
-                self.endingView.hidden = false
-
-                // TimeLabel animation
-                self.topConstraintOfTimeLabel.constant = 50
-                UIView.animateWithDuration( 1, animations: {
-                    self.endingTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
-                    self.view.layoutIfNeeded()
-                })
-
-            } else {
-                // Next one
-                self.answeredQuestion++
-                self.updateQuestion()
-            }
-        } else {
-            // Answer is wrong
-            // WarningView animation
-            UIView.animateWithDuration( 0.2, animations: {
-                self.warningView.alpha = 1
-            }, completion: { finish in
-                self.warningView.animation = "shake"
-                self.warningView.animate()
-                UIView.animateWithDuration( 0.2, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                    self.warningView.alpha = 0
-                }, completion: { finish in })
-            })
-
-            // Plus 2 seconds animation
-            self.plus2second.alpha = 1
-            UIView.animateWithDuration( 0.7, animations: {
-                self.plus2second.layer.position.y -= 70
-                self.plus2second.alpha = 0
-            }, completion: { finish in
-                self.plus2second.layer.position.y += 70
-            })
-
-            // Punish: plus two seconds
-            self.currentSecond += 200
-            var displayT = self.currentSecond.displayText()
-            displayT.removeAtIndex(displayT.endIndex.predecessor())
-            self.clock.text = displayT
-        }
-    }
-
-    func addTimer( timer: NSTimer ) {
-        self.currentSecond += 2
-
-        var displayT = self.currentSecond.displayText()
-        displayT.removeAtIndex(displayT.endIndex.predecessor())
-
-        if self.clock.text != displayT {
-            self.clock.text = displayT
-        }
-    }
-
-    func updateQuestion() {
-
-        let nextText = self.colorTextArray.randomItem()
-        let nextColor = self.colorArray.randomItem()
-
-        if nextText != self.currentText || nextColor != self.currentColor {
-            self.currentText = nextText
-            self.questionTitle.text = self.currentText
-            
-            self.currentColor = nextColor
-            switch( nextColor ) {
-                case "red":
-                    self.questionTitle.textColor = UIColor.redColor()
-                case "blue":
-                    self.questionTitle.textColor = UIColor.blueColor()
-                case "black":
-                    self.questionTitle.textColor = UIColor.blackColor()
-                default: // green
-                    self.questionTitle.textColor = UIColor.greenColor()
-            }
-        } else {
-            updateQuestion()
-        }
-        
-    }
-
-    func restartGame() {
-        self.timer.invalidate()
-        self.prepareNewGame()
-        self.gameView.hidden = true
-        self.startView.hidden = false
-    }
 
 
 
 
     // *************
     // Ending View
-
-    @IBAction func playAgain(sender: AnyObject) {
-        // Clear current variables and restart
-        self.prepareNewGame()
-        self.endingView.hidden = true
-        self.beReadyToGame()
-    }
 
     func checkRank() {
 
@@ -420,11 +197,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
 
         self.userP.removeObjectForKey("fb_id")
         self.userP.removeObjectForKey("fb_name")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

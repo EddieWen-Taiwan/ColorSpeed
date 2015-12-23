@@ -36,13 +36,12 @@ class CenterViewController: UIViewController {
 
         self.currentViewController = self.startViewController
     }
-    
+
     func prepareNewGame() {
-        
+
         // Initialize variables
         self.currentSecond = 0
-//        self.answeredQuestion = 0
-//        self.clock.text = "0"
+
         self.effectViewController?.newGame()
         self.gameViewController?.newGame()
         self.endingViewController?.newGame()
@@ -93,5 +92,12 @@ class CenterViewController: UIViewController {
 extension Int {
     func displayText() -> String {
         return NSString( format: "%.2f", Double(self)/100 ) as String
+    }
+}
+
+extension Array {
+    func randomItem() -> Element {
+        let index = Int( arc4random_uniform( UInt32(self.count) ) )
+        return self[index]
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Spring
+import SwiftyJSON
 
 class GameViewController: UIViewController {
 
@@ -18,6 +19,8 @@ class GameViewController: UIViewController {
     var answeredQuestion: Int = 0
     var currentText: String!
     var currentColor: String!
+
+    var newRank: Int = 0
 
     var parentVC: CenterViewController!
 
@@ -77,10 +80,7 @@ class GameViewController: UIViewController {
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
                 parentVC.timer.invalidate()
-//                self.checkRank()
-
-                // Show ending view
-                parentVC.currentViewController = parentVC.endingViewController
+                self.checkRank()
 
             } else {
                 // Next one
@@ -139,6 +139,54 @@ class GameViewController: UIViewController {
             }
         } else {
             updateQuestion()
+        }
+
+    }
+
+    func checkRank() {
+
+        if Reachability().isConnectedToNetwork() {
+            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkTimeInLastRow )!)
+            httpRequest.HTTPMethod = "POST"
+
+            let postString = "time=\(parentVC.currentSecond.displayText())"
+            httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+
+            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
+
+                var nextVC = self.parentVC.endingViewController
+
+                if error == nil {
+                    let status = JSON( data: response! )
+                    if status["better"] {
+                        // Download new ranl data from server
+                        self.newRank = status["rank"].int!
+//                        nextVC = self.parentVC
+
+//                        dispatch_async( dispatch_get_main_queue(), {
+//                            self.newTimeRecordLabel.text = self.endingTimeLabel.text
+//                            // Show break view
+//                            if FBSDKAccessToken.currentAccessToken() == nil {
+//                                self.sameUserButton.hidden = true
+//                            } else {
+//                                self.sameUserButton.hidden = false
+//                                if let username = self.userP.stringForKey("fb_name") {
+//                                    self.sameUserButton.setTitle("Yes, I'm \(username)", forState: .Normal)
+//                                }
+//                            }
+//                            self.breakView.hidden = false
+//                            self.breakView.animation = "pop"
+//                            self.breakView.animate()
+//                        })
+                    } else {
+                        print("not better")
+                    }
+                }
+
+                self.parentVC.currentViewController = nextVC
+
+            }
+            checkNewData.resume()
         }
 
     }

@@ -15,8 +15,8 @@ class EffectViewController: UIViewController {
     @IBOutlet var two: SpringLabel!
     @IBOutlet var one: SpringLabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
 
         self.countdownGame()
     }
@@ -32,27 +32,24 @@ class EffectViewController: UIViewController {
                 self.one.animation = "zoomOut"
                 self.one.animateToNext({
                     // Game Start
-                    let parentVC = self.parentViewController as! CenterViewController
-                    parentVC.currentViewController = parentVC.gameViewController
-                    // Start timer
-                    parentVC.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: parentVC, selector: "addTimer:", userInfo: nil, repeats: true )
-                    self.initEffectTransform()
+                    if let parentVC = self.parentViewController as? CenterViewController {
+                        parentVC.currentViewController = parentVC.gameViewController
+                        // Start timer
+                        parentVC.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: parentVC, selector: "addTimer:", userInfo: nil, repeats: true )
+                    }
+
                 })
             })
         })
 
     }
 
-    func initEffectTransform() {
+    func newGame() {
         self.three.transform = CGAffineTransformIdentity
         self.two.hidden = true
         self.two.transform = CGAffineTransformIdentity
         self.one.hidden = true
         self.one.transform = CGAffineTransformIdentity
-        
-//        self.endingTimeLabel.transform = CGAffineTransformIdentity
-//        self.topConstraintOfTimeLabel.constant = 0
-        self.view.layoutIfNeeded()
     }
 
 }

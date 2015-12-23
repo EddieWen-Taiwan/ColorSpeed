@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     var colorTextArray: [String] = [ "red", "blue", "yellow", "black", "green" ]
     var colorArray: [String] = [ "green", "blue", "black", "red" ]
 
-    let totalQuestion: Int = 20
+    let totalQuestion: Int = 5
     var answeredQuestion: Int = 0
     var currentText: String!
     var currentColor: String!
@@ -31,8 +31,15 @@ class GameViewController: UIViewController {
     @IBOutlet var warningView: SpringView!
     @IBOutlet var plus2second: UILabel!
 
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.parentVC = self.parentViewController as! CenterViewController
+
+        self.newGame()
+    }
+
+    func newGame() {
 
         // Resort array
         colorArray = colorArray.sort({ (c1: String, color2: String) -> Bool in
@@ -40,13 +47,7 @@ class GameViewController: UIViewController {
             let b = Int( arc4random_uniform(50) )
             return a > b
         })
-    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.parentVC = self.parentViewController as! CenterViewController
-        
         // Set text on the buttons
         self.LeftTopButton.setTitle( self.colorArray[0], forState: .Normal )
         self.LeftBottomButton.setTitle( self.colorArray[1], forState: .Normal )
@@ -55,6 +56,13 @@ class GameViewController: UIViewController {
 
         // First question
         self.updateQuestion()
+
+        // Reset answered questions
+        self.answeredQuestion = 0
+
+        // Force to layout
+        self.view.layoutIfNeeded()
+
     }
 
     @IBAction func clickColorButton(sender: UIButton) {
@@ -68,19 +76,11 @@ class GameViewController: UIViewController {
             // Answer is correct
             if self.answeredQuestion == self.totalQuestion-1 {
                 // End game
-                self.parentVC.timer.invalidate()
-//                self.endingTimeLabel.text = self.currentSecond.displayText()
-//
+                parentVC.timer.invalidate()
 //                self.checkRank()
 
                 // Show ending view
-
-                // TimeLabel animation
-//                self.topConstraintOfTimeLabel.constant = 50
-//                UIView.animateWithDuration( 1, animations: {
-//                    self.endingTimeLabel.transform = CGAffineTransformMakeScale(1.7, 1.7)
-//                    self.view.layoutIfNeeded()
-//                })
+                parentVC.currentViewController = parentVC.endingViewController
 
             } else {
                 // Next one
@@ -106,12 +106,12 @@ class GameViewController: UIViewController {
                 self.plus2second.layer.position.y -= 70
                 self.plus2second.alpha = 0
             }, completion: { finish in
-                    self.plus2second.layer.position.y += 70
+                self.plus2second.layer.position.y += 70
             })
 
             // Punish: plus two seconds
-            self.parentVC.currentSecond += 200
-            var displayT = self.parentVC.currentSecond.displayText()
+            parentVC.currentSecond += 200
+            var displayT = parentVC.currentSecond.displayText()
             displayT.removeAtIndex(displayT.endIndex.predecessor())
             self.clock.text = displayT
         }

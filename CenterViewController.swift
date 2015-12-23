@@ -17,11 +17,12 @@ class CenterViewController: UIViewController {
             updateActiveViewController()
         }
     }
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var startViewController: StartViewController?
     var effectViewController: EffectViewController?
     var gameViewController: GameViewController?
+    var breakViewController: BreakViewController?
     var endingViewController: EndingViewController?
-    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
@@ -32,6 +33,7 @@ class CenterViewController: UIViewController {
         self.startViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StartView") as? StartViewController
         self.effectViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EffectView") as? EffectViewController
         self.gameViewController = mainStoryboard.instantiateViewControllerWithIdentifier("GameView") as? GameViewController
+        self.breakViewController = mainStoryboard.instantiateViewControllerWithIdentifier("BreakView") as? BreakViewController
         self.endingViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EndingView") as? EndingViewController
 
         self.currentViewController = self.startViewController

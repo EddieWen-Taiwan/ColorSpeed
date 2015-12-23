@@ -183,7 +183,9 @@ class GameViewController: UIViewController {
                     }
                 }
 
-                self.parentVC.currentViewController = nextVC
+                dispatch_async( dispatch_get_main_queue(), {
+                    self.parentVC.currentViewController = nextVC
+                })
 
             }
             checkNewData.resume()

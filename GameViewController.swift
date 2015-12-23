@@ -154,14 +154,14 @@ class GameViewController: UIViewController {
 
             let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
-                var nextVC = self.parentVC.endingViewController
+                var nextVC = "ending"
 
                 if error == nil {
                     let status = JSON( data: response! )
                     if status["better"] {
                         // Download new ranl data from server
                         self.newRank = status["rank"].int!
-//                        nextVC = self.parentVC
+                        nextVC = "break"
 
 //                        dispatch_async( dispatch_get_main_queue(), {
 //                            self.newTimeRecordLabel.text = self.endingTimeLabel.text
@@ -184,7 +184,7 @@ class GameViewController: UIViewController {
                 }
 
                 dispatch_async( dispatch_get_main_queue(), {
-                    self.parentVC.currentViewController = nextVC
+                    self.parentVC.currentViewController = nextVC == "break" ? self.parentVC.breakViewController : self.parentVC.endingViewController
                 })
 
             }

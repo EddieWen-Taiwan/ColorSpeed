@@ -514,10 +514,10 @@
             </objects>
             <point key="canvasLocation" x="410" y="2675"/>
         </scene>
-        <!--View Controller-->
+        <!--Break View Controller-->
         <scene sceneID="hcG-ZH-WVm">
             <objects>
-                <viewController storyboardIdentifier="BreakView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oV4-kv-ESL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BreakView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oV4-kv-ESL" customClass="BreakViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="soA-xe-O9d"/>
                         <viewControllerLayoutGuide type="bottom" id="WrP-Iu-OvB"/>

@@ -61,46 +61,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // *************
     // Ending View
 
-    func checkRank() {
-
-        if Reachability().isConnectedToNetwork() {
-            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkTimeInLastRow )!)
-            httpRequest.HTTPMethod = "POST"
-
-            let postString = "time=\(self.currentSecond.displayText())"
-            httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-
-            let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
-
-                if error == nil {
-                    let status = JSON( data: response! )
-                    if status["better"] {
-                        // Download new ranl data from server
-                        self.newRank = status["rank"].int!
-                        dispatch_async( dispatch_get_main_queue(), {
-                            self.newTimeRecordLabel.text = self.endingTimeLabel.text
-                            // Show break view
-                            if FBSDKAccessToken.currentAccessToken() == nil {
-                                self.sameUserButton.hidden = true
-                            } else {
-                                self.sameUserButton.hidden = false
-                                if let username = self.userP.stringForKey("fb_name") {
-                                    self.sameUserButton.setTitle("Yes, I'm \(username)", forState: .Normal)
-                                }
-                            }
-                            self.breakView.hidden = false
-                            self.breakView.animation = "pop"
-                            self.breakView.animate()
-                        })
-                    }
-                }
-
-            }
-            checkNewData.resume()
-        }
-
-    }
-
 
 
 

@@ -29,6 +29,7 @@
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
             <string>Quicksand-Regular</string>
+            <string>Quicksand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -576,6 +577,21 @@
                                             <constraint firstAttribute="height" constant="1" id="bU6-xv-V3x"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmn-Te-EIS">
+                                        <rect key="frame" x="20" y="234" width="520" height="50"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1YP-1w-ge3"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQa-Nc-J6E">
+                                        <rect key="frame" x="180" y="309" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="7r0-fe-seZ"/>
+                                            <constraint firstAttribute="height" constant="40" id="eOH-8F-1zN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -586,15 +602,20 @@
                                     <constraint firstAttribute="trailing" secondItem="nrU-05-B40" secondAttribute="trailing" constant="20" id="8Xb-3p-FFt"/>
                                     <constraint firstItem="Er7-9Y-kYO" firstAttribute="bottom" secondItem="egJ-0D-TJz" secondAttribute="bottom" constant="-2" id="CNH-w3-74F"/>
                                     <constraint firstItem="nrU-05-B40" firstAttribute="leading" secondItem="a9d-J4-sgP" secondAttribute="leading" constant="20" id="EXU-Ib-rAH"/>
+                                    <constraint firstItem="rQa-Nc-J6E" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" id="HxY-2b-UjY"/>
                                     <constraint firstItem="X3S-If-eKq" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" id="MPn-cd-gwV"/>
                                     <constraint firstItem="egJ-0D-TJz" firstAttribute="top" secondItem="X3S-If-eKq" secondAttribute="bottom" constant="15" id="PK7-B2-PNC"/>
                                     <constraint firstItem="kh7-uL-Cbn" firstAttribute="top" secondItem="egJ-0D-TJz" secondAttribute="bottom" constant="15" id="Pwk-ee-GNb"/>
+                                    <constraint firstItem="Mmn-Te-EIS" firstAttribute="top" secondItem="nrU-05-B40" secondAttribute="bottom" constant="20" id="SDR-3D-dba"/>
                                     <constraint firstItem="kh7-uL-Cbn" firstAttribute="leading" secondItem="a9d-J4-sgP" secondAttribute="leading" constant="20" id="YOf-mw-qFs"/>
                                     <constraint firstItem="egJ-0D-TJz" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" constant="-5" id="ZNm-Mq-yeS"/>
                                     <constraint firstItem="rAl-MS-jDi" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" id="cJn-iT-WQd"/>
+                                    <constraint firstItem="rQa-Nc-J6E" firstAttribute="top" secondItem="Mmn-Te-EIS" secondAttribute="bottom" constant="25" id="cyb-6W-WDh"/>
                                     <constraint firstAttribute="trailing" secondItem="nrU-05-B40" secondAttribute="trailing" constant="20" id="fLF-Eu-jFV"/>
                                     <constraint firstItem="rAl-MS-jDi" firstAttribute="top" secondItem="kh7-uL-Cbn" secondAttribute="bottom" constant="10" id="faY-wN-Uu8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mmn-Te-EIS" secondAttribute="trailing" constant="20" id="h2m-ma-3X5"/>
                                     <constraint firstItem="nrU-05-B40" firstAttribute="top" secondItem="rAl-MS-jDi" secondAttribute="bottom" constant="10" id="rS7-y0-7lF"/>
+                                    <constraint firstItem="Mmn-Te-EIS" firstAttribute="leading" secondItem="a9d-J4-sgP" secondAttribute="leading" constant="20" id="wuk-Gb-gng"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">

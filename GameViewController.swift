@@ -189,6 +189,8 @@ class GameViewController: UIViewController {
 
             }
             checkNewData.resume()
+        } else {
+            parentVC.currentViewController = parentVC.endingViewController
         }
 
     }

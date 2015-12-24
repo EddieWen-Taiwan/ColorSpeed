@@ -56,6 +56,14 @@ class CenterViewController: UIViewController {
 
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "break" {
+            if let nextVC = segue.destinationViewController as? BreakViewController {
+                nextVC.parentVC = self
+            }
+        }
+    }
+
     func addTimer( timer: NSTimer ) {
         self.currentSecond += 2
 

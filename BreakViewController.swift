@@ -17,12 +17,10 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
-    var parentVC: CenterViewController!
+    var parentVC: CenterViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.parentVC = self.parentViewController as! CenterViewController
 
         self.nameTextField.delegate = self
     }

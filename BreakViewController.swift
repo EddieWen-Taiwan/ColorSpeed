@@ -17,7 +17,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
-    var parentVC: CenterViewController?
+    var parentVC: CenterViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)
             httpRequest.HTTPMethod = "POST"
 
-        var postString = "name=\(username)&time=\(self.currentSecond.displayText())&rank=\(self.newRank)"
+        var postString = "name=\(username)&time=\(parentVC.currentSecond.displayText())&rank=\(parentVC.gameViewController.newRank)"
         if fbid != "" {
             postString += "&fbid=\(fbid)"
         }
@@ -69,12 +69,12 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         updateData.resume()
 
         // Hide this BreakView
-        self.breakView.hidden = true
+        parentVC.currentViewController = parentVC.endingViewController
 
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
-            rankViewController.newDataRow = self.newRank
+            rankViewController.newDataRow = parentVC.gameViewController.newRank
             rankViewController.forceUpdate = true
         let navigationController = UINavigationController(rootViewController: rankViewController)
 

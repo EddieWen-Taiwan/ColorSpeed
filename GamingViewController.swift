@@ -67,20 +67,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // *************
     // Break View
 
-    @IBAction func pressSendButton(sender: AnyObject) {
-
-        // Get the name
-        var name = self.nameTextField.text!
-        if name != "" {
-            self.userP.setValue( name, forKey: "username" )
-        } else {
-            name = ">__<"
-        }
-
-        self.sendUpdateRequest( name )
-
-    }
-
     func sendUpdateRequest( username: String, fbid: String = "" ) {
 
 //        let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)

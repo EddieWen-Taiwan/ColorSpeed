@@ -31,6 +31,17 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func register(sender: AnyObject) {
+
+        // Get the name
+        var name = self.nameTextField.text!
+        if name != "" {
+            self.userDefaults.setValue( name, forKey: "username" )
+        } else {
+            name = ">__<"
+        }
+
+//        self.sendUpdateRequest( name )
+
     }
 
     @IBAction func registerAsSameUser(sender: AnyObject) {

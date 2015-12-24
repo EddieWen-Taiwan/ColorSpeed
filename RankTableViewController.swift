@@ -32,9 +32,7 @@ class RankTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.tableView.rowHeight = 70
-        self.tableView.allowsSelection = false
-        
+
         if reachability.isConnectedToNetwork() {
             // Check should I download new rank data
             let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)
@@ -145,7 +143,17 @@ class RankTableViewController: UITableViewController {
             }
 
             // Set background-color
-            cell.markView.hidden = self.newDataRow == indexPath.row+1 ? false : true
+            cell.markView.hidden = indexPath.row+1 == self.newDataRow ? false : true
+
+            cell.loadingAreaOfName.hidden = true
+            cell.loadingAreaOfTime.hidden = true
+
+        } else {
+
+            cell.userSticker.image = UIImage(named: "defaultUser")
+
+            cell.loadingAreaOfName.hidden = false
+            cell.loadingAreaOfTime.hidden = false
 
         }
 

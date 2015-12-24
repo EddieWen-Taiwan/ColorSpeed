@@ -37,12 +37,12 @@
         <scene sceneID="z8r-WX-0GW">
             <objects>
                 <tableViewController storyboardIdentifier="RankTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vOg-xL-VqE" customClass="RankTableViewController" customModule="ColorSpeed" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vOP-l3-RaH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="vOP-l3-RaH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="PTr-21-4Ao" customClass="RankTableViewCell" customModule="ColorSpeed" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="PTr-21-4Ao" customClass="RankTableViewCell" customModule="ColorSpeed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTr-21-4Ao" id="89Q-OW-cDy">
@@ -69,56 +69,64 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-aK-E2J">
-                                            <rect key="frame" x="76" y="24" width="436" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="140" id="ti9-dR-A9c"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-aK-E2J">
+                                            <rect key="frame" x="76" y="35" width="436" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="ti9-dR-A9c"/>
-                                                </mask>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CJ-3R-Fcz">
-                                            <rect key="frame" x="563" y="25" width="12" height="19"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-We-IxO">
+                                            <rect key="frame" x="76" y="25" width="100" height="20"/>
+                                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="Z41-Hn-kuW"/>
+                                                <constraint firstAttribute="width" constant="100" id="p55-Cm-iob"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CJ-3R-Fcz">
+                                            <rect key="frame" x="575" y="35" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEs-sj-Z1v">
-                                            <rect key="frame" x="576" y="26" width="8" height="18"/>
+                                            <rect key="frame" x="576" y="17" width="8" height="18"/>
                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-F2-ch7">
+                                            <rect key="frame" x="544" y="25" width="40" height="20"/>
+                                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="hU1-Oh-rmh"/>
+                                                <constraint firstAttribute="height" constant="20" id="stJ-Qb-sCJ"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="iJk-wV-44o" firstAttribute="top" secondItem="89Q-OW-cDy" secondAttribute="top" id="18u-6g-82O"/>
-                                        <constraint firstItem="5CJ-3R-Fcz" firstAttribute="leading" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="20" id="3Mf-9O-MsP"/>
+                                        <constraint firstAttribute="trailing" secondItem="h6I-F2-ch7" secondAttribute="trailing" constant="16" id="3Hp-Ws-4hH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="80" id="4D0-tI-Jtd"/>
+                                        <constraint firstItem="h6I-F2-ch7" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="CEr-Hc-mWn"/>
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GFb-5K-Pbe"/>
                                         <constraint firstItem="5CJ-3R-Fcz" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GNk-fv-O59"/>
                                         <constraint firstAttribute="bottom" secondItem="iJk-wV-44o" secondAttribute="bottom" id="JNB-Wb-x3j"/>
                                         <constraint firstItem="iJk-wV-44o" firstAttribute="leading" secondItem="89Q-OW-cDy" secondAttribute="leading" id="M9Z-ov-qKD"/>
+                                        <constraint firstItem="Cz2-We-IxO" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="Pxe-ta-4wO"/>
                                         <constraint firstAttribute="trailing" secondItem="rEs-sj-Z1v" secondAttribute="trailing" constant="16" id="RoN-a3-GmE"/>
                                         <constraint firstItem="rEs-sj-Z1v" firstAttribute="leading" secondItem="5CJ-3R-Fcz" secondAttribute="trailing" constant="1" id="cKw-Rr-pj3"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="gDg-AA-r8t"/>
                                         <constraint firstItem="rEs-sj-Z1v" firstAttribute="bottom" secondItem="5CJ-3R-Fcz" secondAttribute="bottom" id="jF2-ZK-MnJ"/>
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="leading" secondItem="BuU-cW-7pg" secondAttribute="trailing" constant="10" id="vcl-Rs-Xxv"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="leading" secondItem="89Q-OW-cDy" secondAttribute="leading" constant="16" id="xyD-Bn-9ug"/>
+                                        <constraint firstItem="Cz2-We-IxO" firstAttribute="leading" secondItem="BuU-cW-7pg" secondAttribute="trailing" constant="10" id="yV9-g4-JJY"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="3Mf-9O-MsP"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellView" destination="89Q-OW-cDy" id="nyw-hG-OMG"/>
+                                    <outlet property="loadingAreaOfName" destination="Cz2-We-IxO" id="MYR-HE-AgV"/>
+                                    <outlet property="loadingAreaOfTime" destination="h6I-F2-ch7" id="xdx-Iw-OQT"/>
                                     <outlet property="markView" destination="iJk-wV-44o" id="dYp-Q6-NZN"/>
                                     <outlet property="time" destination="5CJ-3R-Fcz" id="ev6-AS-ujr"/>
                                     <outlet property="userSticker" destination="BuU-cW-7pg" id="5nb-vw-nB0"/>

@@ -48,9 +48,9 @@ class CenterViewController: UIViewController {
         // Initialize variables
         self.currentSecond = 0
 
-        self.effectViewController?.newGame()
-        self.gameViewController?.newGame()
-        self.endingViewController?.newGame()
+        self.effectViewController.newGame()
+        self.gameViewController.newGame()
+        self.endingViewController.newGame()
 
         self.currentViewController = self.effectViewController
 

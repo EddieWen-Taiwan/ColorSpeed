@@ -30,7 +30,6 @@ class CenterViewController: UIViewController {
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
-    var newRank: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +71,7 @@ class CenterViewController: UIViewController {
                     let status = JSON( data: response! )
                     if status["better"] {
                         // Download new ranl data from server
-                        self.newRank = status["rank"].int!
+                        self.breakViewController.newRank = status["rank"].int!
 
                         dispatch_async( dispatch_get_main_queue(), {
                             self.breakRecord()

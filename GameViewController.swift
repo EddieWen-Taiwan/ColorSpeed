@@ -184,7 +184,7 @@ class GameViewController: UIViewController {
                 }
 
                 dispatch_async( dispatch_get_main_queue(), {
-                    self.parentVC.currentViewController = nextVC == "break" ? self.parentVC.breakViewController : self.parentVC.endingViewController
+//                    self.parentVC.currentViewController = nextVC == "break" ? self.parentVC.breakViewController : self.parentVC.endingViewController
                 })
 
             }

@@ -24,7 +24,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.parentVC = self.parentViewController as! CenterViewController
+//        self.parentVC = self.parentViewController as! CenterViewController
 
         self.nameTextField.delegate = self
     }

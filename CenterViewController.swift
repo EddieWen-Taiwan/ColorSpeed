@@ -21,6 +21,7 @@ class CenterViewController: UIViewController {
     var startViewController: StartViewController!
     var effectViewController: EffectViewController!
     var gameViewController: GameViewController!
+    var breakViewController: BreakViewController!
     var endingViewController: EndingViewController!
 
     @IBOutlet var breakViewContainer: UIView!
@@ -37,6 +38,9 @@ class CenterViewController: UIViewController {
         self.endingViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EndingView") as! EndingViewController
 
         self.currentViewController = self.startViewController
+
+        breakViewController = self.childViewControllers.first as! BreakViewController
+        print(breakViewController)
     }
 
     func prepareNewGame() {

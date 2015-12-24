@@ -17,8 +17,12 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
+    var parentVC: CenterViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.parentVC = self.parentViewController as! CenterViewController
 
         self.nameTextField.delegate = self
     }
@@ -43,7 +47,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
             self.userDefaults.setValue( name, forKey: "username" )
         }
 
-//        self.sendUpdateRequest( name )
+        self.sendUpdateRequest( name )
 
     }
 

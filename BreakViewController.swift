@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import Spring
 
 class BreakViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var breakView: SpringView!
     @IBOutlet var newTimeLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var FBLoginView: UIView!
@@ -31,9 +29,6 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-
-        self.breakView.animation = "pop"
-        self.breakView.animate()
 
         if let name = self.userDefaults.stringForKey("username") {
             self.nameTextField.text = name

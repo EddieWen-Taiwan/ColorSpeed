@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class BreakViewController: UIViewController, UITextFieldDelegate {
+class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
 
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
@@ -32,6 +32,12 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         } else {
             self.nameTextField.text = ""
         }
+
+        let loginView = FBSDKLoginButton()
+        loginView.delegate = self
+        loginView.readPermissions = ["public_profile"]
+        loginView.frame = CGRectMake( 0, 0, self.FBLoginView.frame.width, self.FBLoginView.frame.height )
+        self.FBLoginView.addSubview( loginView )
     }
 
     @IBAction func register(sender: AnyObject) {

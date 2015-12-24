@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class BreakViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet var newTimeLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var FBLoginView: UIView!
     @IBOutlet var sameUserButton: UIButton!
@@ -23,10 +24,6 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         self.nameTextField.delegate = self
-    }
-
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
 
         if let name = self.userDefaults.stringForKey("username") {
             self.nameTextField.text = name
@@ -50,6 +47,21 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func registerAsSameUser(sender: AnyObject) {
+    }
+
+    func updateView() {
+
+        self.timeLabel.text = parentVC.currentSecond.displayText()
+
+        if FBSDKAccessToken.currentAccessToken() == nil {
+            self.sameUserButton.hidden = true
+        } else {
+            self.sameUserButton.hidden = false
+            if let name = self.userDefaults.stringForKey("username") {
+                self.sameUserButton.setTitle( "Yes, I'm \(name).", forState: .Normal)
+            }
+        }
+
     }
 
     func sendUpdateRequest( username: String, fbid: String = "" ) {

@@ -570,6 +570,18 @@
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-MS-jDi">
+                                <rect key="frame" x="160" y="163" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="PhE-W4-3ji"/>
+                                    <constraint firstAttribute="height" constant="40" id="TfW-Jm-xsu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <state key="normal" title="SEND"/>
+                                <connections>
+                                    <action selector="register:" destination="oV4-kv-ESL" eventType="touchUpInside" id="i9D-4N-7VO"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrU-05-B40" userLabel="----">
                                 <rect key="frame" x="20" y="213" width="520" height="1"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -593,18 +605,6 @@
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                 <connections>
                                     <action selector="registerAsSameUser:" destination="oV4-kv-ESL" eventType="touchUpInside" id="GUe-5X-AZo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-MS-jDi">
-                                <rect key="frame" x="160" y="163" width="240" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="PhE-W4-3ji"/>
-                                    <constraint firstAttribute="height" constant="40" id="TfW-Jm-xsu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
-                                <state key="normal" title="SEND"/>
-                                <connections>
-                                    <action selector="register:" destination="oV4-kv-ESL" eventType="touchUpInside" id="i9D-4N-7VO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -634,8 +634,8 @@
                     <connections>
                         <outlet property="FBLoginView" destination="Mmn-Te-EIS" id="SbG-0P-L6e"/>
                         <outlet property="nameTextField" destination="kh7-uL-Cbn" id="5Gi-hd-GFK"/>
-                        <outlet property="newTimeLabel" destination="egJ-0D-TJz" id="EXG-as-umy"/>
                         <outlet property="sameUserButton" destination="rQa-Nc-J6E" id="o97-c1-KG6"/>
+                        <outlet property="timeLabel" destination="egJ-0D-TJz" id="D0A-IK-pUS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH0-Ni-94K" userLabel="First Responder" sceneMemberID="firstResponder"/>

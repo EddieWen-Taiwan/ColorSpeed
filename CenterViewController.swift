@@ -73,24 +73,10 @@ class CenterViewController: UIViewController {
                     if status["better"] {
                         // Download new ranl data from server
                         self.newRank = status["rank"].int!
-                        
-//                        dispatch_async( dispatch_get_main_queue(), {
-//                            self.newTimeRecordLabel.text = self.endingTimeLabel.text
-//                            // Show break view
-//                            if FBSDKAccessToken.currentAccessToken() == nil {
-//                                self.sameUserButton.hidden = true
-//                            } else {
-//                                self.sameUserButton.hidden = false
-//                                if let username = self.userP.stringForKey("fb_name") {
-//                                    self.sameUserButton.setTitle("Yes, I'm \(username)", forState: .Normal)
-//                                }
-//                            }
-//                            self.breakView.hidden = false
-//                            self.breakView.animation = "pop"
-//                            self.breakView.animate()
-//                        })
+
                         dispatch_async( dispatch_get_main_queue(), {
                             self.breakRecord()
+                            self.breakViewController.updateView()
                         })
                     }
                 }

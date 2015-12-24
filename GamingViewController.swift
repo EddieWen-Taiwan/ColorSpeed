@@ -71,7 +71,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         let fbid = self.userP.stringForKey("fb_id")!
         let name = self.userP.stringForKey("fb_name")!
 
-        self.sendUpdateRequest(name, fbid: fbid)
+//        self.sendUpdateRequest(name, fbid: fbid)
     }
 
 
@@ -95,7 +95,7 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
                 if error == nil {
                     let FBID = result.objectForKey("id") as! String
                     let name = result.objectForKey("name") as! String
-                    self.sendUpdateRequest( name, fbid: FBID )
+//                    self.sendUpdateRequest( name, fbid: FBID )
 
                     self.userP.setValue( FBID, forKey: "fb_id" )
                     self.userP.setValue( name, forKey: "fb_name" )

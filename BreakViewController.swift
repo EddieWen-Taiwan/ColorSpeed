@@ -36,9 +36,9 @@ class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         // Add Facebook login button
         self.FBLoginView.layoutIfNeeded()
         let loginView = FBSDKLoginButton()
-        loginView.delegate = self
-        loginView.readPermissions = ["public_profile"]
-        loginView.frame = CGRectMake( 0, 0, UIScreen.mainScreen().bounds.width - 80, 50 )
+            loginView.delegate = self
+            loginView.readPermissions = ["public_profile"]
+            loginView.frame = CGRectMake( 0, 0, UIScreen.mainScreen().bounds.width - 80, 50 )
         self.FBLoginView.addSubview( loginView )
     }
 

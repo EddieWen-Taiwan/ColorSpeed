@@ -80,9 +80,6 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest )
         updateData.resume()
 
-        // Hide this BreakView
-        parentVC.currentViewController = parentVC.endingViewController
-
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController

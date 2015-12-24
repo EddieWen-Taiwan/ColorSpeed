@@ -181,6 +181,17 @@
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-Dr-vmX" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="oV4-kv-ESL" kind="embed" identifier="break" id="gwa-tN-Weg"/>
                                 </connections>
@@ -608,6 +619,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="egJ-0D-TJz" firstAttribute="top" secondItem="X3S-If-eKq" secondAttribute="bottom" constant="15" id="CE0-Mm-zFd"/>
                             <constraint firstItem="rAl-MS-jDi" firstAttribute="top" secondItem="kh7-uL-Cbn" secondAttribute="bottom" constant="10" id="DMk-kO-CL9"/>

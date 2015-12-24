@@ -31,21 +31,6 @@ class GamingViewController: UIViewController, UITextFieldDelegate {
         // Add gesture
 //        let restartGesture = UITapGestureRecognizer(target: self, action: "restartGame")
 //        self.restartButton.addGestureRecognizer( restartGesture )
-
-        // Preenter user name
-        if let username = self.userP.stringForKey("username") {
-            self.nameTextField.text = username
-        }
-
-        self.nameTextField.delegate = self
-        // Add Facebook login button
-        self.view.layoutIfNeeded()
-
-        let loginView = FBSDKLoginButton()
-        self.FBLoginView.addSubview( loginView )
-        loginView.frame = CGRectMake( 0, 0, self.FBLoginView.frame.width, self.FBLoginView.frame.height )
-        loginView.readPermissions = [ "public_profile" ]
-        loginView.delegate = self
     }
 
 }

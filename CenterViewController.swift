@@ -89,14 +89,11 @@ class CenterViewController: UIViewController {
 //                            self.breakView.animation = "pop"
 //                            self.breakView.animate()
 //                        })
-                    } else {
-                        print("not better")
+                        dispatch_async( dispatch_get_main_queue(), {
+                            self.breakRecord()
+                        })
                     }
                 }
-
-                dispatch_async( dispatch_get_main_queue(), {
-                    self.breakRecord()
-                })
 
             }
             checkNewData.resume()

@@ -71,7 +71,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             self.sameUserButton.hidden = true
         } else {
             self.sameUserButton.hidden = false
-            if let name = self.userDefaults.stringForKey("username") {
+            if let name = self.userDefaults.stringForKey("fb_name") {
                 self.sameUserButton.setTitle( "Yes, I'm \(name).", forState: .Normal)
             }
         }
@@ -99,6 +99,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             rankViewController.forceUpdate = true
         let navigationController = UINavigationController(rootViewController: rankViewController)
 
+        parentVC.breakViewContainer.hidden = true
         self.presentViewController(navigationController, animated: true, completion: nil)
 
     }

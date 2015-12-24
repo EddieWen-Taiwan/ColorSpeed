@@ -71,17 +71,9 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWI-aK-E2J">
                                             <rect key="frame" x="76" y="24" width="436" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="140" id="ti9-dR-A9c"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="ti9-dR-A9c"/>
-                                                </mask>
-                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CJ-3R-Fcz">
                                             <rect key="frame" x="563" y="25" width="12" height="19"/>
@@ -98,7 +90,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="iJk-wV-44o" firstAttribute="top" secondItem="89Q-OW-cDy" secondAttribute="top" id="18u-6g-82O"/>
-                                        <constraint firstItem="5CJ-3R-Fcz" firstAttribute="leading" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="20" id="3Mf-9O-MsP"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="TWI-aK-E2J" secondAttribute="trailing" constant="80" id="4D0-tI-Jtd"/>
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GFb-5K-Pbe"/>
                                         <constraint firstItem="5CJ-3R-Fcz" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="GNk-fv-O59"/>
@@ -111,11 +102,6 @@
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="leading" secondItem="BuU-cW-7pg" secondAttribute="trailing" constant="10" id="vcl-Rs-Xxv"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="leading" secondItem="89Q-OW-cDy" secondAttribute="leading" constant="16" id="xyD-Bn-9ug"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="3Mf-9O-MsP"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellView" destination="89Q-OW-cDy" id="nyw-hG-OMG"/>

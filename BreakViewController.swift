@@ -55,6 +55,10 @@ class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
 
     @IBAction func registerAsSameUser(sender: AnyObject) {
+        let name = self.userDefaults.stringForKey("fb_name")!
+        let fbid = self.userDefaults.stringForKey("fb_id")!
+
+        self.sendUpdateRequest(name, fbid: fbid)
     }
 
     func updateView() {
@@ -100,6 +104,44 @@ class BreakViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+
+
+
+    // *************
+    // Facebook login
+
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+
+        if error != nil {
+            // Process error
+        } else if result.isCancelled {
+            // Handle cancellations
+        } else {
+            // Navigate to other view
+
+            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name"])
+            graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+
+                if error == nil {
+                    let FBID = result.objectForKey("id") as! String
+                    let name = result.objectForKey("name") as! String
+
+                    self.userDefaults.setValue( FBID, forKey: "fb_id" )
+                    self.userDefaults.setValue( name, forKey: "fb_name" )
+
+                    self.sendUpdateRequest( name, fbid: FBID )
+                }
+
+            }) // --- graphRequest
+        }
+    }
+
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        self.sameUserButton.hidden = true
+
+        self.userDefaults.removeObjectForKey("fb_id")
+        self.userDefaults.removeObjectForKey("fb_name")
     }
 
 }

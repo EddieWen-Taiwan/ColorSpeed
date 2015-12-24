@@ -11,7 +11,7 @@ import Spring
 import SwiftyJSON
 import FBSDKLoginKit
 
-class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFieldDelegate {
+class GamingViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var breakView: SpringView!
 
@@ -46,71 +46,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
         loginView.frame = CGRectMake( 0, 0, self.FBLoginView.frame.width, self.FBLoginView.frame.height )
         loginView.readPermissions = [ "public_profile" ]
         loginView.delegate = self
-    }
-
-
-
-
-
-
-
-
-
-
-
-    // *************
-    // Ending View
-
-
-
-
-    // *************
-    // Break View
-
-    @IBAction func loginAsSameUser(sender: AnyObject) {
-        let fbid = self.userP.stringForKey("fb_id")!
-        let name = self.userP.stringForKey("fb_name")!
-
-//        self.sendUpdateRequest(name, fbid: fbid)
-    }
-
-
-
-    // *************
-    // Facebook login
-
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-
-        if error != nil {
-            // Process error
-        } else if result.isCancelled {
-            // Handle cancellations
-//            print("cancel")
-        } else {
-            // Navigate to other view
-
-            let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name"])
-            graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-
-                if error == nil {
-                    let FBID = result.objectForKey("id") as! String
-                    let name = result.objectForKey("name") as! String
-//                    self.sendUpdateRequest( name, fbid: FBID )
-
-                    self.userP.setValue( FBID, forKey: "fb_id" )
-                    self.userP.setValue( name, forKey: "fb_name" )
-                }
-
-            }) // --- graphRequest
-        }
-    }
-
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        self.sameUserButton.hidden = true
-        self.sameUserButton.setTitle("", forState: .Normal)
-
-        self.userP.removeObjectForKey("fb_id")
-        self.userP.removeObjectForKey("fb_name")
     }
 
 }

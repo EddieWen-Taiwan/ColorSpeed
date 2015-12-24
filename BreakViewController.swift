@@ -37,10 +37,10 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
         // Get the name
         var name = self.nameTextField.text ?? ""
-        if name != "" {
-            self.userDefaults.setValue( name, forKey: "username" )
-        } else {
+        if name == "" {
             name = ">__<"
+        } else {
+            self.userDefaults.setValue( name, forKey: "username" )
         }
 
 //        self.sendUpdateRequest( name )

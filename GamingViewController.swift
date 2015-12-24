@@ -67,11 +67,6 @@ class GamingViewController: UIViewController, FBSDKLoginButtonDelegate, UITextFi
     // *************
     // Break View
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-
     @IBAction func pressSendButton(sender: AnyObject) {
 
         // Get the name

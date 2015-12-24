@@ -36,4 +36,9 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registerAsSameUser(sender: AnyObject) {
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }

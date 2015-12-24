@@ -24,6 +24,8 @@ class CenterViewController: UIViewController {
     var breakViewController: BreakViewController!
     var endingViewController: EndingViewController!
 
+    @IBOutlet var breakViewContainer: UIView!
+
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
 

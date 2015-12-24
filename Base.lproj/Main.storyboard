@@ -204,6 +204,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="breakViewContainer" destination="sfc-Dr-vmX" id="lEO-Dy-EdY"/>
                         <outlet property="containerView" destination="Ycu-gJ-g0U" id="paO-Qz-ApE"/>
                     </connections>
                 </viewController>

@@ -569,6 +569,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                         <state key="normal" title="SEND"/>
+                                        <connections>
+                                            <action selector="register:" destination="oV4-kv-ESL" eventType="touchUpInside" id="i9D-4N-7VO"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrU-05-B40" userLabel="----">
                                         <rect key="frame" x="20" y="213" width="520" height="1"/>
@@ -591,6 +594,9 @@
                                             <constraint firstAttribute="height" constant="40" id="eOH-8F-1zN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                        <connections>
+                                            <action selector="registerAsSameUser:" destination="oV4-kv-ESL" eventType="touchUpInside" id="GUe-5X-AZo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -599,9 +605,7 @@
                                     <constraint firstAttribute="trailing" secondItem="kh7-uL-Cbn" secondAttribute="trailing" constant="20" id="55Z-of-ehE"/>
                                     <constraint firstItem="X3S-If-eKq" firstAttribute="top" secondItem="a9d-J4-sgP" secondAttribute="top" constant="20" id="5tQ-ab-Hgi"/>
                                     <constraint firstItem="Er7-9Y-kYO" firstAttribute="leading" secondItem="egJ-0D-TJz" secondAttribute="trailing" constant="3" id="6MA-Z9-wDV"/>
-                                    <constraint firstAttribute="trailing" secondItem="nrU-05-B40" secondAttribute="trailing" constant="20" id="8Xb-3p-FFt"/>
                                     <constraint firstItem="Er7-9Y-kYO" firstAttribute="bottom" secondItem="egJ-0D-TJz" secondAttribute="bottom" constant="-2" id="CNH-w3-74F"/>
-                                    <constraint firstItem="nrU-05-B40" firstAttribute="leading" secondItem="a9d-J4-sgP" secondAttribute="leading" constant="20" id="EXU-Ib-rAH"/>
                                     <constraint firstItem="rQa-Nc-J6E" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" id="HxY-2b-UjY"/>
                                     <constraint firstItem="X3S-If-eKq" firstAttribute="centerX" secondItem="a9d-J4-sgP" secondAttribute="centerX" id="MPn-cd-gwV"/>
                                     <constraint firstItem="egJ-0D-TJz" firstAttribute="top" secondItem="X3S-If-eKq" secondAttribute="bottom" constant="15" id="PK7-B2-PNC"/>
@@ -617,12 +621,6 @@
                                     <constraint firstItem="nrU-05-B40" firstAttribute="top" secondItem="rAl-MS-jDi" secondAttribute="bottom" constant="10" id="rS7-y0-7lF"/>
                                     <constraint firstItem="Mmn-Te-EIS" firstAttribute="leading" secondItem="a9d-J4-sgP" secondAttribute="leading" constant="20" id="wuk-Gb-gng"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8Xb-3p-FFt"/>
-                                        <exclude reference="EXU-Ib-rAH"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <constraints>
@@ -633,6 +631,12 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="FBLoginView" destination="Mmn-Te-EIS" id="SbG-0P-L6e"/>
+                        <outlet property="nameTextField" destination="kh7-uL-Cbn" id="5Gi-hd-GFK"/>
+                        <outlet property="newTimeLabel" destination="egJ-0D-TJz" id="EXG-as-umy"/>
+                        <outlet property="sameUserButton" destination="rQa-Nc-J6E" id="o97-c1-KG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH0-Ni-94K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

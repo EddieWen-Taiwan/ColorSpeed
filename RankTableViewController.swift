@@ -32,8 +32,7 @@ class RankTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.tableView.allowsSelection = false
-        
+
         if reachability.isConnectedToNetwork() {
             // Check should I download new rank data
             let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)

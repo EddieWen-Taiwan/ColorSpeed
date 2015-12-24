@@ -50,6 +50,34 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     @IBAction func registerAsSameUser(sender: AnyObject) {
     }
 
+    func sendUpdateRequest( username: String, fbid: String = "" ) {
+        
+        let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)
+            httpRequest.HTTPMethod = "POST"
+
+        var postString = "name=\(username)&time=\(self.currentSecond.displayText())&rank=\(self.newRank)"
+        if fbid != "" {
+            postString += "&fbid=\(fbid)"
+        }
+        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+
+        let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest )
+        updateData.resume()
+        
+        // Hide this BreakView
+        self.breakView.hidden = true
+        
+        // Present RankTableViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
+            rankViewController.newDataRow = self.newRank
+            rankViewController.forceUpdate = true
+        let navigationController = UINavigationController(rootViewController: rankViewController)
+
+        self.presentViewController(navigationController, animated: true, completion: nil)
+        
+    }
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

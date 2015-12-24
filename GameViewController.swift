@@ -54,14 +54,14 @@ class GameViewController: UIViewController {
         self.RightTopButton.setTitle( self.colorArray[2], forState: .Normal )
         self.RightBottomButton.setTitle( self.colorArray[3], forState: .Normal )
 
+        // Force to layout
+        self.view.layoutIfNeeded()
+
         // First question
         self.updateQuestion()
 
         // Reset answered questions
         self.answeredQuestion = 0
-
-        // Force to layout
-        self.view.layoutIfNeeded()
 
     }
 

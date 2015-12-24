@@ -21,13 +21,16 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         self.nameTextField.delegate = self
-        if let name = self.userDefaults.stringForKey("username") {
-            self.nameTextField.text = name
-        }
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+
+        if let name = self.userDefaults.stringForKey("username") {
+            self.nameTextField.text = name
+        } else {
+            self.nameTextField.text = ""
+        }
     }
 
     @IBAction func register(sender: AnyObject) {

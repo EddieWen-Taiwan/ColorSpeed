@@ -67,13 +67,11 @@ class CenterViewController: UIViewController {
 
             let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
 
-                var nextVC = "ending"
-
                 if error == nil {
                     let status = JSON( data: response! )
                     if status["better"] {
                         // Download new ranl data from server
-                        self.newRank = status["rank"].int!
+                        let newRank = status["rank"].int!
                         
 //                        dispatch_async( dispatch_get_main_queue(), {
 //                            self.newTimeRecordLabel.text = self.endingTimeLabel.text

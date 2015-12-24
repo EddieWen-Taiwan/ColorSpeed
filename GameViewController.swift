@@ -19,8 +19,6 @@ class GameViewController: UIViewController {
     var currentText: String!
     var currentColor: String!
 
-    var newRank: Int = 0
-
     var parentVC: CenterViewController!
 
     @IBOutlet var LeftTopButton: UIButton!

@@ -51,7 +51,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
     }
 
     func sendUpdateRequest( username: String, fbid: String = "" ) {
-        
+
         let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.update )!)
             httpRequest.HTTPMethod = "POST"
 
@@ -63,10 +63,10 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
 
         let updateData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest )
         updateData.resume()
-        
+
         // Hide this BreakView
         self.breakView.hidden = true
-        
+
         // Present RankTableViewController
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rankViewController = storyboard.instantiateViewControllerWithIdentifier("RankTable") as! RankTableViewController
@@ -75,7 +75,7 @@ class BreakViewController: UIViewController, UITextFieldDelegate {
         let navigationController = UINavigationController(rootViewController: rankViewController)
 
         self.presentViewController(navigationController, animated: true, completion: nil)
-        
+
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {

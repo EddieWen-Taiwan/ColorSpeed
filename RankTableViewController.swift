@@ -145,15 +145,15 @@ class RankTableViewController: UITableViewController {
             // Set background-color
             cell.markView.hidden = indexPath.row+1 == self.newDataRow ? false : true
 
-            cell.loadingAreaOfName.hidden = false
-            cell.loadingAreaOfTime.hidden = false
+            cell.loadingAreaOfName.hidden = true
+            cell.loadingAreaOfTime.hidden = true
 
         } else {
 
             cell.userSticker.image = UIImage(named: "defaultUser")
 
-            cell.loadingAreaOfName.hidden = true
-            cell.loadingAreaOfTime.hidden = true
+            cell.loadingAreaOfName.hidden = false
+            cell.loadingAreaOfTime.hidden = false
 
         }
 

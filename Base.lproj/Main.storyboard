@@ -96,10 +96,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-F2-ch7">
-                                            <rect key="frame" x="524" y="25" width="60" height="20"/>
+                                            <rect key="frame" x="544" y="25" width="40" height="20"/>
                                             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="60" id="hU1-Oh-rmh"/>
+                                                <constraint firstAttribute="width" constant="40" id="hU1-Oh-rmh"/>
                                                 <constraint firstAttribute="height" constant="20" id="stJ-Qb-sCJ"/>
                                             </constraints>
                                         </view>
@@ -125,6 +125,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellView" destination="89Q-OW-cDy" id="nyw-hG-OMG"/>
+                                    <outlet property="loadingAreaOfName" destination="Cz2-We-IxO" id="MYR-HE-AgV"/>
+                                    <outlet property="loadingAreaOfTime" destination="h6I-F2-ch7" id="xdx-Iw-OQT"/>
                                     <outlet property="markView" destination="iJk-wV-44o" id="dYp-Q6-NZN"/>
                                     <outlet property="time" destination="5CJ-3R-Fcz" id="ev6-AS-ujr"/>
                                     <outlet property="userSticker" destination="BuU-cW-7pg" id="5nb-vw-nB0"/>

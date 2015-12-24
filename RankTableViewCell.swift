@@ -16,6 +16,9 @@ class RankTableViewCell: UITableViewCell {
     @IBOutlet var time: UILabel!
     @IBOutlet var markView: UIView!
 
+    @IBOutlet var loadingAreaOfName: UIView!
+    @IBOutlet var loadingAreaOfTime: UIView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

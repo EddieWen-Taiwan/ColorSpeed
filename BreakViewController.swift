@@ -8,15 +8,22 @@
 
 import UIKit
 
-class BreakViewController: UIViewController {
+class BreakViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var newTimeLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var FBLoginView: UIView!
     @IBOutlet var sameUserButton: UIButton!
 
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.nameTextField.delegate = self
+        if let name = self.userDefaults.stringForKey("username") {
+            self.nameTextField.text = name
+        }
     }
 
     override func viewDidAppear(animated: Bool) {

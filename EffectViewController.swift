@@ -32,7 +32,7 @@ class EffectViewController: UIViewController {
                 self.one.animation = "zoomOut"
                 self.one.animateToNext({
                     // Game Start
-                    if let parentVC = self.parentViewController as? CenterViewController {
+                    if let parentVC = self.parentViewController as! CenterViewController {
                         parentVC.currentViewController = parentVC.gameViewController
                         // Start timer
                         parentVC.timer = NSTimer.scheduledTimerWithTimeInterval( 0.02, target: parentVC, selector: "addTimer:", userInfo: nil, repeats: true )

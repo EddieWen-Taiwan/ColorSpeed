@@ -48,9 +48,9 @@ class CenterViewController: UIViewController {
         // Initialize variables
         self.currentSecond = 0
 
-        self.effectViewController.newGame()
-        self.gameViewController.newGame()
-        self.endingViewController.newGame()
+        effectViewController.newGame()
+        gameViewController.newGame()
+        endingViewController.newGame()
 
         self.currentViewController = self.effectViewController
 
@@ -87,9 +87,9 @@ class CenterViewController: UIViewController {
     }
 
     func breakRecord() {
-        self.breakViewContainer.hidden = false
-        self.breakViewContainer.animation = "pop"
-        self.breakViewContainer.animate()
+        breakViewContainer.hidden = false
+        breakViewContainer.animation = "pop"
+        breakViewContainer.animate()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -106,8 +106,8 @@ class CenterViewController: UIViewController {
         var displayT = self.currentSecond.displayText()
         displayT.removeAtIndex(displayT.endIndex.predecessor())
 
-        if gameViewController?.clock.text != displayT {
-            gameViewController?.clock.text = displayT
+        if gameViewController.clock.text != displayT {
+            gameViewController.clock.text = displayT
         }
     }
 

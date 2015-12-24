@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class CenterViewController: UIViewController {
 
@@ -24,7 +25,7 @@ class CenterViewController: UIViewController {
     var breakViewController: BreakViewController!
     var endingViewController: EndingViewController!
 
-    @IBOutlet var breakViewContainer: UIView!
+    @IBOutlet var breakViewContainer: SpringView!
 
     var timer = NSTimer()
     var currentSecond: Int = 0 // output = currentSecond / 100
@@ -35,12 +36,10 @@ class CenterViewController: UIViewController {
         self.startViewController = mainStoryboard.instantiateViewControllerWithIdentifier("StartView") as! StartViewController
         self.effectViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EffectView") as! EffectViewController
         self.gameViewController = mainStoryboard.instantiateViewControllerWithIdentifier("GameView") as! GameViewController
+        self.breakViewController = self.childViewControllers.first as! BreakViewController
         self.endingViewController = mainStoryboard.instantiateViewControllerWithIdentifier("EndingView") as! EndingViewController
 
         self.currentViewController = self.startViewController
-
-        breakViewController = self.childViewControllers.first as! BreakViewController
-        print(breakViewController)
     }
 
     func prepareNewGame() {
@@ -54,6 +53,12 @@ class CenterViewController: UIViewController {
 
         self.currentViewController = self.effectViewController
 
+    }
+
+    func breakRecord() {
+        self.breakViewContainer.hidden = false
+        self.breakViewContainer.animation = "pop"
+        self.breakViewContainer.animate()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

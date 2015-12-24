@@ -179,7 +179,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-gJ-g0U">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-Dr-vmX">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-Dr-vmX" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <connections>
                                     <segue destination="oV4-kv-ESL" kind="embed" identifier="break" id="gwa-tN-Weg"/>
@@ -204,7 +204,7 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="breakViewContainer" destination="sfc-Dr-vmX" id="lEO-Dy-EdY"/>
+                        <outlet property="breakViewContainer" destination="sfc-Dr-vmX" id="8Xw-b6-7ej"/>
                         <outlet property="containerView" destination="Ycu-gJ-g0U" id="paO-Qz-ApE"/>
                     </connections>
                 </viewController>

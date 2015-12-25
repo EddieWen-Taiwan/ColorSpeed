@@ -141,4 +141,7 @@ class GameViewController: UIViewController {
 
     }
 
+    @IBAction func restartGame(sender: AnyObject) {
+    }
+
 }

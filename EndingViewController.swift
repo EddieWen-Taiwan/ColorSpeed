@@ -15,8 +15,11 @@ class EndingViewController: UIViewController {
 
     var parentVC: CenterViewController!
 
+    var didViewLoad: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.didViewLoad = true
 
         self.parentVC = self.parentViewController as! CenterViewController
     }
@@ -37,8 +40,10 @@ class EndingViewController: UIViewController {
     }
 
     func newGame() {
-        self.centerYConstraint.constant = -140
-        self.finalTimeLabel.transform = CGAffineTransformIdentity
+        if self.didViewLoad {
+            self.centerYConstraint.constant = -140
+            self.finalTimeLabel.transform = CGAffineTransformIdentity
+        }
     }
 
 }

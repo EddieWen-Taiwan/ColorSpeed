@@ -148,13 +148,6 @@ class RankTableViewController: UITableViewController {
             cell.loadingAreaOfName.hidden = true
             cell.loadingAreaOfTime.hidden = true
 
-        } else {
-
-            cell.userSticker.image = UIImage(named: "defaultUser")
-
-            cell.loadingAreaOfName.hidden = false
-            cell.loadingAreaOfTime.hidden = false
-
         }
 
         return cell

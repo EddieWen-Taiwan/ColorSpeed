@@ -142,6 +142,8 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func restartGame(sender: AnyObject) {
+        parentVC.timer.invalidate()
+        parentVC.prepareNewGame()
     }
 
 }

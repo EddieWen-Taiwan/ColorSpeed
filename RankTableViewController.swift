@@ -28,32 +28,37 @@ class RankTableViewController: UITableViewController {
             if let rankData = self.userP.stringForKey("json") {
                 self.isDataExisted = true
                 self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )
-            }
 
-            // Check should I download new rank data
-            let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)
-            httpRequest.HTTPMethod = "POST"
+                if self.forceUpdate {
+                    self.updateLocalRank()
+                } else {
+                    // Check should I download new rank data
+                    let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)
+                    httpRequest.HTTPMethod = "POST"
 
-            if let time = self.userP.stringForKey("time") {
-                let postString = "time=\(time)"
-                httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+                    if let time = self.userP.stringForKey("time") {
+                        let postString = "time=\(time)"
+                        httpRequest.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
 
-                let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
+                        let checkNewData = NSURLSession.sharedSession().dataTaskWithRequest( httpRequest ) { (response, info, error) in
+                        
+                            if error == nil {
+                                let status = JSON( data: response! )
+                                if status["new"] {
+                                    // Download new ranl data from server
+                                    self.updateLocalRank()
+                                }
+                            }
 
-                    if error == nil {
-                        let status = JSON( data: response! )
-                        if status["new"] || self.forceUpdate {
-                            // Download new ranl data from server
-                            self.updateLocalRank()
                         }
+                        checkNewData.resume()
                     }
-
                 }
-                checkNewData.resume()
             } else {
                 // There is no rank data in local
                 self.updateLocalRank()
             }
+
         } else {
             let alertController = UIAlertController(title: "No Netwrok", message: "Please check you newtwork connection and try again.", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)

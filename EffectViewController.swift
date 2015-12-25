@@ -23,12 +23,15 @@ class EffectViewController: UIViewController {
 
     func countdownGame() {
 
+        self.three.duration = 0.8
         self.three.animation = "zoomOut"
         self.three.animateToNext({
             self.two.hidden = false
+            self.two.duration = 0.8
             self.two.animation = "zoomOut"
             self.two.animateToNext({
                 self.one.hidden = false
+                self.one.duration = 0.8
                 self.one.animation = "zoomOut"
                 self.one.animateToNext({
                     // Game Start

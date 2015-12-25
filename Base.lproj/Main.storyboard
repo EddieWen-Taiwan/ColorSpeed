@@ -514,7 +514,7 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

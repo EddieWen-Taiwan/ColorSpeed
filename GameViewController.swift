@@ -88,7 +88,7 @@ class GameViewController: UIViewController {
         } else {
             // Answer is wrong
             // WarningView animation
-            UIView.animateWithDuration( 0.2, animations: {
+            UIView.animateWithDuration( 0.1, animations: {
                 self.warningView.alpha = 1
             }, completion: { finish in
                 self.warningView.animation = "shake"

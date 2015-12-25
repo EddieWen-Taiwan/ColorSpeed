@@ -381,7 +381,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-2W-STQ">
-                                <rect key="frame" x="169" y="135" width="41" height="28"/>
+                                <rect key="frame" x="169" y="85" width="41" height="28"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -532,7 +532,7 @@
                             <constraint firstItem="ALM-OF-NYO" firstAttribute="leading" secondItem="3Zp-0x-BWU" secondAttribute="leading" id="3KO-8B-sFk"/>
                             <constraint firstItem="hBQ-2W-STQ" firstAttribute="trailing" secondItem="R3d-We-6fU" secondAttribute="leading" constant="10" id="BB5-zU-nw7"/>
                             <constraint firstItem="AZ9-9T-3cs" firstAttribute="top" secondItem="R3d-We-6fU" secondAttribute="bottom" constant="30" id="CHm-l4-cmC"/>
-                            <constraint firstItem="hBQ-2W-STQ" firstAttribute="top" secondItem="R3d-We-6fU" secondAttribute="top" id="FcO-W4-2k3"/>
+                            <constraint firstItem="hBQ-2W-STQ" firstAttribute="top" secondItem="R3d-We-6fU" secondAttribute="top" constant="-50" id="FcO-W4-2k3"/>
                             <constraint firstItem="Nop-Ae-tsL" firstAttribute="top" secondItem="lFP-KB-HXo" secondAttribute="bottom" constant="20" id="IDG-TG-bbW"/>
                             <constraint firstAttribute="trailing" secondItem="Nop-Ae-tsL" secondAttribute="trailing" constant="20" id="O6c-U7-GHL"/>
                             <constraint firstItem="AZ9-9T-3cs" firstAttribute="centerY" secondItem="3Zp-0x-BWU" secondAttribute="centerY" constant="-50" id="Us0-kO-pEY"/>

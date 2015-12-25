@@ -22,12 +22,13 @@ class RankTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let rankData = self.userP.stringForKey("json") {
-            self.isDataExisted = true
-            self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )
-        }
-
         if reachability.isConnectedToNetwork() {
+
+            if let rankData = self.userP.stringForKey("json") {
+                self.isDataExisted = true
+                self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )
+            }
+
             // Check should I download new rank data
             let httpRequest = NSMutableURLRequest(URL: NSURL( string: ServerTalker.checkNew )!)
             httpRequest.HTTPMethod = "POST"
@@ -53,8 +54,6 @@ class RankTableViewController: UITableViewController {
                 self.updateLocalRank()
             }
         } else {
-            self.isDataExisted = false
-
             let alertController = UIAlertController(title: "No Netwrok", message: "Please check you newtwork connection and try again.", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alertController.addAction(okAction)

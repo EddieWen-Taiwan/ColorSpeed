@@ -24,6 +24,7 @@ class RankTableViewController: UITableViewController {
 
         if reachability.isConnectedToNetwork() {
 
+            // Check whether there is data in local app
             if let rankData = self.userP.stringForKey("json") {
                 self.isDataExisted = true
                 self.rankJSON = JSON( data: rankData.dataUsingEncoding(NSUTF8StringEncoding)! )

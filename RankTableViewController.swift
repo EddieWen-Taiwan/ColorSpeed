@@ -61,7 +61,9 @@ class RankTableViewController: UITableViewController {
 
         } else {
             let alertController = UIAlertController(title: "No Netwrok", message: "Please check you newtwork connection and try again.", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: { Void in
+                self.dismissViewControllerAnimated( true, completion: nil )
+            })
             alertController.addAction(okAction)
             self.presentViewController(alertController, animated: true, completion: nil)
         }

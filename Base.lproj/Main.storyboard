@@ -94,7 +94,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEs-sj-Z1v">
-                                            <rect key="frame" x="576" y="23" width="8" height="18"/>
+                                            <rect key="frame" x="576" y="22" width="8" height="18"/>
                                             <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                         <constraint firstAttribute="trailing" secondItem="rEs-sj-Z1v" secondAttribute="trailing" constant="16" id="RoN-a3-GmE"/>
                                         <constraint firstItem="rEs-sj-Z1v" firstAttribute="leading" secondItem="5CJ-3R-Fcz" secondAttribute="trailing" constant="1" id="cKw-Rr-pj3"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="centerY" secondItem="89Q-OW-cDy" secondAttribute="centerY" id="gDg-AA-r8t"/>
-                                        <constraint firstItem="rEs-sj-Z1v" firstAttribute="bottom" secondItem="5CJ-3R-Fcz" secondAttribute="bottom" id="jF2-ZK-MnJ"/>
+                                        <constraint firstItem="rEs-sj-Z1v" firstAttribute="bottom" secondItem="5CJ-3R-Fcz" secondAttribute="bottom" constant="-1" id="jF2-ZK-MnJ"/>
                                         <constraint firstItem="TWI-aK-E2J" firstAttribute="leading" secondItem="BuU-cW-7pg" secondAttribute="trailing" constant="10" id="vcl-Rs-Xxv"/>
                                         <constraint firstItem="BuU-cW-7pg" firstAttribute="leading" secondItem="89Q-OW-cDy" secondAttribute="leading" constant="16" id="xyD-Bn-9ug"/>
                                         <constraint firstItem="Cz2-We-IxO" firstAttribute="leading" secondItem="BuU-cW-7pg" secondAttribute="trailing" constant="10" id="yV9-g4-JJY"/>

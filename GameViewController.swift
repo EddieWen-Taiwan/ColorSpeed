@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
 
             } else {
                 // Next one
-                self.answeredQuestion++
+                self.answeredQuestion += 1
                 self.updateQuestion()
             }
         } else {
